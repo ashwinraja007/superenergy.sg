@@ -6,8 +6,8 @@ const Hero = () => {
   // Full height, vertically centered, professional gray gradient
   className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-neutral-50 via-neutral-100 to-neutral-200">
       {/* Plants (bottom corners) */}
-      <img src="/plant.png" alt="Plant left" className="pointer-events-none select-none absolute -bottom-3 left-2 w-28 sm:w-32 md:w-36 drop-shadow-xl animate-sway" />
-      <img src="/plant.png" alt="Plant right" className="pointer-events-none select-none absolute -bottom-4 right-2 w-28 sm:w-32 md:w-36 drop-shadow-xl animate-sway-delayed" />
+      <img src="/plant.png" alt="Plant left" className="pointer-events-none select-none absolute -bottom-3 left-2 w-28 sm:w-32 md:w-36 animate-sway" />
+      <img src="/plant.png" alt="Plant right" className="pointer-events-none select-none absolute -bottom-4 right-2 w-28 sm:w-32 md:w-36 animate-sway-delayed" />
 
       {/* Main Grid */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
