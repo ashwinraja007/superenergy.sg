@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react";
 // Image placeholders (replace with actual assets)
 
 const Hero = () => {
-  return <section className="relative min-h-screen bg-gradient-to-br from-[#f5fdf7] to-[#eaf4ed] overflow-hidden px-6 pt-34 lg:pt-32 bg-gray-500   mt-35">
+  return <section className="relative min-h-screen bg-gradient-to-br from-[#f5fdf7] to-[#eaf4ed] overflow-hidden px-6 pt-34 lg:pt-32 bg-gray-500   mt-38">
       {/* Main Grid */}
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12 relative z-10">
         
