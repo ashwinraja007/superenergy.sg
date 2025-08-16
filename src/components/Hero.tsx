@@ -6,7 +6,7 @@ const Hero = () => {
   // Full height, vertically centered, professional gray gradient
   className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-neutral-50 via-neutral-100 to-neutral-200">
       {/* Plants (bottom corners) */}
-      <img src="/plant.png" alt="Plant left" className="pointer-events-none select-none absolute -bottom-3 left-2 w-28 sm:w-32 md:w-36 animate-sway" />
+      <img src="/plant.png" alt="Plant left" className="pointer-events-none select-none absolute -bottom-3 left-2 w-48 sm:w-32 md:w-36 animate-sway" />
       <img src="/plant.png" alt="Plant right" className="pointer-events-none select-none absolute -bottom-4 right-2 w-28 sm:w-32 md:w-36 animate-sway-delayed" />
 
       {/* Main Grid */}
@@ -36,9 +36,6 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Schedule Free Pickup
-              </Button>
               <Button variant="hero-outline" size="lg" className="text-white text-lg px-8 py-6 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-xl">
                 Become a Partner
               </Button>
@@ -59,7 +56,7 @@ const Hero = () => {
           alt="Super Energy Van" className="w-[520px] max-w-full object-contain drop-shadow-2xl animate-float" />
             <div className="mt-6 animate-bounce">
               <Button size="lg" className="text-white px-10 py-5 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
-                Contact Now
+                Schedule Free Pickup
               </Button>
             </div>
           </div>
