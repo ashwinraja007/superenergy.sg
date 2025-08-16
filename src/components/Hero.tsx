@@ -3,9 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle } from "lucide-react";
 
 // Image placeholders (replace with actual assets)
-import vanImage from "@/assets/van.png"; // Replace with your actual van image
-import plantLeft from "@/assets/plant-left.png";
-import plantRight from "@/assets/plant-right.png";
 
 const Hero = () => {
   return (
