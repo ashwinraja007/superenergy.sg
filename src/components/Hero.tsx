@@ -11,12 +11,12 @@ const Hero = () => {
     >
       {/* Plants (bottom corners) */}
       <img
-        src="/plant-left.png"
+        src="/plant.png"
         alt="Plant left"
         className="pointer-events-none select-none absolute -bottom-3 left-2 w-28 sm:w-32 md:w-36 drop-shadow-xl animate-sway"
       />
       <img
-        src="/plant-right.png"
+        src="/plant.png"
         alt="Plant right"
         className="pointer-events-none select-none absolute -bottom-4 right-2 w-28 sm:w-32 md:w-36 drop-shadow-xl animate-sway-delayed"
       />
