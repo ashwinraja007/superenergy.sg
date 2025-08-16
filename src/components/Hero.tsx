@@ -15,7 +15,7 @@ const Hero = () => {
             🌱 Join the Green Revolution
           </Badge>
 
-          <h1 className="text-5xl font-bold leading-tight lg:text-5xl">
+          <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
             Transform Your{" "}
             <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
               Waste
@@ -53,12 +53,12 @@ const Hero = () => {
         {/* 🚛 Right Side - Van, Button & Plants */}
         <div className="relative w-full h-full flex flex-col items-center justify-center animate-fade-in">
           {/* Van */}
-          <img src="/van.png" alt="Super Energy Van" className="w-[1300px] max-w-full object-contain  animate-float" />
+          <img src="/van.png" alt="Super Energy Van" className="w-[500px] max-w-full object-contain  animate-float" />
 
           {/* Contact Now Button */}
           <div className="mt-6 animate-bounce">
             <Button size="lg" className="text-white px-10 py-5 rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
-              Schedule Free Pickup
+              Contact Now
             </Button>
           </div>
 
