@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react";
 // Image placeholders (replace with actual assets)
 
 const Hero = () => {
-  return <section className="relative min-h-screen bg-gradient-to-br from-[#f5fdf7] to-[#eaf4ed] overflow-hidden px-6 pt-24 lg:pt-32 bg-slate-200">
+  return <section className="relative min-h-screen bg-gradient-to-br from-[#f5fdf7] to-[#eaf4ed] overflow-hidden px-6 pt-24 lg:pt-32 bg-gray-500">
       {/* Main Grid */}
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12 relative z-10">
         
@@ -53,7 +53,7 @@ const Hero = () => {
         {/* 🚛 Right Side - Van, Button & Plants */}
         <div className="relative w-full h-full flex flex-col items-center justify-center animate-fade-in">
           {/* Van */}
-          <img src="/van.png" alt="Super Energy Van" className="w-[400px] max-w-full object-contain drop-shadow-xl animate-float" />
+          <img src="/van.png" alt="Super Energy Van" className="w-[900px] max-w-full object-contain  animate-float" />
 
           {/* Contact Now Button */}
           <div className="mt-6 animate-bounce">
