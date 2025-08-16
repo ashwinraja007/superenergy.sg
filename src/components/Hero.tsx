@@ -58,7 +58,7 @@ const Hero = () => {
           {/* Contact Now Button */}
           <div className="mt-6 animate-bounce">
             <Button size="lg" className="text-white px-10 py-5 rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
-              Contact Now
+              Schedule Free Pickup
             </Button>
           </div>
 
