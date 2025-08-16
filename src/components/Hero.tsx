@@ -34,7 +34,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             
-            <Button variant="hero-outline" size="lg" className="text-lg px-8 py-6 bg-[#075f07]/[0.86] text-slate-50">
+            <Button variant="hero-outline" size="lg" className="text-white px-10 py-5 bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl rounded-sm">
               Become a Partner
             </Button>
           </div>
@@ -55,7 +55,7 @@ const Hero = () => {
 
           {/* Contact Now Button */}
           <div className="mt-6 animate-bounce">
-            <Button size="lg" className="text-white px-10 py-5 rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
+            <Button size="lg" className="text-white px-10 py-5 bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl rounded-sm">
               Contact Now
             </Button>
           </div>
