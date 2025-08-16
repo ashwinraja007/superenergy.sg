@@ -5,8 +5,7 @@ import { CheckCircle } from "lucide-react";
 // Image placeholders (replace with actual assets)
 
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen bg-gradient-to-br from-[#f5fdf7] to-[#eaf4ed] overflow-hidden px-6 pt-24 lg:pt-32">
+  return <section className="relative min-h-screen bg-gradient-to-br from-[#f5fdf7] to-[#eaf4ed] overflow-hidden px-6 pt-24 lg:pt-32 bg-slate-200">
       {/* Main Grid */}
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12 relative z-10">
         
@@ -44,49 +43,30 @@ const Hero = () => {
 
           {/* ✅ Trust Badges */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
-            {["FSSAI Approved", "Carbon Offset", "100% Eco-Friendly", "Free Pickup"].map((text) => (
-              <div key={text} className="flex items-center gap-2 text-sm text-muted-foreground">
+            {["FSSAI Approved", "Carbon Offset", "100% Eco-Friendly", "Free Pickup"].map(text => <div key={text} className="flex items-center gap-2 text-sm text-muted-foreground">
                 <CheckCircle className="h-4 w-4 text-green-600" />
                 {text}
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
         {/* 🚛 Right Side - Van, Button & Plants */}
         <div className="relative w-full h-full flex flex-col items-center justify-center animate-fade-in">
           {/* Van */}
-          <img
-            src="/van.png"
-            alt="Super Energy Van"
-            className="w-[400px] max-w-full object-contain drop-shadow-xl animate-float"
-          />
+          <img src="/van.png" alt="Super Energy Van" className="w-[400px] max-w-full object-contain drop-shadow-xl animate-float" />
 
           {/* Contact Now Button */}
           <div className="mt-6 animate-bounce">
-            <Button
-              size="lg"
-              className="text-white px-10 py-5 rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl"
-            >
+            <Button size="lg" className="text-white px-10 py-5 rounded-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
               Contact Now
             </Button>
           </div>
 
           {/* 🌿 Plants */}
-          <img
-            src="/CarbonFootprint.jpg"
-            alt="Plant Left"
-            className="absolute bottom-0 left-0 w-28 h-auto animate-grow-slow"
-          />
-          <img
-            src="/CarbonFootprint.jpg"
-            alt="Plant Right"
-            className="absolute bottom-0 right-0 w-28 h-auto animate-grow-slow delay-300"
-          />
+          <img src="/CarbonFootprint.jpg" alt="Plant Left" className="absolute bottom-0 left-0 w-28 h-auto animate-grow-slow" />
+          <img src="/CarbonFootprint.jpg" alt="Plant Right" className="absolute bottom-0 right-0 w-28 h-auto animate-grow-slow delay-300" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
