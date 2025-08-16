@@ -53,7 +53,7 @@ const Hero = () => {
         {/* 🚛 Right Side - Van, Button & Plants */}
         <div className="relative w-full h-full flex flex-col items-center justify-center animate-fade-in">
           {/* Van */}
-          <img src="/van.png" alt="Super Energy Van" className="w-[900px] max-w-full object-contain  animate-float" />
+          <img src="/van.png" alt="Super Energy Van" className="w-[1300px] max-w-full object-contain  animate-float" />
 
           {/* Contact Now Button */}
           <div className="mt-6 animate-bounce">
