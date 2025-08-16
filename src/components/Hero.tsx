@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
 
           {/* ✅ Trust Badges */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6">
             {["FSSAI Approved", "Carbon Offset", "100% Eco-Friendly", "Free Pickup"].map(text => <div key={text} className="flex items-center gap-2 text-sm text-muted-foreground">
                 <CheckCircle className="h-4 w-4 text-green-600" />
                 {text}
