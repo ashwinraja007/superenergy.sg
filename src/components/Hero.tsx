@@ -57,7 +57,7 @@ const Hero = () => {
         <div className="relative w-full h-full flex flex-col items-center justify-center animate-fade-in">
           {/* Van */}
           <img
-            src={vanImage}
+            src="/van.png"
             alt="Super Energy Van"
             className="w-[400px] max-w-full object-contain drop-shadow-xl animate-float"
           />
@@ -74,12 +74,12 @@ const Hero = () => {
 
           {/* 🌿 Plants */}
           <img
-            src={plantLeft}
+            src="/CarbonFootprint.jpg"
             alt="Plant Left"
             className="absolute bottom-0 left-0 w-28 h-auto animate-grow-slow"
           />
           <img
-            src={plantRight}
+            src="/CarbonFootprint.jpg"
             alt="Plant Right"
             className="absolute bottom-0 right-0 w-28 h-auto animate-grow-slow delay-300"
           />
