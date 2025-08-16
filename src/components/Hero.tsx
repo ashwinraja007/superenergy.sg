@@ -15,7 +15,7 @@ const Hero = () => {
             🌱 Join the Green Revolution
           </Badge>
 
-          <h1 className="text-5xl font-bold leading-tight lg:text-5xl">
+          <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
             Transform Your{" "}
             <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
               Waste
@@ -33,10 +33,8 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-              Schedule Free Pickup
-            </Button>
-            <Button variant="hero-outline" size="lg" className="text-lg px-8 py-6">
+            
+            <Button variant="hero-outline" size="lg" className="text-lg px-8 py-6 bg-[#075f07]/[0.86] text-slate-50">
               Become a Partner
             </Button>
           </div>
@@ -53,7 +51,7 @@ const Hero = () => {
         {/* 🚛 Right Side - Van, Button & Plants */}
         <div className="relative w-full h-full flex flex-col items-center justify-center animate-fade-in">
           {/* Van */}
-          <img src="/van.png" alt="Super Energy Van" className="w-[500px] max-w-full object-contain  animate-float" />
+          <img src="/van.png" alt="Super Energy Van" className="w-[900px] max-w-full object-contain  animate-float" />
 
           {/* Contact Now Button */}
           <div className="mt-6 animate-bounce">
@@ -63,8 +61,8 @@ const Hero = () => {
           </div>
 
           {/* 🌿 Plants */}
-          <img src="/CarbonFootprint.jpg" alt="Plant Left" className="absolute bottom-0 left-0 w-28 h-auto animate-grow-slow" />
-          <img src="/CarbonFootprint.jpg" alt="Plant Right" className="absolute bottom-0 right-0 w-28 h-auto animate-grow-slow delay-300" />
+          
+          
         </div>
       </div>
     </section>;
