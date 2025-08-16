@@ -15,7 +15,7 @@ const Hero = () => {
             🌱 Join the Green Revolution
           </Badge>
 
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className="text-5xl font-bold leading-tight lg:text-5xl">
             Transform Your{" "}
             <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
               Waste
