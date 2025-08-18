@@ -51,8 +51,7 @@ const AboutPreview = () => {
             About Us
           </Badge>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
-            Responsible{" "}
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tight">
             <span className="bg-gradient-to-r from-green-700 to-emerald-400 bg-clip-text text-transparent">
               Used Cooking Oil
             </span>{" "}
