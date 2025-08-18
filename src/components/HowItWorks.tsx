@@ -1,36 +1,50 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Droplets, Smartphone, Truck, ShieldCheck, Receipt } from "lucide-react";
-const steps = [{
-  icon: Droplets,
-  title: "Save Your Used Oil",
-  description: "After frying or cooking, let the oil cool and pour it into our provided sealed container.",
-  step: "01"
-}, {
-  icon: Smartphone,
-  title: "Book a Pickup",
-  description: "Use our mobile app, website, or hotline to request a free pickup at your convenience.",
-  step: "02"
-}, {
-  icon: Truck,
-  title: "We Collect It",
-  description: "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.",
-  step: "03"
-}, {
-  icon: ShieldCheck,
-  title: "Handover to Licensed Recycler",
-  description: "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.",
-  step: "04"
-}, {
-  icon: Receipt,
-  title: "Compliance & Impact",
-  description: "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.",
-  step: "05"
-}];
+
+const steps = [
+  {
+    icon: Droplets,
+    title: "Save Your Used Oil",
+    description:
+      "After frying or cooking, let the oil cool and pour it into our provided sealed container.",
+    step: "01",
+  },
+  {
+    icon: Smartphone,
+    title: "Book a Pickup",
+    description:
+      "Use our mobile app, website, or hotline to request a free pickup at your convenience.",
+    step: "02",
+  },
+  {
+    icon: Truck,
+    title: "We Collect It",
+    description:
+      "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.",
+    step: "03",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Handover to Licensed Recycler",
+    description:
+      "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.",
+    step: "04",
+  },
+  {
+    icon: Receipt,
+    title: "Compliance & Impact",
+    description:
+      "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.",
+    step: "05",
+  },
+];
+
 const HowItWorks = () => {
-  return <section id="how-it-works" className="relative py-10">
+  return (
+    <section id="how-it-works" className="relative py-10">
       {/* Background accents */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
         <div className="absolute -bottom-28 -left-20 h-96 w-96 rounded-full bg-green-500/10 blur-3xl" />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-emerald-50/60 to-transparent" />
@@ -59,9 +73,12 @@ const HowItWorks = () => {
             {/* Connection line */}
             <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200" />
             <div className="grid grid-cols-5 gap-6 items-stretch">
-              {steps.map((s, i) => <div key={s.step} className="relative flex flex-col h-full [animation:fadeIn_.6s_ease_forwards] opacity-0" style={{
-              animationDelay: `${i * 120}ms`
-            }}>
+              {steps.map((s, i) => (
+                <div
+                  key={s.step}
+                  className="relative flex flex-col h-full [animation:fadeIn_.6s_ease_forwards] opacity-0"
+                  style={{ animationDelay: `${i * 120}ms` }}
+                >
                   {/* Step number */}
                   <div className="relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-6 shadow-[0_8px_24px_rgba(16,185,129,0.35)] bg-teal-300">
                     {s.step}
@@ -73,22 +90,23 @@ const HowItWorks = () => {
                       <s.icon className="h-8 w-8 text-emerald-600" />
                     </div>
                     <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {s.description}
-                    </p>
-                    {/* spacer keeps bottoms aligned if copy wraps */}
+                    <p className="text-sm text-muted-foreground leading-relaxed">{s.description}</p>
                     <div className="mt-auto" />
                   </Card>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Mobile vertical timeline (even spacing) */}
         <div className="lg:hidden space-y-6">
-          {steps.map((s, i) => <Card key={s.step} className="p-5 bg-white/90 backdrop-blur border border-emerald-100 rounded-2xl [animation:fadeIn_.5s_ease_forwards] opacity-0" style={{
-          animationDelay: `${i * 100}ms`
-        }}>
+          {steps.map((s, i) => (
+            <Card
+              key={s.step}
+              className="p-5 bg-white/90 backdrop-blur border border-emerald-100 rounded-2xl [animation:fadeIn_.5s_ease_forwards] opacity-0"
+              style={{ animationDelay: `${i * 100}ms` }}
+            >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-11 h-11 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold shadow-[0_6px_20px_rgba(16,185,129,0.35)]">
@@ -102,12 +120,11 @@ const HowItWorks = () => {
                     </div>
                     <h3 className="text-base sm:text-lg font-semibold">{s.title}</h3>
                   </div>
-                  <p className="text-sm sm:text-base text-muted-foreground">
-                    {s.description}
-                  </p>
+                  <p className="text-sm sm:text-base text-muted-foreground">{s.description}</p>
                 </div>
               </div>
-            </Card>)}
+            </Card>
+          ))}
         </div>
 
         {/* After pickup (balanced, equal height columns) */}
@@ -115,10 +132,17 @@ const HowItWorks = () => {
           <div className="flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-8 animate-fade-in bg-lime-100">
             <h3 className="text-2xl font-bold mb-4">What Happens After Pickup</h3>
             <ul className="space-y-3">
-              {["Sealed containers are transported to authorized recyclers.", "Full traceability with chain-of-custody records.", "Recyclers perform testing & processing per regulations.", "You retain receipts/compliance notes for your records."].map(item => <li key={item} className="flex items-start gap-3">
+              {[
+                "Sealed containers are transported to authorized recyclers.",
+                "Full traceability with chain-of-custody records.",
+                "Recyclers perform testing & processing per regulations.",
+                "You retain receipts/compliance notes for your records.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
                   <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
                   <span className="text-muted-foreground">{item}</span>
-                </li>)}
+                </li>
+              ))}
             </ul>
             <div className="mt-auto" />
           </div>
@@ -126,10 +150,16 @@ const HowItWorks = () => {
           <Card className="flex flex-col h-full p-8 bg-gradient-to-br from-emerald-600 to-emerald-500 text-white border-0 shadow-xl rounded-2xl">
             <h4 className="text-xl font-bold mb-3">Environmental Benefits</h4>
             <ul className="space-y-3">
-              {["Prevents drain clogging and water contamination", "Reduces improper reuse of UCO in food supply", "Supports cleaner fuels and circular economy"].map(b => <li key={b} className="flex items-start gap-3">
+              {[
+                "Prevents drain clogging and water contamination",
+                "Reduces improper reuse of UCO in food supply",
+                "Supports cleaner fuels and circular economy",
+              ].map((b) => (
+                <li key={b} className="flex items-start gap-3">
                   <span className="mt-2 h-2 w-2 rounded-full bg-white" />
                   <span>{b}</span>
-                </li>)}
+                </li>
+              ))}
             </ul>
             <div className="mt-auto text-sm text-emerald-50/90">
               *We only collect used cooking oil and hand it over to licensed recyclers.
@@ -140,8 +170,13 @@ const HowItWorks = () => {
 
       {/* tiny CSS keyframes if not present */}
       <style>{`
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { 
+          from { opacity: 0; transform: translateY(6px); } 
+          to { opacity: 1; transform: translateY(0); } 
+        }
       `}</style>
-    </section>;
+    </section>
+  );
 };
+
 export default HowItWorks;
