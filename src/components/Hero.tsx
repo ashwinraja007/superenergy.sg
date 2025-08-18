@@ -1,19 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
-      style={{
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(245,245,245,0.85), rgba(230,230,230,0.95)), url('/greybackgound.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+  return <section id="hero" style={{
+    backgroundImage: "linear-gradient(to bottom, rgba(245,245,245,0.85), rgba(230,230,230,0.95)), url('/greybackgound.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center"
+  }} className="relative min-h-screen flex items-center overflow-hidden bg-slate-200">
       {/* Main Grid */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 items-center gap-12">
@@ -41,51 +34,32 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                variant="hero-outline"
-                size="lg"
-                className="text-white text-lg px-8 py-6 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-xl"
-              >
+              <Button variant="hero-outline" size="lg" className="text-white text-lg px-8 py-6 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-xl">
                 Become a Partner
               </Button>
             </div>
 
             {/* Trust badges */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
-              {["FSSAI Approved", "Carbon Offset", "100% Eco-Friendly", "Free Pickup"].map(
-                (text) => (
-                  <div
-                    key={text}
-                    className="flex items-center gap-2 text-sm text-muted-foreground"
-                  >
+              {["FSSAI Approved", "Carbon Offset", "100% Eco-Friendly", "Free Pickup"].map(text => <div key={text} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <CheckCircle className="h-4 w-4 text-green-600" />
                     {text}
-                  </div>
-                )
-              )}
+                  </div>)}
             </div>
           </div>
 
           {/* Right: Van + CTA */}
           <div className="relative flex flex-col items-center justify-center animate-fade-in">
-            <img
-              src="/van.png" // place van.png in /public
-              alt="Super Energy Van"
-              className="w-[520px] max-w-full object-contain animate-float"
-            />
+            <img src="/van.png" // place van.png in /public
+          alt="Super Energy Van" className="w-[520px] max-w-full object-contain animate-float" />
             <div className="mt-6 animate-bounce">
-              <Button
-                size="lg"
-                className="text-white px-10 py-5 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl"
-              >
+              <Button size="lg" className="text-white px-10 py-5 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
                 Schedule Free Pickup
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
