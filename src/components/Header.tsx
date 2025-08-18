@@ -17,9 +17,6 @@ const Header = () => {
   }, {
     name: "Sustainability",
     href: "/sustainability"
-  }, {
-    name: "Contact",
-    href: "/contact"
   }];
   const isActive = (href: string) => location.pathname === href;
   return <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border shadow-soft bg-slate-50">
