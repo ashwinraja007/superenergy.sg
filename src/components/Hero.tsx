@@ -91,7 +91,7 @@ const Hero = () => {
                 <h3 className="font-semibold">Collected for Licensed Recycling</h3>
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
-                 We only collect used cooking oil. Our team picks up sealed containers and hands them over to licensed recyclers; you receive a pickup receipt/compliance note.
+                 Our team picks up sealed containers and hands them over to licensed recyclers.
               </p>
             </div>
           </div>
