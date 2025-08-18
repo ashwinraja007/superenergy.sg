@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle } from "lucide-react";
+
 const Hero = () => {
   return <section id="hero" style={{
     backgroundImage: "linear-gradient(to bottom, rgba(245,245,245,0.85), rgba(230,230,230,0.95)), url('/greybackgound.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center"
-  }} className="relative min-h-screen flex items-center overflow-hidden bg-slate-100">
+  }} className="relative min-h-screen flex items-center overflow-hidden bg-slate-200">
       {/* Main Grid */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 items-center gap-12">
@@ -29,7 +30,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              Join the green energy movement by recycling your used cooking oil into clean,
+              Join the green energy movement by recycling your, <strong>used cooking oil</strong> into clean,
               efficient biodiesel. Together, we can reduce pollution and build a sustainable tomorrow.
             </p>
 
@@ -59,6 +60,63 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/* ===== Added: Bottom strip only (inside hero) ===== */}
+        <div className="mt-12">
+          {/* 3-step How It Works */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="rounded-xl border border-emerald-100 bg-white/70 backdrop-blur p-5 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">1</span>
+                <h3 className="font-semibold">Request Pickup</h3>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Book a free collection—get sealed containers for your used cooking oil.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-emerald-100 bg-white/70 backdrop-blur p-5 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">2</span>
+                <h3 className="font-semibold">We Collect & Weigh</h3>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Trained staff, scheduled pickups & digital weight slip for transparency.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-emerald-100 bg-white/70 backdrop-blur p-5 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">3</span>
+                <h3 className="font-semibold">Converted to Biodiesel</h3>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Traceable process; compliance certificate issued for your records.
+              </p>
+            </div>
+          </div>
+
+          {/* Quick stats */}
+          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div className="rounded-lg border bg-white/70 backdrop-blur p-4">
+              <div className="text-2xl font-bold text-emerald-700">100+</div>
+              <div className="text-xs text-muted-foreground">Partner Kitchens</div>
+            </div>
+            <div className="rounded-lg border bg-white/70 backdrop-blur p-4">
+              <div className="text-2xl font-bold text-emerald-700">25K+</div>
+              <div className="text-xs text-muted-foreground">Liters Recycled</div>
+            </div>
+            <div className="rounded-lg border bg-white/70 backdrop-blur p-4">
+              <div className="text-2xl font-bold text-emerald-700">0₹</div>
+              <div className="text-xs text-muted-foreground">Pickup Cost</div>
+            </div>
+            <div className="rounded-lg border bg-white/70 backdrop-blur p-4">
+              <div className="text-2xl font-bold text-emerald-700">FSSAI</div>
+              <div className="text-xs text-muted-foreground">Compliant Process</div>
+            </div>
+          </div>
+        </div>
+        {/* ===== /Bottom strip ===== */}
       </div>
     </section>;
 };
