@@ -96,26 +96,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Quick stats */}
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="rounded-lg border bg-white/70 backdrop-blur p-4">
-              <div className="text-2xl font-bold text-emerald-700">100+</div>
-              <div className="text-xs text-muted-foreground">Partner Kitchens</div>
-            </div>
-            <div className="rounded-lg border bg-white/70 backdrop-blur p-4">
-              <div className="text-2xl font-bold text-emerald-700">25K+</div>
-              <div className="text-xs text-muted-foreground">Liters Recycled</div>
-            </div>
-            <div className="rounded-lg border bg-white/70 backdrop-blur p-4">
-              <div className="text-2xl font-bold text-emerald-700">0₹</div>
-              <div className="text-xs text-muted-foreground">Pickup Cost</div>
-            </div>
-            <div className="rounded-lg border bg-white/70 backdrop-blur p-4">
-              <div className="text-2xl font-bold text-emerald-700">FSSAI</div>
-              <div className="text-xs text-muted-foreground">Compliant Process</div>
-            </div>
-          </div>
-        </div>
+         
         {/* ===== /Bottom strip ===== */}
       </div>
     </section>;
