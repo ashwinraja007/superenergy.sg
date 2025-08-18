@@ -7,6 +7,7 @@ import ForHouseholds from "@/components/ForHouseholds";
 import ForBusinesses from "@/components/ForBusinesses";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AboutPreview from "@/components/AboutPreview";
 
 const Index = () => {
   return (
