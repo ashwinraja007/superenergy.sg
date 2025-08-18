@@ -44,9 +44,7 @@ const Header = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" size="sm" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              
-            </Button>
+
             <Button size="sm" asChild className="bg-gradient-eco hover:opacity-90 transition-opacity">
               <Link to="/services">Contact </Link>
             </Button>
