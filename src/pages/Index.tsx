@@ -15,8 +15,8 @@ const Index = () => {
       <Header />
       <Hero />
      <AboutPreview />
-      <Stats />
       <HowItWorks />
+      <Stats />
       <WhyBiodiesel />
       <ForHouseholds />
       <ForBusinesses />
