@@ -86,20 +86,7 @@ const Stats = () => {
             </Card>)}
         </div>
 
-        <div className="mt-16 text-center">
-          <Card className="inline-block p-8 bg-gradient-eco text-white border-0 rounded-2xl shadow-eco">
-            <h3 className="text-2xl font-bold mb-4">Ready to Make an Impact?</h3>
-            <p className="text-lg mb-6 opacity-90">Join thousands of environmentally conscious individuals and businesses</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-white text-primary font-semibold rounded-full hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 transition transform motion-safe:duration-200">
-                Start Today
-              </button>
-              <button className="px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-primary focus:outline-none focus:ring-4 focus:ring-white/50 transition">
-                Learn More
-              </button>
-            </div>
-          </Card>
-        </div>
+        
       </div>
     </section>;
 };

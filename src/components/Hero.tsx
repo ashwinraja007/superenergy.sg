@@ -6,7 +6,7 @@ const Hero = () => {
     backgroundImage: "linear-gradient(to bottom, rgba(245,245,245,0.85), rgba(230,230,230,0.95)), url('/greybackgound.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center"
-  }} className="relative min-h-screen flex items-center overflow-hidden bg-slate-200">
+  }} className="relative min-h-screen flex items-center overflow-hidden bg-slate-100">
       {/* Main Grid */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 items-center gap-12">
@@ -29,7 +29,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              Join the green energy movement by recycling your, <strong>used cooking oil</strong> into clean,
+              Join the green energy movement by recycling your used cooking oil into clean,
               efficient biodiesel. Together, we can reduce pollution and build a sustainable tomorrow.
             </p>
 
