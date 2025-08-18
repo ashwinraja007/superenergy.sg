@@ -139,22 +139,7 @@ const Contact = () => {
         </div>
 
         {/* Bottom Banner */}
-        <div className="mt-20 text-center">
-          <Card className="p-8 bg-gradient-soft border-2 border-primary/20 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Ready to Start?</h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Join the green energy revolution today. Every drop of oil counts towards a cleaner future.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg">
-                Schedule Free Pickup
-              </Button>
-              <Button variant="hero-outline" size="lg">
-                Explore Partnership
-              </Button>
-            </div>
-          </Card>
-        </div>
+        
       </div>
     </section>;
 };
