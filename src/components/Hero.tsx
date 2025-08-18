@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle } from "lucide-react";
-
 const Hero = () => {
   return <section id="hero" style={{
     backgroundImage: "linear-gradient(to bottom, rgba(245,245,245,0.85), rgba(230,230,230,0.95)), url('/greybackgound.jpg')",
@@ -65,7 +64,7 @@ const Hero = () => {
         <div className="mt-12">
           {/* 3-step How It Works */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="rounded-xl border border-emerald-100 bg-white/70 backdrop-blur p-5 shadow-sm">
+            <div className="border border-emerald-100 backdrop-blur p-5 shadow-sm bg-emerald-100 rounded-xl">
               <div className="flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">1</span>
                 <h3 className="font-semibold">Request Pickup</h3>
@@ -75,7 +74,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-emerald-100 bg-white/70 backdrop-blur p-5 shadow-sm">
+            <div className="rounded-xl border border-emerald-100 backdrop-blur p-5 shadow-sm bg-emerald-100">
               <div className="flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">2</span>
                 <h3 className="font-semibold">We Collect & Weigh</h3>
@@ -85,7 +84,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-emerald-100 bg-white/70 backdrop-blur p-5 shadow-sm">
+            <div className="rounded-xl border border-emerald-100 backdrop-blur p-5 shadow-sm bg-emerald-100">
               <div className="flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">3</span>
                 <h3 className="font-semibold">Collected for Licensed Recycling</h3>
