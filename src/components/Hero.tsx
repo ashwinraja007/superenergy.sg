@@ -95,10 +95,9 @@ const Hero = () => {
               </p>
             </div>
           </div>
-
-         
+        </div>
         {/* ===== /Bottom strip ===== */}
-      </div>
+      </div> {/* <-- closes outer container */}
     </section>;
 };
 export default Hero;
