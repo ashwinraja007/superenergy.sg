@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import ScrollToTop from '../components/ScrollToTop';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
 const HowItWorksPage = () => {
   const steps = [{
     icon: Droplets,
@@ -38,6 +39,7 @@ const HowItWorksPage = () => {
     step: "05",
     details: ["Direct supply to transport companies", "Industrial equipment fueling", "Reduced carbon emissions", "Support for renewable energy goals"]
   }];
+
   const technologies = [{
     name: "Vacuum Filtration",
     description: "Advanced filtration removes impurities and solid particles"
@@ -51,14 +53,22 @@ const HowItWorksPage = () => {
     name: "Quality Testing",
     description: "Comprehensive lab testing to meet BIS and international standards"
   }];
-  return <div className="min-h-screen">
+
+  // Accent colors for the Advanced Technologies cards
+  const techAccents = [
+    { border: "border-teal-500", text: "text-teal-700" },
+    { border: "border-emerald-500", text: "text-emerald-700" },
+    { border: "border-sky-500", text: "text-sky-700" },
+    { border: "border-cyan-500", text: "text-cyan-700" },
+  ];
+
+  return <div className="min-h-screen bg-teal-200">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
-            
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               How It{" "}
               <span className="bg-gradient-eco bg-clip-text text-transparent">
@@ -153,19 +163,26 @@ const HowItWorksPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => <Card key={index} className="p-6 bg-background hover:shadow-eco transition-all duration-300">
-                <h3 className="text-xl font-semibold mb-3 text-primary">{tech.name}</h3>
-                <p className="text-muted-foreground">{tech.description}</p>
-              </Card>)}
+            {technologies.map((tech, index) => {
+              const accent = techAccents[index % techAccents.length];
+              return (
+                <Card
+                  key={index}
+                  className={`p-6 bg-background border-l-4 ${accent.border} hover:shadow-eco transition-all duration-300`}
+                >
+                  <h3 className={`text-xl font-semibold mb-3 ${accent.text}`}>{tech.name}</h3>
+                  <p className="text-muted-foreground">{tech.description}</p>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      
-
       <Footer />
-<ScrollToTop />
+      <ScrollToTop />
     </div>;
 };
+
 export default HowItWorksPage;
