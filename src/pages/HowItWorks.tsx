@@ -1,190 +1,204 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Droplets, Smartphone, Truck, Cog, Fuel, CheckCircle, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import ScrollToTop from '../components/ScrollToTop';
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Droplets, Smartphone, Truck, ShieldCheck, Receipt } from "lucide-react";
 
-const steps = [{
-  icon: Droplets,
-  title: "Save Your Used Oil",
-  description: "After frying or cooking, let the oil cool and pour it into our provided sealed container.",
-  step: "01"
-}, {
-  icon: Smartphone,
-  title: "Book a Pickup",
-  description: "Use our mobile app, website, or hotline to request a free pickup at your convenience.",
-  step: "02"
-}, {
-  icon: Truck,
-  title: "We Collect It",
-  description: "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.",
-  step: "03"
-}, {
-  icon: ShieldCheck,
-  title: "Handover to Licensed Recycler",
-  description: "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.",
-  step: "04"
-}, {
-  icon: Receipt,
-  title: "Compliance & Impact",
-  description: "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.",
-  step: "05"
-}];
+const steps = [
+  {
+    icon: Droplets,
+    title: "Save Your Used Oil",
+    description:
+      "After frying or cooking, let the oil cool and pour it into our provided sealed container.",
+    step: "01",
+  },
+  {
+    icon: Smartphone,
+    title: "Book a Pickup",
+    description:
+      "Use our mobile app, website, or hotline to request a free pickup at your convenience.",
+    step: "02",
+  },
+  {
+    icon: Truck,
+    title: "We Collect It",
+    description:
+      "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.",
+    step: "03",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Handover to Licensed Recycler",
+    description:
+      "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.",
+    step: "04",
+  },
+  {
+    icon: Receipt,
+    title: "Compliance & Impact",
+    description:
+      "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.",
+    step: "05",
+  },
+];
+
+// ✅ Moved OUTSIDE JSX to avoid “Expected } but found :” parsing error
+const technologies = [
+  {
+    name: "Vacuum Filtration",
+    description: "Advanced filtration removes impurities and solid particles.",
+  },
+  {
+    name: "Degumming & Neutralization",
+    description:
+      "Removes phosphatides and free fatty acids for stable downstream processing.",
+  },
+  {
+    name: "Esterification / Transesterification",
+    description: "Performed by licensed recyclers (we only collect UCO).",
+  },
+  {
+    name: "Lab Testing (BIS/Compliance)",
+    description: "Quality checks and documentation retained for your records.",
+  },
+];
+
 const HowItWorks = () => {
-  return <section id="how-it-works" className="relative py-10">
+  return (
+    <section id="how-it-works" className="relative py-10">
       {/* Background accents */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
         <div className="absolute -bottom-28 -left-20 h-96 w-96 rounded-full bg-green-500/10 blur-3xl" />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-emerald-50/60 to-transparent" />
       </div>
 
-  const technologies = [{
-    name: "Vacuum Filtration",
-    description: "Advanced filtration removes impurities and solid particles"
-  }, {
-    name: "Degumming & Neutralization",
-    description: "Chemical process to remove phospholipids and free fatty acids"
-  }, {
-    name: "Transesterification",
-    description: "Converting triglycerides into biodiesel and glycerol"
-  }, {
-    name: "Quality Testing",
-    description: "Comprehensive lab testing to meet BIS and international standards"
-  }];
-
-  const techAccents = [
-    { border: "border-teal-500", text: "text-teal-700" },
-    { border: "border-emerald-500", text: "text-emerald-700" },
-    { border: "border-sky-500", text: "text-sky-700" },
-    { border: "border-cyan-500", text: "text-cyan-700" },
-  ];
-
-  return <div className="min-h-screen bg-teal-200">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              How It{" "}
-              <span className="bg-gradient-eco bg-clip-text text-transparent">
-                Works
-              </span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              From your kitchen to clean fuel - discover our simple, transparent, and impactful process 
-              that transforms waste cooking oil into renewable biodiesel.
-            </p>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-14 animate-fade-in">
+          <Badge variant="secondary" className="px-3 py-1 text-sm bg-lime-100">
+            Simple • Transparent • Impactful
+          </Badge>
+          <h2 className="mt-4 text-4xl lg:text-5xl font-extrabold leading-tight">
+            How It{" "}
+            <span className="bg-gradient-to-r from-green-700 to-emerald-400 bg-clip-text text-transparent">
+              Works
+            </span>
+          </h2>
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+            A clean, compliant way to handle your used cooking oil—end to end.
+          </p>
         </div>
-      </section>
 
-      {/* Process Steps */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Desktop Layout (grid bg teal-100) */}
-          <div className="hidden lg:block">
-            <div className="relative rounded-2xl bg-teal-100 p-6 md:p-8">
-              {/* Connection Line */}
-              <div className="absolute top-24 left-6 right-6 h-0.5 bg-gradient-eco"></div>
-              
-              <div className="grid grid-cols-5 gap-8">
-                {steps.map((step, index) => <div key={index} className="relative animate-fade-in" style={{
-                animationDelay: `${index * 200}ms`
-              }}>
-                    {/* Step Number */}
-                    <div className="relative z-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-6 shadow-eco">
-                      {step.step}
+        {/* Desktop timeline (even heights) */}
+        <div className="hidden lg:block">
+          <div className="relative">
+            {/* Connection line */}
+            <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200" />
+            <div className="grid grid-cols-5 gap-6 items-stretch">
+              {steps.map((s, i) => (
+                <div
+                  key={s.step}
+                  className="relative flex flex-col h-full [animation:fadeIn_.6s_ease_forwards] opacity-0"
+                  style={{ animationDelay: `${i * 120}ms` }}
+                >
+                  {/* Step number */}
+                  <div className="relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-6 shadow-[0_8px_24px_rgba(16,185,129,0.35)] bg-teal-300">
+                    {s.step}
+                  </div>
+
+                  {/* Card (equal height) */}
+                  <Card className="flex flex-col h-full min-h-[240px] p-6 text-center backdrop-blur border border-emerald-100 hover:border-emerald-300/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl bg-teal-200">
+                    <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mx-auto mb-4 shadow-inner">
+                      <s.icon className="h-8 w-8 text-emerald-600" />
                     </div>
-                    
-                    <Card className="p-6 text-center hover:shadow-eco transition-all duration-300 hover:scale-105 bg-eco-surface border-2 hover:border-primary/20">
-                      <div className="w-16 h-16 bg-eco-light rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <step.icon className="h-8 w-8 text-primary" />
-                      </div>
-                      <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-4">{step.description}</p>
-                      
-                      <div className="space-y-2">
-                        {step.details.map((detail, idx) => <div key={idx} className="flex items-center gap-2 text-xs text-muted-foreground">
-                            <CheckCircle className="h-3 w-3 text-eco-success" />
-                            <span>{detail}</span>
-                          </div>)}
-                      </div>
-                    </Card>
-                  </div>)}
-              </div>
+                    <h3 className="text-lg font-semibold mb-2">{s.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {s.description}
+                    </p>
+                    <div className="mt-auto" />
+                  </Card>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Mobile Layout (grid bg teal-100) */}
-          <div className="lg:hidden rounded-2xl bg-teal-100 p-4 sm:p-6 space-y-8">
-            {steps.map((step, index) => <Card key={index} className="p-6 hover:shadow-eco transition-all duration-300 bg-eco-surface border-2 hover:border-primary/20 animate-fade-in" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg shadow-eco">
-                      {step.step}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-eco-light rounded-xl flex items-center justify-center">
-                        <step.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <h3 className="text-lg font-semibold">{step.title}</h3>
-                    </div>
-                    <p className="text-muted-foreground mb-4">{step.description}</p>
-                    <div className="space-y-2">
-                      {step.details.map((detail, idx) => <div key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <CheckCircle className="h-3 w-3 text-eco-success" />
-                          <span>{detail}</span>
-                        </div>)}
-                    </div>
+        {/* Mobile vertical timeline (even spacing) */}
+        <div className="lg:hidden space-y-6">
+          {steps.map((s, i) => (
+            <Card
+              key={s.step}
+              className="p-5 bg-white/90 backdrop-blur border border-emerald-100 rounded-2xl [animation:fadeIn_.5s_ease_forwards] opacity-0"
+              style={{ animationDelay: `${i * 100}ms` }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-11 h-11 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold shadow-[0_6px_20px_rgba(16,185,129,0.35)]">
+                    {s.step}
                   </div>
                 </div>
-              </Card>)}
-          </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center">
+                      <s.icon className="h-5 w-5 text-emerald-600" />
+                    </div>
+                    <h3 className="text-base sm:text-lg font-semibold">{s.title}</h3>
+                  </div>
+                  <p className="text-sm sm:text-base text-muted-foreground">{s.description}</p>
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
-      </section>
 
-      {/* Technology Section (grid bg teal-100) */}
-      <section className="py-20 bg-eco-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Advanced Technology Behind Our Process</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              State-of-the-art equipment and proven methodologies ensure highest quality biodiesel production
-            </p>
+        {/* After pickup (balanced, equal height columns) */}
+        <div className="mt-16 grid md:grid-cols-2 gap-8 items-stretch">
+          <div className="flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-8 animate-fade-in bg-lime-100">
+            <h3 className="text-2xl font-bold mb-4">What Happens After Pickup</h3>
+            <ul className="space-y-3">
+              {[
+                "Sealed containers are transported to authorized recyclers.",
+                "Full traceability with chain-of-custody records.",
+                "Recyclers perform testing & processing per regulations.",
+                "You retain receipts/compliance notes for your records.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
+                  <span className="text-muted-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-auto" />
           </div>
 
-          <div className="rounded-2xl bg-teal-100 p-6 md:p-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              {technologies.map((tech, index) => {
-                const accent = techAccents[index % techAccents.length];
-                return (
-                  <Card
-                    key={index}
-                    className={`p-6 bg-background border-l-4 ${accent.border} hover:shadow-eco transition-all duration-300`}
-                  >
-                    <h3 className={`text-xl font-semibold mb-3 ${accent.text}`}>{tech.name}</h3>
-                    <p className="text-muted-foreground">{tech.description}</p>
-                  </Card>
-                );
-              })}
+          <Card className="flex flex-col h-full p-8 bg-white/90 backdrop-blur border border-emerald-100 rounded-2xl">
+            <h4 className="text-xl font-bold mb-4">Technology & Compliance</h4>
+            <ul className="space-y-3">
+              {technologies.map((t) => (
+                <li key={t.name} className="flex items-start gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
+                  <div>
+                    <div className="font-medium">{t.name}</div>
+                    <div className="text-sm text-muted-foreground">{t.description}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-auto text-xs text-muted-foreground pt-4">
+              *We only collect UCO and hand it over to licensed recyclers.
             </div>
-          </div>
+          </Card>
         </div>
-      </section>
+      </div>
 
-      <Footer />
-      <ScrollToTop />
-    </div>;
+      {/* keyframes if not present */}
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(6px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+    </section>
+  );
 };
 
-export default HowItWorksPage;
+export default HowItWorks;
