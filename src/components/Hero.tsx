@@ -29,9 +29,10 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              Join the green energy movement by recycling your, <strong>used cooking oil</strong> into clean,
-              efficient biodiesel. Together, we can reduce pollution and build a sustainable tomorrow.
-            </p>
+  Join the green energy movement by recycling your,{" "}
+  <strong className="text-[#D4AF37]">used cooking oil</strong> into clean,
+  efficient biodiesel. Together, we can reduce pollution and build a sustainable tomorrow.
+</p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero-outline" size="lg" className="text-white text-lg px-8 py-6 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-xl">
