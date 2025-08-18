@@ -29,7 +29,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              Join the green energy movement by recycling your ,<strong>used cooking oil</strong> into clean,
+              Join the green energy movement by recycling your, <strong>used cooking oil</strong> into clean,
               efficient biodiesel. Together, we can reduce pollution and build a sustainable tomorrow.
             </p>
 
