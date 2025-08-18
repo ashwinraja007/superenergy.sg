@@ -20,7 +20,7 @@ const AboutPreview = () => {
           <div className="relative overflow-hidden rounded-2xl border border-emerald-100 shadow-2xl">
             {/* Put your image at /public/images/about-us.jpg */}
             <img
-              src="/images/about-us.jpg"
+              src="/about-us.png"
               alt="Team collecting sealed used cooking oil containers"
               className="w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[520px] object-cover"
               loading="lazy"
