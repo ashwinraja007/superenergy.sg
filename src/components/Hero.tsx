@@ -88,10 +88,10 @@ const Hero = () => {
             <div className="rounded-xl border border-emerald-100 bg-white/70 backdrop-blur p-5 shadow-sm">
               <div className="flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">3</span>
-                <h3 className="font-semibold">Converted to Biodiesel</h3>
+                <h3 className="font-semibold">Collected for Licensed Recycling</h3>
               </div>
               <p className="mt-2 text-sm text-muted-foreground">
-                Traceable process; compliance certificate issued for your records.
+                 We only collect used cooking oil. Our team picks up sealed containers and hands them over to licensed recyclers; you receive a pickup receipt/compliance note.
               </p>
             </div>
           </div>
