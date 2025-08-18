@@ -13,7 +13,7 @@ const WhyBiodieselSection = () => {
               <img
                 src="/van1.png" // ensure this exists in /public
                 alt="Used cooking oil being repurposed into clean, sustainable fuel"
-                className="w-full h-[210px] sm:h-[310px] lg:h-[420px] object-obtain animate-float"
+                className="w-full h-[210px] sm:h-[310px] lg:h-[420px] object-fill animate-float"
                 loading="lazy"
                 decoding="async"
               />
