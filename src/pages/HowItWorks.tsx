@@ -54,7 +54,6 @@ const HowItWorksPage = () => {
     description: "Comprehensive lab testing to meet BIS and international standards"
   }];
 
-  // Accent colors for the Advanced Technologies cards
   const techAccents = [
     { border: "border-teal-500", text: "text-teal-700" },
     { border: "border-emerald-500", text: "text-emerald-700" },
@@ -86,11 +85,11 @@ const HowItWorksPage = () => {
       {/* Process Steps */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Desktop Layout */}
+          {/* Desktop Layout (grid bg teal-100) */}
           <div className="hidden lg:block">
-            <div className="relative">
+            <div className="relative rounded-2xl bg-teal-100 p-6 md:p-8">
               {/* Connection Line */}
-              <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-eco"></div>
+              <div className="absolute top-24 left-6 right-6 h-0.5 bg-gradient-eco"></div>
               
               <div className="grid grid-cols-5 gap-8">
                 {steps.map((step, index) => <div key={index} className="relative animate-fade-in" style={{
@@ -120,8 +119,8 @@ const HowItWorksPage = () => {
             </div>
           </div>
 
-          {/* Mobile Layout */}
-          <div className="lg:hidden space-y-8">
+          {/* Mobile Layout (grid bg teal-100) */}
+          <div className="lg:hidden rounded-2xl bg-teal-100 p-4 sm:p-6 space-y-8">
             {steps.map((step, index) => <Card key={index} className="p-6 hover:shadow-eco transition-all duration-300 bg-eco-surface border-2 hover:border-primary/20 animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
@@ -152,7 +151,7 @@ const HowItWorksPage = () => {
         </div>
       </section>
 
-      {/* Technology Section */}
+      {/* Technology Section (grid bg teal-100) */}
       <section className="py-20 bg-eco-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -162,24 +161,25 @@ const HowItWorksPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {technologies.map((tech, index) => {
-              const accent = techAccents[index % techAccents.length];
-              return (
-                <Card
-                  key={index}
-                  className={`p-6 bg-background border-l-4 ${accent.border} hover:shadow-eco transition-all duration-300`}
-                >
-                  <h3 className={`text-xl font-semibold mb-3 ${accent.text}`}>{tech.name}</h3>
-                  <p className="text-muted-foreground">{tech.description}</p>
-                </Card>
-              );
-            })}
+          <div className="rounded-2xl bg-teal-100 p-6 md:p-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              {technologies.map((tech, index) => {
+                const accent = techAccents[index % techAccents.length];
+                return (
+                  <Card
+                    key={index}
+                    className={`p-6 bg-background border-l-4 ${accent.border} hover:shadow-eco transition-all duration-300`}
+                  >
+                    <h3 className={`text-xl font-semibold mb-3 ${accent.text}`}>{tech.name}</h3>
+                    <p className="text-muted-foreground">{tech.description}</p>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <Footer />
       <ScrollToTop />
     </div>;
