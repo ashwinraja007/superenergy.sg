@@ -22,7 +22,7 @@ const WhyBiodieselSection = () => {
         <div className="mb-12">
           {/* Place your file at /public/images/biodiesel-hero.jpg */}
           <img
-            src="/images/biodiesel-hero.jpg"
+            src="/van1.png"
             alt="Used cooking oil being repurposed into clean, sustainable fuel"
             className="w-full h-[220px] sm:h-[320px] md:h-[380px] object-cover rounded-2xl border border-emerald-100 shadow-xl"
             loading="lazy"
