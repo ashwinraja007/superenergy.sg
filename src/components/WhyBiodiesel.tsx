@@ -9,11 +9,11 @@ const WhyBiodieselSection = () => {
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* LEFT: Image */}
           <div className="order-1 md:order-none">
-            <div className="relative overflow-hidden rounded-2xl border border-emerald-100 shadow-xl">
+            <div className="relative overflow-hidden rounded-2xl border border-emerald-100 ">
               <img
                 src="/van1.png" // ensure this exists in /public
                 alt="Used cooking oil being repurposed into clean, sustainable fuel"
-                className="w-full h-[240px] sm:h-[340px] lg:h-[420px] object-cover"
+                className="w-full h-[210px] sm:h-[310px] lg:h-[420px] object-cover"
                 loading="lazy"
                 decoding="async"
               />
