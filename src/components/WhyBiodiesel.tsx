@@ -17,7 +17,7 @@ const WhyBiodieselSection = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/10 to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-transparent" />
             </div>
           </div>
 
