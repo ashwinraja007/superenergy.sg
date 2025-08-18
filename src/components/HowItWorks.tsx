@@ -28,7 +28,7 @@ const steps = [{
   step: "05"
 }];
 const HowItWorks = () => {
-  return <section id="how-it-works" className="relative py-5">
+  return <section id="how-it-works" className="relative py-10">
       {/* Background accents */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
