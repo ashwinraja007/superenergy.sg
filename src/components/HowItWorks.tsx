@@ -3,60 +3,18 @@ import { Badge } from "@/components/ui/badge";
 import { Droplets, Smartphone, Truck, ShieldCheck, Receipt } from "lucide-react";
 
 const steps = [
-  {
-    icon: Droplets,
-    title: "Save Your Used Oil",
-    description:
-      "After frying or cooking, let the oil cool and pour it into our provided sealed container.",
-    step: "01",
-  },
-  {
-    icon: Smartphone,
-    title: "Book a Pickup",
-    description:
-      "Use our mobile app, website, or hotline to request a free pickup at your convenience.",
-    step: "02",
-  },
-  {
-    icon: Truck,
-    title: "We Collect It",
-    description:
-      "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.",
-    step: "03",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Handover to Licensed Recycler",
-    description:
-      "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.",
-    step: "04",
-  },
-  {
-    icon: Receipt,
-    title: "Compliance & Impact",
-    description:
-      "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.",
-    step: "05",
-  },
+  { icon: Droplets,  title: "Save Your Used Oil",  description: "After frying or cooking, let the oil cool and pour it into our provided sealed container.", step: "01" },
+  { icon: Smartphone, title: "Book a Pickup",      description: "Use our mobile app, website, or hotline to request a free pickup at your convenience.", step: "02" },
+  { icon: Truck,     title: "We Collect It",       description: "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.", step: "03" },
+  { icon: ShieldCheck, title: "Handover to Licensed Recycler", description: "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.", step: "04" },
+  { icon: Receipt,   title: "Compliance & Impact", description: "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.", step: "05" },
 ];
 
 const technologies = [
-  {
-    name: "Vacuum Filtration",
-    description: "Advanced filtration removes impurities and solid particles.",
-  },
-  {
-    name: "Degumming & Neutralization",
-    description: "Removes phosphatides/free fatty acids for stable downstream processing.",
-  },
-  {
-    name: "Esterification / Transesterification",
-    description: "Chemical conversion performed by licensed recyclers (we only collect UCO).",
-  },
-  {
-    name: "Lab Testing (BIS/Compliance)",
-    description: "Quality checks and documentation retained for your records.",
-  },
+  { name: "Vacuum Filtration",            description: "Advanced filtration removes impurities and solid particles." },
+  { name: "Degumming & Neutralization",   description: "Removes phosphatides and free fatty acids for stable downstream processing." },
+  { name: "Esterification / Transesterification", description: "Performed by licensed recyclers (we only collect UCO)." },
+  { name: "Lab Testing (BIS/Compliance)", description: "Quality checks and documentation retained for your records." },
 ];
 
 const HowItWorks = () => {
@@ -86,9 +44,10 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        {/* Desktop timeline */}
+        {/* Desktop timeline (even heights) */}
         <div className="hidden lg:block">
           <div className="relative">
+            {/* Connection line */}
             <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200" />
             <div className="grid grid-cols-5 gap-6 items-stretch">
               {steps.map((s, i) => (
@@ -97,10 +56,12 @@ const HowItWorks = () => {
                   className="relative flex flex-col h-full [animation:fadeIn_.6s_ease_forwards] opacity-0"
                   style={{ animationDelay: `${i * 120}ms` }}
                 >
+                  {/* Step number */}
                   <div className="relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-6 shadow-[0_8px_24px_rgba(16,185,129,0.35)] bg-teal-300">
                     {s.step}
                   </div>
 
+                  {/* Card */}
                   <Card className="flex flex-col h-full min-h-[240px] p-6 text-center backdrop-blur border border-emerald-100 hover:border-emerald-300/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl bg-teal-200">
                     <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mx-auto mb-4 shadow-inner">
                       <s.icon className="h-8 w-8 text-emerald-600" />
@@ -115,7 +76,7 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        {/* Mobile timeline */}
+        {/* Mobile vertical timeline */}
         <div className="lg:hidden space-y-6">
           {steps.map((s, i) => (
             <Card
@@ -143,7 +104,7 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        {/* Technologies / After pickup */}
+        {/* After pickup + Technology */}
         <div className="mt-16 grid md:grid-cols-2 gap-8 items-stretch">
           <div className="flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-8 animate-fade-in bg-lime-100">
             <h3 className="text-2xl font-bold mb-4">What Happens After Pickup</h3>
@@ -183,10 +144,11 @@ const HowItWorks = () => {
         </div>
       </div>
 
+      {/* keyframes if not present */}
       <style>{`
-        @keyframes fadeIn { 
-          from { opacity: 0; transform: translateY(6px); } 
-          to { opacity: 1; transform: translateY(0); } 
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(6px); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </section>
