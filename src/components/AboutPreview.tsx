@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2, ShieldCheck, Leaf, Receipt } from "lucide-react";
 import { Link } from "react-router-dom";
 const AboutPreview = () => {
-  return <section id="about-preview" className="relative py-20">
+  return <section id="about-preview" className="relative py-5">
       {/* subtle background accents */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
@@ -39,7 +39,7 @@ const AboutPreview = () => {
 
         {/* RIGHT: CONTENT */}
         <div className="space-y-6">
-          <Badge variant="secondary" className="px-3 py-1 text-sm">
+          <Badge variant="secondary" className="px-3 py-1 text-sm bg-lime-100">
             About Us
           </Badge>
 

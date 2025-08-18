@@ -39,7 +39,7 @@ const HowItWorks = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14 animate-fade-in">
-          <Badge variant="secondary" className="px-3 py-1 text-sm">
+          <Badge variant="secondary" className="px-3 py-1 text-sm bg-lime-100">
             Simple • Transparent • Impactful
           </Badge>
           <h2 className="mt-4 text-4xl lg:text-5xl font-extrabold leading-tight">

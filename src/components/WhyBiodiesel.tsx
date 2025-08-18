@@ -36,7 +36,7 @@ const WhyBiodiesel = () => <section id="why-biodiesel" className="py-20 bg-eco-s
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Header */}
       <div className="text-center mb-16 animate-fade-in">
-        <Badge variant="secondary" className="mb-4 px-4 py-2 text-base">
+        <Badge variant="secondary" className="mb-4 px-4 py-2 text-base bg-lime-100">
           🌿 Environmental Impact
         </Badge>
         <h2 className="text-4xl lg:text-5xl font-bold mb-6">
