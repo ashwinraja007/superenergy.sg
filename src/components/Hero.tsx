@@ -12,16 +12,16 @@ const Hero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      // Mobile tweaks only; desktop (lg+) unchanged
+      // Mobile: subtract header height; Desktop (lg+) unchanged
       className="relative overflow-hidden bg-gray-50 
-                 min-h-[calc(100svh-6rem)] lg:min-h-screen 
-                 pt-24 lg:pt-0 pb-10"
+                 min-h-[calc(100svh-64px)] lg:min-h-screen 
+                 lg:flex lg:items-center pt-20 sm:pt-24 lg:pt-0 pb-10"
     >
       {/* Main Grid */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 items-center gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-2 items-center gap-12">
           {/* Left: Text */}
-          <div className="space-y-6 sm:space-y-8 animate-fade-in text-center lg:text-left max-w-xl mx-auto lg:max-w-none lg:mx-0">
+          <div className="space-y-8 animate-fade-in text-center lg:text-left">
             <Badge
               variant="secondary"
               className="px-4 py-2 text-base font-medium bg-orange-100 inline-block"
@@ -59,7 +59,7 @@ const Hero = () => {
             </div>
 
             {/* Trust badges */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 pt-2 sm:pt-4 justify-items-center lg:justify-items-start">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 justify-items-center lg:justify-items-start">
               {["FSSAI Approved", "Carbon Offset", "100% Eco-Friendly", "Free Pickup"].map(
                 (text) => (
                   <div
@@ -75,13 +75,13 @@ const Hero = () => {
           </div>
 
           {/* Right: Van + CTA */}
-          <div className="relative flex flex-col items-center justify-center animate-fade-in mt-8 lg:mt-0">
+          <div className="relative flex flex-col items-center justify-center animate-fade-in mt-10 lg:mt-0">
             <img
               src="/van.png" // place van.png in /public
               alt="Super Energy Van"
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[520px] object-contain animate-float"
+              className="w-64 sm:w-80 md:w-96 lg:w-[520px] max-w-full object-contain animate-float"
             />
-            <div className="mt-6 animate-bounce w-full max-w-xs sm:max-w-none sm:w-auto">
+            <div className="mt-6 animate-bounce w-full sm:w-auto">
               <Button className="w-full sm:w-auto text-white px-10 py-5 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
                 Schedule Free Pickup
               </Button>
@@ -89,10 +89,10 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* ===== Bottom strip (inside hero) ===== */}
-        <div className="mt-10 sm:mt-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 max-w-3xl lg:max-w-none mx-auto">
-            <div className="rounded-xl border border-emerald-100 backdrop-blur p-4 sm:p-5 shadow-sm bg-emerald-100 text-center md:text-left">
+        {/* ===== Bottom strip ===== */}
+        <div className="mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="rounded-xl border border-emerald-100 backdrop-blur p-5 shadow-sm bg-emerald-100 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">
                   1
@@ -104,7 +104,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-emerald-100 backdrop-blur p-4 sm:p-5 shadow-sm bg-emerald-100 text-center md:text-left">
+            <div className="rounded-xl border border-emerald-100 backdrop-blur p-5 shadow-sm bg-emerald-100 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">
                   2
@@ -116,7 +116,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-emerald-100 backdrop-blur p-4 sm:p-5 shadow-sm bg-emerald-100 text-center md:text-left">
+            <div className="rounded-xl border border-emerald-100 backdrop-blur p-5 shadow-sm bg-emerald-100 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">
                   3
