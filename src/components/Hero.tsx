@@ -12,10 +12,11 @@ const Hero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      // Mobile: subtract header height; Desktop (lg+) unchanged
-      className="relative overflow-hidden bg-gray-50 
-                 min-h-[calc(100svh-64px)] lg:min-h-screen 
-                 lg:flex lg:items-center pt-20 sm:pt-24 lg:pt-0 pb-10"
+      // Mobile: subtract header height + safe area; Desktop (lg+) unchanged
+      className="relative overflow-hidden bg-gray-50
+                 min-h-[calc(100svh-var(--header-h))] lg:min-h-screen
+                 pt-[calc(env(safe-area-inset-top)+var(--header-h))] lg:pt-0
+                 pb-10"
     >
       {/* Main Grid */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
