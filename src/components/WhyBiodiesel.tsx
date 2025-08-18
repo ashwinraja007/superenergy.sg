@@ -61,30 +61,11 @@ const WhyBiodiesel = () => <section id="why-biodiesel" className="py-20 bg-eco-s
       </div>
 
       {/* Benefits Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {benefits.map((b, idx) => <Card key={idx} className="relative overflow-hidden h-80 rounded-xl group animate-fade-in flex flex-col justify-between">
-            {b.img ? <div className="absolute inset-0 bg-cover bg-center opacity-80" style={{
-          backgroundImage: `url(${b.img})`
-        }} aria-hidden="true" /> : <div className="absolute inset-0 bg-eco-light" aria-hidden="true" />}
-            <div className="relative z-10 flex flex-col h-full p-6 justify-center text-white">
-              
-            </div>
-            <div className="relative z-10 bg-black/30 p-4 text-center">
-              <h3 className="text-lg font-semibold text-white">{b.title}</h3>
-            </div>
-          </Card>)}
-      </div>
+      
 
       {/* National Contribution */}
       <div className="mt-16 animate-fade-in">
-        <Card className="p-8 bg-gradient-soft border-2 border-eco-light rounded-xl shadow-inner">
-          <h3 className="text-2xl font-bold mb-4 text-eco-dark text-center">
-            Our Contribution to the Nation
-          </h3>
-          <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto">
-            Super Energy supports India’s National Biodiesel Mission, helping meet biofuel blending targets and Sustainable Development Goals.
-          </p>
-        </Card>
+        
       </div>
     </div>
   </section>;

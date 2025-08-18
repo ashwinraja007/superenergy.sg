@@ -28,7 +28,7 @@ const steps = [{
   step: "05"
 }];
 const HowItWorks = () => {
-  return <section id="how-it-works" className="relative py-20">
+  return <section id="how-it-works" className="relative py-5">
       {/* Background accents */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
@@ -112,7 +112,7 @@ const HowItWorks = () => {
 
         {/* After pickup (balanced, equal height columns) */}
         <div className="mt-16 grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="flex flex-col h-full rounded-2xl border border-emerald-200/60 bg-white/85 backdrop-blur p-8 animate-fade-in">
+          <div className="flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-8 animate-fade-in bg-lime-100">
             <h3 className="text-2xl font-bold mb-4">What Happens After Pickup</h3>
             <ul className="space-y-3">
               {["Sealed containers are transported to authorized recyclers.", "Full traceability with chain-of-custody records.", "Recyclers perform testing & processing per regulations.", "You retain receipts/compliance notes for your records."].map(item => <li key={item} className="flex items-start gap-3">
