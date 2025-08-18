@@ -7,38 +7,40 @@ import ScrollToTop from '../components/ScrollToTop';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const HowItWorksPage = () => {
-  const steps = [{
-    icon: Droplets,
-    title: "Save Your Used Oil",
-    description: "After frying or cooking, let the oil cool and pour it into our provided sealed container. We provide collection containers for households and businesses.",
-    step: "01",
-    details: ["Let oil cool completely before storage", "Use provided containers or clean bottles", "Store in a cool, dry place", "Minimum collection: 1 liter for households"]
-  }, {
-    icon: Smartphone,
-    title: "Book a Pickup",
-    description: "Use our mobile app, website, or hotline to request a free pickup at your convenience. Schedule flexible timing that works for you.",
-    step: "02",
-    details: ["24/7 online booking system", "Flexible pickup scheduling", "SMS and email confirmations", "Real-time tracking updates"]
-  }, {
-    icon: Truck,
-    title: "We Collect It",
-    description: "Our trained team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely using proper handling procedures.",
-    step: "03",
-    details: ["Professional collection team", "Proper weighing and documentation", "Safe handling procedures", "Immediate receipt generation"]
-  }, {
-    icon: Cog,
-    title: "Quality Processing",
-    description: "At our licensed facility, the oil is filtered and processed into biodiesel using industry-standard techniques and quality controls.",
-    step: "04",
-    details: ["Advanced filtration systems", "Multi-stage purification process", "Quality testing at each stage", "BIS standard compliance"]
-  }, {
-    icon: Fuel,
-    title: "Clean Fuel Impact",
-    description: "The biodiesel powers vehicles, generators, and industrial equipment, reducing dependence on imported crude oil and environmental impact.",
-    step: "05",
-    details: ["Direct supply to transport companies", "Industrial equipment fueling", "Reduced carbon emissions", "Support for renewable energy goals"]
-  }];
+const steps = [{
+  icon: Droplets,
+  title: "Save Your Used Oil",
+  description: "After frying or cooking, let the oil cool and pour it into our provided sealed container.",
+  step: "01"
+}, {
+  icon: Smartphone,
+  title: "Book a Pickup",
+  description: "Use our mobile app, website, or hotline to request a free pickup at your convenience.",
+  step: "02"
+}, {
+  icon: Truck,
+  title: "We Collect It",
+  description: "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.",
+  step: "03"
+}, {
+  icon: ShieldCheck,
+  title: "Handover to Licensed Recycler",
+  description: "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.",
+  step: "04"
+}, {
+  icon: Receipt,
+  title: "Compliance & Impact",
+  description: "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.",
+  step: "05"
+}];
+const HowItWorks = () => {
+  return <section id="how-it-works" className="relative py-10">
+      {/* Background accents */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
+        <div className="absolute -bottom-28 -left-20 h-96 w-96 rounded-full bg-green-500/10 blur-3xl" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-emerald-50/60 to-transparent" />
+      </div>
 
   const technologies = [{
     name: "Vacuum Filtration",
