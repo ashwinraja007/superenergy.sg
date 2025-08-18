@@ -1,12 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Droplets,
-  Smartphone,
-  Truck,
-  ShieldCheck,
-  Receipt,
-} from "lucide-react";
+import { Droplets, Smartphone, Truck, ShieldCheck, Receipt } from "lucide-react";
 
 const steps = [
   {
@@ -49,7 +43,7 @@ const steps = [
 const HowItWorks = () => {
   return (
     <section id="how-it-works" className="relative py-20">
-      {/* background accents */}
+      {/* Background accents */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
         <div className="absolute -bottom-28 -left-20 h-96 w-96 rounded-full bg-green-500/10 blur-3xl" />
@@ -57,7 +51,7 @@ const HowItWorks = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* header */}
+        {/* Header */}
         <div className="text-center mb-14 animate-fade-in">
           <Badge variant="secondary" className="px-3 py-1 text-sm">
             Simple • Transparent • Impactful
@@ -73,26 +67,25 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        {/* desktop timeline */}
+        {/* Desktop timeline (even heights) */}
         <div className="hidden lg:block">
           <div className="relative">
-            {/* connection line */}
+            {/* Connection line */}
             <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200" />
-
-            <div className="grid grid-cols-5 gap-6">
+            <div className="grid grid-cols-5 gap-6 items-stretch">
               {steps.map((s, i) => (
                 <div
                   key={s.step}
-                  className="relative [animation:fadeIn_.6s_ease_forwards] opacity-0"
+                  className="relative flex flex-col h-full [animation:fadeIn_.6s_ease_forwards] opacity-0"
                   style={{ animationDelay: `${i * 120}ms` }}
                 >
-                  {/* step number */}
+                  {/* Step number */}
                   <div className="relative z-10 w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-6 shadow-[0_8px_24px_rgba(16,185,129,0.35)]">
                     {s.step}
                   </div>
 
-                  {/* card */}
-                  <Card className="p-6 text-center bg-white/80 backdrop-blur border border-emerald-100 hover:border-emerald-300/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl">
+                  {/* Card (equal height) */}
+                  <Card className="flex flex-col h-full min-h-[240px] p-6 text-center bg-white/85 backdrop-blur border border-emerald-100 hover:border-emerald-300/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 rounded-2xl">
                     <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mx-auto mb-4 shadow-inner">
                       <s.icon className="h-8 w-8 text-emerald-600" />
                     </div>
@@ -100,6 +93,8 @@ const HowItWorks = () => {
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {s.description}
                     </p>
+                    {/* spacer keeps bottoms aligned if copy wraps */}
+                    <div className="mt-auto" />
                   </Card>
                 </div>
               ))}
@@ -107,12 +102,12 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        {/* mobile vertical timeline */}
+        {/* Mobile vertical timeline (even spacing) */}
         <div className="lg:hidden space-y-6">
           {steps.map((s, i) => (
             <Card
               key={s.step}
-              className="p-5 bg-white/85 backdrop-blur border border-emerald-100 rounded-2xl [animation:fadeIn_.5s_ease_forwards] opacity-0"
+              className="p-5 bg-white/90 backdrop-blur border border-emerald-100 rounded-2xl [animation:fadeIn_.5s_ease_forwards] opacity-0"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <div className="flex items-start gap-4">
@@ -137,9 +132,9 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        {/* what happens after pickup */}
+        {/* After pickup (balanced, equal height columns) */}
         <div className="mt-16 grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="rounded-2xl border border-emerald-200/60 bg-white/80 backdrop-blur p-8 animate-fade-in">
+          <div className="flex flex-col h-full rounded-2xl border border-emerald-200/60 bg-white/85 backdrop-blur p-8 animate-fade-in">
             <h3 className="text-2xl font-bold mb-4">What Happens After Pickup</h3>
             <ul className="space-y-3">
               {[
@@ -154,9 +149,10 @@ const HowItWorks = () => {
                 </li>
               ))}
             </ul>
+            <div className="mt-auto" />
           </div>
 
-          <Card className="p-8 bg-gradient-to-br from-emerald-600 to-emerald-500 text-white border-0 shadow-xl rounded-2xl">
+          <Card className="flex flex-col h-full p-8 bg-gradient-to-br from-emerald-600 to-emerald-500 text-white border-0 shadow-xl rounded-2xl">
             <h4 className="text-xl font-bold mb-3">Environmental Benefits</h4>
             <ul className="space-y-3">
               {[
@@ -170,14 +166,14 @@ const HowItWorks = () => {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 text-sm text-emerald-50/90">
+            <div className="mt-auto text-sm text-emerald-50/90">
               *We only collect used cooking oil and hand it over to licensed recyclers.
             </div>
           </Card>
         </div>
       </div>
 
-      {/* tiny CSS keyframes for fadeIn if not already present */}
+      {/* tiny CSS keyframes if not present */}
       <style>{`
         @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
       `}</style>
