@@ -78,7 +78,7 @@ const AboutPage = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20">
+      <section className="relative pt-31 pb-10">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-emerald-50 via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Badge variant="secondary" className="mb-4 px-4 py-2">🌟 About Super Energy</Badge>
@@ -98,7 +98,7 @@ const AboutPage = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20">
+      <section className="py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Mission */}
@@ -151,7 +151,7 @@ const AboutPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all duration-300 group rounded-2xl">
+            {values.map((value, index) => <Card key={index} className="p-6 text-center border hover:shadow-lg transition-all duration-300 group rounded-2xl bg-teal-100">
                 <div className="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 group-hover:rotate-3 transition-transform">
                   <value.icon className="h-8 w-8 text-emerald-600" />
                 </div>
@@ -163,7 +163,7 @@ const AboutPage = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-10 bg-slate-200">
+      <section className="py-10 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold mb-3 tracking-tight">Our Journey</h2>
@@ -221,7 +221,7 @@ const AboutPage = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 bg-slate-200">
+      <section className="py-20 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold mb-3 tracking-tight">Certifications & Compliance</h2>
