@@ -15,63 +15,55 @@ import ScrollToTop from "../components/ScrollToTop";
 // ---
 
 const SustainabilityPage = () => {
-  const impacts = [
-    {
-      icon: Globe,
-      label: "CO₂ Offset",
-      value: "2,200+ t",
-      blurb: "78% fewer GHG vs. fossil diesel",
-      color: "text-emerald-600",
-    },
-    {
-      icon: Recycle,
-      label: "Oil Recycled",
-      value: "175,000+ L",
-      blurb: "Diverted from drains & landfills",
-      color: "text-primary",
-    },
-    {
-      icon: Droplets,
-      label: "Water-Safe",
-      value: "100%",
-      blurb: "Zero liquid discharge facility",
-      color: "text-cyan-600",
-    },
-    {
-      icon: Leaf,
-      label: "Closed-Loop Fleet",
-      value: "B20",
-      blurb: "All vehicles on biodiesel",
-      color: "text-green-600",
-    },
-  ];
-
-  const initiatives = [
-    {
-      icon: Zap,
-      title: "Zero Waste Ops",
-      points: ["ZLD processing", "By‑product recycling", "Digital paperwork"],
-    },
-    {
-      icon: Leaf,
-      title: "Greener Logistics",
-      points: ["B20 across fleet", "Smart routing", "EV pilot"],
-    },
-    {
-      icon: Award,
-      title: "Community",
-      points: ["School programs", "Biz workshops", "Recycling drives"],
-    },
-  ];
-
-  const certifications = [
-    { name: "ISO 14001", note: "Environmental Management" },
-    { name: "Carbon Trust", note: "Measured & reduced emissions" },
-    { name: "Green Finance", note: "SG framework compliant" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background relative">
+  const impacts = [{
+    icon: Globe,
+    label: "CO₂ Offset",
+    value: "2,200+ t",
+    blurb: "78% fewer GHG vs. fossil diesel",
+    color: "text-emerald-600"
+  }, {
+    icon: Recycle,
+    label: "Oil Recycled",
+    value: "175,000+ L",
+    blurb: "Diverted from drains & landfills",
+    color: "text-primary"
+  }, {
+    icon: Droplets,
+    label: "Water-Safe",
+    value: "100%",
+    blurb: "Zero liquid discharge facility",
+    color: "text-cyan-600"
+  }, {
+    icon: Leaf,
+    label: "Closed-Loop Fleet",
+    value: "B20",
+    blurb: "All vehicles on biodiesel",
+    color: "text-green-600"
+  }];
+  const initiatives = [{
+    icon: Zap,
+    title: "Zero Waste Ops",
+    points: ["ZLD processing", "By‑product recycling", "Digital paperwork"]
+  }, {
+    icon: Leaf,
+    title: "Greener Logistics",
+    points: ["B20 across fleet", "Smart routing", "EV pilot"]
+  }, {
+    icon: Award,
+    title: "Community",
+    points: ["School programs", "Biz workshops", "Recycling drives"]
+  }];
+  const certifications = [{
+    name: "ISO 14001",
+    note: "Environmental Management"
+  }, {
+    name: "Carbon Trust",
+    note: "Measured & reduced emissions"
+  }, {
+    name: "Green Finance",
+    note: "SG framework compliant"
+  }];
+  return <div className="min-h-screen bg-background relative">
       {/* Soft background accents */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
@@ -91,14 +83,7 @@ const SustainabilityPage = () => {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             We turn used cooking oil into clean fuel—cutting emissions, protecting water, and closing the loop for businesses.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Button size="lg" asChild>
-              <Link to="/contact">Partner With Us</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link to="/services">See How It Works</Link>
-            </Button>
-          </div>
+          
         </div>
       </section>
 
@@ -106,8 +91,7 @@ const SustainabilityPage = () => {
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {impacts.map((i, idx) => (
-              <Card key={idx} className="p-6 bg-white border rounded-2xl hover:shadow-lg transition-shadow">
+            {impacts.map((i, idx) => <Card key={idx} className="p-6 border rounded-2xl hover:shadow-lg transition-shadow bg-yellow-100">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 grid place-items-center">
                     <i.icon className={`h-6 w-6 ${i.color}`} />
@@ -116,8 +100,7 @@ const SustainabilityPage = () => {
                 </div>
                 <div className={`text-3xl font-bold ${i.color}`}>{i.value}</div>
                 <p className="mt-1 text-sm text-muted-foreground">{i.blurb}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -131,22 +114,18 @@ const SustainabilityPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {initiatives.map((it, idx) => (
-              <Card key={idx} className="p-6 bg-white border rounded-2xl hover:shadow-lg transition-shadow">
+            {initiatives.map((it, idx) => <Card key={idx} className="p-6 border rounded-2xl hover:shadow-lg transition-shadow bg-green-200">
                 <div className="w-12 h-12 rounded-xl bg-emerald-50 grid place-items-center mb-3">
                   <it.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold">{it.title}</h3>
                 <ul className="mt-3 space-y-2">
-                  {it.points.map((p, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm">
+                  {it.points.map((p, i) => <li key={i} className="flex items-start gap-2 text-sm">
                       <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary inline-block" />
                       <span>{p}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -160,8 +139,7 @@ const SustainabilityPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {certifications.map((c, idx) => (
-              <Card key={idx} className="p-6 bg-white border rounded-2xl hover:shadow-lg transition-shadow">
+            {certifications.map((c, idx) => <Card key={idx} className="p-6 border rounded-2xl hover:shadow-lg transition-shadow bg-cyan-100">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-emerald-50 grid place-items-center">
                     <Award className="h-5 w-5 text-emerald-700" />
@@ -171,8 +149,7 @@ const SustainabilityPage = () => {
                     <div className="text-sm text-muted-foreground">{c.note}</div>
                   </div>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -190,7 +167,7 @@ const SustainabilityPage = () => {
                   <Link to="/contact">Get a Quote</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                  <Link to="/services">Explore Services</Link>
+                  
                 </Button>
               </div>
             </div>
@@ -200,8 +177,6 @@ const SustainabilityPage = () => {
 
       <Footer />
       <ScrollToTop />
-    </div>
-  );
+    </div>;
 };
-
 export default SustainabilityPage;
