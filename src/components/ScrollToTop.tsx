@@ -1,8 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
-
 export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
@@ -20,7 +18,7 @@ export const ScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: 'smooth'
     });
   };
 
@@ -34,20 +32,8 @@ export const ScrollToTop = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
-
-  return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 bg-brand-gold rounded-full shadow-lg hover:bg-amber-500 transition-all duration-300 z-50 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-400"
-          aria-label="Scroll to top"
-        >
-          <ChevronUp className="h-6 w-6 text-brand-navy" />
-        </button>
-      )}
-    </>
-  );
+  return <>
+      {isVisible}
+    </>;
 };
-
 export default ScrollToTop;
