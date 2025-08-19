@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
+import ScrollToTop from '../components/ScrollToTop';
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -48,6 +49,7 @@ const Index = () => {
       </main>
 
       <Footer />
+      <ScrollToTop />
 
       {/* Scroll-to-top button (mirrors HowItWorks styling/behavior) */}
       <button
