@@ -55,7 +55,7 @@ const Hero = () => {
 
           {/* Right: Van + CTA */}
           <div className="relative flex flex-col items-center justify-center animate-fade-in mt-10 lg:mt-0">
-            <img src="/van.png" // place van.png in /public
+            <img src="/van2.png" // place van.png in /public
           alt="Super Energy Van" className="w-64 sm:w-80 md:w-96 lg:w-[520px] max-w-full object-contain animate-float" />
             <div className="mt-6 animate-bounce w-full sm:w-auto">
               <Button className="w-full sm:w-auto text-white px-10 py-5 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
