@@ -58,11 +58,11 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <img src="/lovable-uploads/1f4bd614-0ece-402a-ac57-f1dcf6bd37ff.png" alt="Super Energy" className="h-8 w-auto object-contain" />
+              <img src="/logo1.png" alt="Super Energy" className="h-8 w-auto object-contain" />
             </div>
             
             <p className="text-white/80 mb-6 leading-relaxed">
@@ -99,16 +99,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-            <ul className="space-y-3">
-              {services.map((service, index) => <li key={index}>
-                  <a href={service.href} className="text-white/80 hover:text-white transition-colors text-sm">
-                    {service.label}
-                  </a>
-                </li>)}
-            </ul>
-          </div>
+        
 
           {/* Certifications & Social */}
           <div>
