@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
           <div className="relative animate-scale-in">
             <div className="relative">
               <img
-                src={HERO_IMG}
+                src="/hero-image.jpg"
                 alt="Super Energy - Clean biodiesel from cooking oil"
                 className="w-full h-auto rounded-3xl shadow-eco"
               />
