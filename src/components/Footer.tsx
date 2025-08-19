@@ -6,7 +6,7 @@ const Footer = () => {
   const quickLinks = [{
     label: "How It Works",
     href: "/how-it-works"
-  },  {
+  }, {
     label: "About Us",
     href: "/about"
   }, {
@@ -59,7 +59,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <img src="/logo1.png" alt="Super Energy" className="h-13 w-auto object-contain" />
+              <img src="/logo1.png" alt="Super Energy" className="h-12 w-auto object-contain" />
             </div>
             
             <p className="text-white/80 mb-6 leading-relaxed">
