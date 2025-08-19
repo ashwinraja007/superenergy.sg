@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import ScrollToTop from '../components/ScrollToTop';
+
 import {
   Droplets,
   Smartphone,
@@ -223,6 +225,7 @@ const HowItWorks = () => {
         </section>
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };
