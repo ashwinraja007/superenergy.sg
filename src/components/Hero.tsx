@@ -54,16 +54,39 @@ const Hero = () => {
           </div>
 
           {/* Right: Van + CTA */}
-          <div className="relative flex flex-col items-center justify-center animate-fade-in mt-10 lg:mt-0">
-            <img src="/van2.png" // place van.png in /public
-          alt="Super Energy Van" className="w-64 sm:w-80 md:w-96 lg:w-[520px] max-w-full object-contain animate-float" />
-            <div className="mt-6 animate-bounce w-full sm:w-auto">
-              <Button className="w-full sm:w-auto text-white px-10 py-5 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg shadow-xl">
-                Schedule Free Pickup
-              </Button>
+          <div className="relative animate-scale-in">
+            <div className="relative">
+              <img 
+                src={heroImage} 
+                alt="Super Energy - Clean biodiesel from cooking oil"
+                className="w-full h-auto rounded-3xl shadow-eco"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
             </div>
-          </div>
-        </div>
+            
+            {/* Floating Stats */}
+            <div className="absolute -bottom-8 -left-8 bg-background rounded-2xl p-6 shadow-soft border animate-float border-eco-light/20">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-eco-light rounded-full flex items-center justify-center">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-primary">3,500+</div>
+                  <div className="text-sm text-muted-foreground">Businesses Served</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="absolute -top-8 -right-8 bg-background rounded-2xl p-6 shadow-soft border animate-float border-eco-light/20" style={{animationDelay: '500ms'}}>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-eco-success/20 rounded-full flex items-center justify-center">
+                  <Building className="h-6 w-6 text-eco-success" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-eco-success">1,75,000+</div>
+                  <div className="text-sm text-muted-foreground">Litres Collected</div>
+                </div>
+              </div>
 
         {/* ===== Added: Bottom strip only (inside hero) ===== */}
         <div className="mt-12">
