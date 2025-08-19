@@ -6,6 +6,7 @@ import { Leaf, Recycle, Globe, Zap, TreePine, Droplets, Award, TrendingUp } from
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from '../components/ScrollToTop';
 
 const SustainabilityPage = () => {
   const impacts = [
@@ -335,6 +336,7 @@ const SustainabilityPage = () => {
       </section>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
