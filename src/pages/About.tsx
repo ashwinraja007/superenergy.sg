@@ -128,7 +128,7 @@ const AboutPage = () => {
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 To be Southeast Asia's leading sustainable fuel solutions provider, setting the standard for environmental responsibility and innovation in the circular economy.
               </p>
-              <div className="bg-white rounded-xl p-6 border shadow-xs">
+              <div className="rounded-xl p-6 border shadow-xs bg-amber-100">
                 <h3 className="text-xl font-semibold mb-3 text-primary">2030 Goals</h3>
                 <ul className="space-y-2 text-sm">
                   <li>• 1 million litres of biodiesel production annually</li>
