@@ -9,7 +9,7 @@ const Hero = () => {
   }}
   // Mobile: block layout + extra top padding for fixed header
   // Desktop (lg+): same flex centering as before
-  className="relative min-h-screen overflow-hidden lg:flex lg:items-center pt-24 lg:pt-0 pb-10 bg-slate-50">
+  className="relative min-h-screen overflow-hidden lg:flex lg:items-center pt-14 lg:pt-0 pb-10 bg-slate-50">
       {/* Main Grid */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 items-center gap-12">
