@@ -6,16 +6,9 @@ import { Link } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-};
-
-const stagger = {
-  show: { transition: { staggerChildren: 0.08 } },
-};
+// CSS-only version (no framer-motion). Uses subtle transitions & hover effects.
+// Safe to deploy on Vercel without adding new dependencies.
 
 const AboutPage = () => {
   const values = [
@@ -119,27 +112,23 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-emerald-50 via-transparent to-transparent" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="text-center mb-16">
-            <motion.div variants={fadeUp}>
-              <Badge variant="secondary" className="mb-4 px-4 py-2">🌟 About Super Energy</Badge>
-            </motion.div>
-            <motion.h1 variants={fadeUp} className="text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-              Transforming{" "}
-              <span className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">
-                Singapore's
-              </span>
-              <br />Energy Future
-            </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              We're pioneering the circular economy in Singapore by converting waste cooking oil into clean, renewable biodiesel,
-              creating a sustainable future for generations to come.
-            </motion.p>
-            <motion.div variants={fadeUp} className="mt-8 flex items-center justify-center gap-3">
-              <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              <p className="text-sm text-muted-foreground">ISO-aligned • Traceable collection • Real-time reporting</p>
-            </motion.div>
-          </motion.div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Badge variant="secondary" className="mb-4 px-4 py-2">🌟 About Super Energy</Badge>
+          <h1 className="text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+            Transforming{" "}
+            <span className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">
+              Singapore's
+            </span>
+            <br />Energy Future
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            We're pioneering the circular economy in Singapore by converting waste cooking oil into clean, renewable biodiesel,
+            creating a sustainable future for generations to come.
+          </p>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+            <p className="text-sm text-muted-foreground">ISO-aligned • Traceable collection • Real-time reporting</p>
+          </div>
         </div>
       </section>
 
@@ -148,7 +137,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Mission */}
-            <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="rounded-2xl p-8 bg-white/70 backdrop-blur border shadow-sm">
+            <div className="rounded-2xl p-8 bg-white/70 backdrop-blur border shadow-sm transition-shadow hover:shadow-lg">
               <div className="w-14 h-14 rounded-xl bg-emerald-100 flex items-center justify-center mb-6">
                 <Target className="h-7 w-7 text-emerald-600" />
               </div>
@@ -165,10 +154,10 @@ const AboutPage = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
             {/* Vision */}
-            <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="rounded-2xl p-8 bg-gradient-to-b from-emerald-50 to-white border shadow-sm">
+            <div className="rounded-2xl p-8 bg-gradient-to-b from-emerald-50 to-white border shadow-sm">
               <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center mb-6">
                 <Globe className="h-7 w-7 text-primary" />
               </div>
@@ -185,7 +174,7 @@ const AboutPage = () => {
                   <li>• Power 10,000+ vehicles with clean fuel</li>
                 </ul>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -198,19 +187,17 @@ const AboutPage = () => {
             <p className="text-lg text-muted-foreground">The principles that guide everything we do</p>
           </div>
 
-          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <motion.div variants={fadeUp} key={index}>
-                <Card className="p-6 text-center bg-white border hover:shadow-lg transition-all duration-300 group rounded-2xl">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 group-hover:rotate-3 transition-transform">
-                    <value.icon className="h-8 w-8 text-emerald-600" />
-                  </div>
-                  <h3 className="text-base font-semibold mb-2">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
-                </Card>
-              </motion.div>
+              <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all duration-300 group rounded-2xl">
+                <div className="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 group-hover:rotate-3 transition-transform">
+                  <value.icon className="h-8 w-8 text-emerald-600" />
+                </div>
+                <h3 className="text-base font-semibold mb-2">{value.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+              </Card>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -226,12 +213,8 @@ const AboutPage = () => {
             <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-transparent via-emerald-200 to-transparent" />
             <div className="space-y-12">
               {milestones.map((m, i) => (
-                <motion.div
+                <div
                   key={i}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.3 }}
                   className={`relative flex flex-col md:flex-row items-center ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}
                 >
                   <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pl-10" : "md:pr-10"} w-full`}>
@@ -250,7 +233,7 @@ const AboutPage = () => {
                       <div className="absolute inset-0 animate-ping rounded-full bg-primary/20" />
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -265,23 +248,21 @@ const AboutPage = () => {
             <p className="text-lg text-muted-foreground">Experienced professionals driving our mission forward</p>
           </div>
 
-          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
-              <motion.div variants={fadeUp} key={index}>
-                <Card className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
-                  <div className="relative w-24 h-24 mx-auto mb-4">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-emerald-400 to-primary blur" />
-                    <div className="relative w-24 h-24 rounded-full bg-white grid place-items-center border">
-                      <Users className="h-10 w-10 text-primary" />
-                    </div>
+              <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
+                <div className="relative w-24 h-24 mx-auto mb-4">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-emerald-400 to-primary blur" />
+                  <div className="relative w-24 h-24 rounded-full bg-white grid place-items-center border">
+                    <Users className="h-10 w-10 text-primary" />
                   </div>
-                  <h3 className="text-base font-semibold">{member.name}</h3>
-                  <p className="text-primary text-sm font-medium mb-2">{member.position}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
-                </Card>
-              </motion.div>
+                </div>
+                <h3 className="text-base font-semibold">{member.name}</h3>
+                <p className="text-primary text-sm font-medium mb-2">{member.position}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+              </Card>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -293,18 +274,16 @@ const AboutPage = () => {
             <p className="text-lg text-muted-foreground">Maintaining the highest standards of quality and environmental responsibility</p>
           </div>
 
-          <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <motion.div variants={fadeUp} key={index}>
-                <Card className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mx-auto mb-3">
-                    <Award className="h-6 w-6 text-emerald-700" />
-                  </div>
-                  <p className="font-medium text-sm md:text-base">{cert}</p>
-                </Card>
-              </motion.div>
+              <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mx-auto mb-3">
+                  <Award className="h-6 w-6 text-emerald-700" />
+                </div>
+                <p className="font-medium text-sm md:text-base">{cert}</p>
+              </Card>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -315,7 +294,7 @@ const AboutPage = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.15),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.12),transparent_40%)]" />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Mission</h2>
-              <p className="text-lg md:text-xl mb-8/90 opacity-90">
+              <p className="text-lg md:text-xl mb-8 opacity-90">
                 Be part of Singapore's sustainable energy transformation. Together, we can create a cleaner, greener future.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
