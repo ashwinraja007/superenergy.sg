@@ -163,7 +163,7 @@ const AboutPage = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-20">
+      <section className="py-10 bg-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold mb-3 tracking-tight">Our Journey</h2>
@@ -221,7 +221,7 @@ const AboutPage = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold mb-3 tracking-tight">Certifications & Compliance</h2>
