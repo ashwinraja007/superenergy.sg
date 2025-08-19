@@ -59,7 +59,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <img src="/logo1.png" alt="Super Energy" className="max-h-15 w-auto object-contain shadow-eco" />
+              <img src="/logo1.png" alt="Super Energy" className="max-h-12 w-auto object-contain shadow-eco" />
             </div>
             
             <p className="text-white/80 mb-6 leading-relaxed">
