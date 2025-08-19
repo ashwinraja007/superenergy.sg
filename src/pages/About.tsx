@@ -11,95 +11,63 @@ import Footer from "@/components/Footer";
 // Safe to deploy on Vercel without adding new dependencies.
 
 const AboutPage = () => {
-  const values = [
-    {
-      icon: Leaf,
-      title: "Environmental Responsibility",
-      description:
-        "Committed to reducing environmental impact through sustainable practices and innovative recycling solutions.",
-    },
-    {
-      icon: Heart,
-      title: "Community First",
-      description:
-        "Building strong relationships with our community partners and creating positive local impact.",
-    },
-    {
-      icon: CheckCircle,
-      title: "Transparency & Trust",
-      description:
-        "Operating with complete transparency in our processes, pricing, and environmental impact reporting.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation & Excellence",
-      description:
-        "Continuously improving our technology and processes to deliver the highest quality biodiesel.",
-    },
-  ];
-
-  const milestones = [
-    {
-      year: "2020",
-      title: "Company Founded",
-      description: "Super Energy established with a vision to transform Singapore's waste oil landscape",
-    },
-    {
-      year: "2021",
-      title: "First Commercial Partnerships",
-      description: "Secured partnerships with 50+ restaurants and commercial kitchens",
-    },
-    {
-      year: "2022",
-      title: "Processing Facility Launch",
-      description: "Opened state-of-the-art biodiesel processing facility with 100,000L monthly capacity",
-    },
-    {
-      year: "2023",
-      title: "Expansion & Growth",
-      description: "Reached 3,500+ business partnerships and 175,000+ litres collected annually",
-    },
-    {
-      year: "2024",
-      title: "Sustainability Leadership",
-      description: "Recognized as Singapore's leading sustainable fuel solutions provider",
-    },
-  ];
-
-  const team = [
-    {
-      name: "Dr. Sarah Chen",
-      position: "Chief Executive Officer",
-      bio: "Environmental engineer with 15+ years in renewable energy sector",
-    },
-    {
-      name: "Michael Tan",
-      position: "Chief Technology Officer",
-      bio: "Biochemical engineer specializing in biodiesel production and quality control",
-    },
-    {
-      name: "Lisa Wong",
-      position: "Head of Operations",
-      bio: "Logistics expert with extensive experience in waste management systems",
-    },
-    {
-      name: "David Kumar",
-      position: "Sustainability Director",
-      bio: "Environmental scientist focused on carbon footprint reduction and ESG compliance",
-    },
-  ];
-
-  const certifications = [
-    "Singapore Food Agency (SFA) Licensed",
-    "National Environment Agency (NEA) Certified",
-    "ISO 14001 Environmental Management",
-    "OHSAS 18001 Occupational Health & Safety",
-    "Singapore Green Finance Framework Compliant",
-    "Carbon Trust Standard Certified",
-  ];
-
-  return (
-    <div className="min-h-screen bg-background relative">
+  const values = [{
+    icon: Leaf,
+    title: "Environmental Responsibility",
+    description: "Committed to reducing environmental impact through sustainable practices and innovative recycling solutions."
+  }, {
+    icon: Heart,
+    title: "Community First",
+    description: "Building strong relationships with our community partners and creating positive local impact."
+  }, {
+    icon: CheckCircle,
+    title: "Transparency & Trust",
+    description: "Operating with complete transparency in our processes, pricing, and environmental impact reporting."
+  }, {
+    icon: Lightbulb,
+    title: "Innovation & Excellence",
+    description: "Continuously improving our technology and processes to deliver the highest quality biodiesel."
+  }];
+  const milestones = [{
+    year: "2020",
+    title: "Company Founded",
+    description: "Super Energy established with a vision to transform Singapore's waste oil landscape"
+  }, {
+    year: "2021",
+    title: "First Commercial Partnerships",
+    description: "Secured partnerships with 50+ restaurants and commercial kitchens"
+  }, {
+    year: "2022",
+    title: "Processing Facility Launch",
+    description: "Opened state-of-the-art biodiesel processing facility with 100,000L monthly capacity"
+  }, {
+    year: "2023",
+    title: "Expansion & Growth",
+    description: "Reached 3,500+ business partnerships and 175,000+ litres collected annually"
+  }, {
+    year: "2024",
+    title: "Sustainability Leadership",
+    description: "Recognized as Singapore's leading sustainable fuel solutions provider"
+  }];
+  const team = [{
+    name: "Dr. Sarah Chen",
+    position: "Chief Executive Officer",
+    bio: "Environmental engineer with 15+ years in renewable energy sector"
+  }, {
+    name: "Michael Tan",
+    position: "Chief Technology Officer",
+    bio: "Biochemical engineer specializing in biodiesel production and quality control"
+  }, {
+    name: "Lisa Wong",
+    position: "Head of Operations",
+    bio: "Logistics expert with extensive experience in waste management systems"
+  }, {
+    name: "David Kumar",
+    position: "Sustainability Director",
+    bio: "Environmental scientist focused on carbon footprint reduction and ESG compliance"
+  }];
+  const certifications = ["Singapore Food Agency (SFA) Licensed", "National Environment Agency (NEA) Certified", "ISO 14001 Environmental Management", "OHSAS 18001 Occupational Health & Safety", "Singapore Green Finance Framework Compliant", "Carbon Trust Standard Certified"];
+  return <div className="min-h-screen bg-background relative">
       {/* Decorative background elements */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
@@ -121,10 +89,7 @@ const AboutPage = () => {
             </span>
             <br />Energy Future
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We're pioneering the circular economy in Singapore by converting waste cooking oil into clean, renewable biodiesel,
-            creating a sustainable future for generations to come.
-          </p>
+          
           <div className="mt-8 flex items-center justify-center gap-3">
             <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
             <p className="text-sm text-muted-foreground">ISO-aligned • Traceable collection • Real-time reporting</p>
@@ -137,7 +102,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Mission */}
-            <div className="rounded-2xl p-8 bg-white/70 backdrop-blur border shadow-sm transition-shadow hover:shadow-lg">
+            <div className="rounded-2xl p-8 backdrop-blur border shadow-sm transition-shadow hover:shadow-lg bg-green-100">
               <div className="w-14 h-14 rounded-xl bg-emerald-100 flex items-center justify-center mb-6">
                 <Target className="h-7 w-7 text-emerald-600" />
               </div>
@@ -147,17 +112,15 @@ const AboutPage = () => {
                 reducing environmental impact while supporting the nation's renewable energy goals.
               </p>
               <ul className="space-y-3">
-                {["Zero waste to landfill policy", "100% renewable fuel production", "Community-centered approach", "Transparent operations"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
+                {["Zero waste to landfill policy", "100% renewable fuel production", "Community-centered approach", "Transparent operations"].map((item, i) => <li key={i} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-emerald-600" />
                     <span className="text-sm md:text-base">{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
 
             {/* Vision */}
-            <div className="rounded-2xl p-8 bg-gradient-to-b from-emerald-50 to-white border shadow-sm">
+            <div className="rounded-2xl p-8 bg-gradient-to-b from-emerald-50 to-white border shadow-sm bg-yellow-100">
               <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center mb-6">
                 <Globe className="h-7 w-7 text-primary" />
               </div>
@@ -188,15 +151,13 @@ const AboutPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all duration-300 group rounded-2xl">
+            {values.map((value, index) => <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all duration-300 group rounded-2xl">
                 <div className="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 group-hover:rotate-3 transition-transform">
                   <value.icon className="h-8 w-8 text-emerald-600" />
                 </div>
                 <h3 className="text-base font-semibold mb-2">{value.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -212,11 +173,7 @@ const AboutPage = () => {
           <div className="relative">
             <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-transparent via-emerald-200 to-transparent" />
             <div className="space-y-12">
-              {milestones.map((m, i) => (
-                <div
-                  key={i}
-                  className={`relative flex flex-col md:flex-row items-center ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}
-                >
+              {milestones.map((m, i) => <div key={i} className={`relative flex flex-col md:flex-row items-center ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                   <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pl-10" : "md:pr-10"} w-full`}>
                     <Card className="p-6 border bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                       <div className="flex items-center gap-3 mb-2">
@@ -233,8 +190,7 @@ const AboutPage = () => {
                       <div className="absolute inset-0 animate-ping rounded-full bg-primary/20" />
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -249,8 +205,7 @@ const AboutPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, index) => (
-              <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
+            {team.map((member, index) => <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
                 <div className="relative w-24 h-24 mx-auto mb-4">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-emerald-400 to-primary blur" />
                   <div className="relative w-24 h-24 rounded-full bg-white grid place-items-center border">
@@ -260,8 +215,7 @@ const AboutPage = () => {
                 <h3 className="text-base font-semibold">{member.name}</h3>
                 <p className="text-primary text-sm font-medium mb-2">{member.position}</p>
                 <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -275,14 +229,12 @@ const AboutPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
+            {certifications.map((cert, index) => <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
                 <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mx-auto mb-3">
                   <Award className="h-6 w-6 text-emerald-700" />
                 </div>
                 <p className="font-medium text-sm md:text-base">{cert}</p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -312,8 +264,6 @@ const AboutPage = () => {
 
       <Footer />
       <ScrollToTop />
-    </div>
-  );
+    </div>;
 };
-
 export default AboutPage;
