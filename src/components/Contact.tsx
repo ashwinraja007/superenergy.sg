@@ -9,7 +9,7 @@ const Contact = () => {
   const contactInfo = [{
     icon: MapPin,
     title: "Head Office",
-    details: ["Super Energy Pvt Ltd", "Tamil Nadu, India"]
+    details: ["1001 Tai Seng Avenue, #01-2526,Singapore 534420"]
   }, {
     icon: Phone,
     title: "Phone Support",
@@ -18,10 +18,6 @@ const Contact = () => {
     icon: Mail,
     title: "Email",
     details: ["info@superenergy.in"]
-  }, {
-    icon: Clock,
-    title: "Business Hours",
-    details: ["Monday – Saturday", "9:00 AM – 7:00 PM"]
   }];
   const socialLinks = [{
     icon: Facebook,
