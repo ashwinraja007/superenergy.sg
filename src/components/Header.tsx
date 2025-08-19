@@ -46,7 +46,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-3">
 
             <Button size="sm" asChild className="bg-gradient-eco hover:opacity-90 transition-opacity">
-              <Link to="/services">Contact </Link>
+              <Link to="/contact">Contact </Link>
             </Button>
           </div>
 
@@ -64,14 +64,10 @@ const Header = () => {
                 {item.name}
               </Link>)}
             <div className="flex flex-col gap-3 pt-4 border-t border-border">
-              <Button variant="outline" asChild className="border-primary text-primary">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  Schedule Pickup
-                </Link>
-              </Button>
+            
               <Button asChild className="bg-gradient-eco">
-                <Link to="/services" onClick={() => setIsMenuOpen(false)}>
-                  Our Services
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                  Contact
                 </Link>
               </Button>
             </div>
