@@ -102,7 +102,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Mission */}
-            <div className="rounded-2xl p-8 backdrop-blur border shadow-sm transition-shadow hover:shadow-lg bg-green-100">
+            <div className="rounded-2xl p-8 backdrop-blur border shadow-sm transition-shadow hover:shadow-lg bg-gradient-to-b from-emerald-50 to-white border ">
               <div className="w-14 h-14 rounded-xl bg-emerald-100 flex items-center justify-center mb-6">
                 <Target className="h-7 w-7 text-emerald-600" />
               </div>
