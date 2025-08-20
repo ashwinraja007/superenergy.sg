@@ -32,7 +32,7 @@ const Header = () => {
             <div className="h-8 w-px bg-gray-500 hidden md:block"></div>
             <img
               alt="1 Global Enterprises Logo"
-              src="/lovable-uploads/a2513c1d-2708-4143-a69b-fa65a1d4d1f2.png"
+              src="/1global.png"
               className="hidden md:block h-11 w-auto object-contain transition-all duration-300"
             />
           </Link>
