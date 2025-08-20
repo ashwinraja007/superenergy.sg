@@ -21,21 +21,26 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
   return <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border shadow-soft bg-slate-50 pt-5">
       {/* Container */}
-      <div className="container mx-auto px-4">
-        {/* Main navigation bar */}
-        <div className="flex items-center justify-between py-4">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="relative">
-              <img alt="Super Energy" className="h-12 w-auto object-contain" src="/lovable-uploads/a3ad0f90-3f30-4006-8027-6d25a277ad0e.png" />
-            <div className="h-8 w-px bg-gray-500 hidden md:block"></div>
-            <img
-              alt="1 Global Enterprises Logo"
-              src="/lovable-uploads/a2513c1d-2708-4143-a69b-fa65a1d4d1f2.png"
-              className="hidden md:block h-11 w-auto object-contain transition-all duration-300"
-            />
-          </div>
-          </Link>
+      <<div className="container mx-auto px-4 md:px-6">
+  {/* Main navigation bar */}
+  <div className="flex items-center justify-between py-4">
+    {/* Logo Section */}
+    <Link to="/" className="flex items-center gap-4">
+      <img
+        alt="Super Energy"
+        className="h-12 w-auto cursor-pointer object-contain transition-all duration-300"
+        src="/lovable-uploads/a3ad0f90-3f30-4006-8027-6d25a277ad0e.png"
+      />
+      <div className="h-8 w-px bg-gray-500 hidden md:block"></div>
+      <img
+        alt="1 Global Enterprises Logo"
+        src="/lovable-uploads/a2513c1d-2708-4143-a69b-fa65a1d4d1f2.png"
+        className="hidden md:block h-11 w-auto object-contain transition-all duration-300"
+      />
+    </Link>
+  </div>
+</div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
