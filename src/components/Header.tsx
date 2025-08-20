@@ -35,9 +35,6 @@ const Header = () => {
               className="hidden md:block h-11 w-auto object-contain transition-all duration-300"
             />
           </div>
-            <div>
-              <p className="text-xs text-muted-foreground">Clean Fuel Solutions</p>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
