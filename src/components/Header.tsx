@@ -39,10 +39,8 @@ const Header = () => {
       />
     </Link>
   </div>
-</div>
 
-
-          {/* Desktop Navigation */}
+{/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map(item => <Link key={item.name} to={item.href} className={`text-foreground hover:text-primary transition-colors duration-200 font-medium relative group ${isActive(item.href) ? "text-primary" : ""}`}>
                 {item.name}
