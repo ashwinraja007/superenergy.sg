@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Users, Building } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   return (
