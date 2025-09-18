@@ -42,13 +42,15 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                variant="hero-outline"
-                size="lg"
-                className="w-full sm:w-auto text-white text-lg px-8 py-6 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-xl"
-              >
-                Book a Collection
-              </Button>
+              <Link to="/contact">
+  <Button
+    variant="hero-outline"
+    size="lg"
+    className="w-full sm:w-auto text-white text-lg px-8 py-6 rounded-sm bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 shadow-xl"
+  >
+    Book a Collection
+  </Button>
+</Link>
             </div>
 
             {/* Trust badges */}
