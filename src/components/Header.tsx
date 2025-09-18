@@ -27,12 +27,12 @@ const Header = () => {
             <img
               alt="Super Energy"
               className="h-12 w-auto cursor-pointer object-contain transition-all duration-300"
-              src="/logo123.png"
+              src="/lovable-uploads/a3ad0f90-3f30-4006-8027-6d25a277ad0e.png"
             />
             <div className="h-8 w-px bg-gray-500 hidden md:block" />
             <img
               alt="1 Global Enterprises Logo"
-              src="/1global.png"
+              src="/logo123.png"
               className="hidden md:block h-11 w-auto object-contain transition-all duration-300"
             />
           </Link>
