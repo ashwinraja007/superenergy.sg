@@ -43,8 +43,6 @@ const Index = () => {
         <HowItWorks />
         <Stats />
         <WhyBiodiesel />
-        <ForHouseholds />
-        <ForBusinesses />
         <Contact />
       </main>
 
