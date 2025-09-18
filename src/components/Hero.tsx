@@ -7,11 +7,8 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      style={{
-        // ✅ Soft light-green background
-        backgroundColor: "#e8f5e9", // lightish green
-      }}
-      className="relative min-h-screen overflow-hidden lg:flex lg:items-center pt-14 lg:pt-0 pb-10"
+      // ✅ ultra-light green background
+      className="bg-green-50 relative min-h-screen overflow-hidden lg:flex lg:items-center pt-14 lg:pt-0 pb-10"
     >
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 items-center gap-12">
@@ -39,8 +36,8 @@ const Hero: React.FC = () => {
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
               Join the green energy movement by recycling your{" "}
               <strong className="text-green-600">used cooking oil</strong> into
-              clean, efficient renewable fuels. Together, we can reduce
-              pollution and build a sustainable tomorrow.
+              clean, efficient renewable fuels. Together, we can reduce pollution and
+              build a sustainable tomorrow.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
