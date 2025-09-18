@@ -52,9 +52,9 @@ const AboutPreview = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-muted-foreground max-w-prose">
-            We’re a sustainability-first team that <strong className="text-emerald-600">only collects used cooking oil (UCO)</strong> from restaurants, hotels, and households. 
-            Our trained staff provide sealed containers, schedule free pickups, and hand over your UCO to{" "}
-            <span className="font-medium text-foreground">licensed recyclers</span> with full traceability.
+            We’re a sustainability-first team that <strong className="text-emerald-600">collects used cooking oil (UCO)</strong> from restaurants, hotels, and households. 
+            Our trained staff provide sealed SmartDrums, that automatically schedule pickups, and then we handover your UCO to{" "}
+            <span className="font-medium text-foreground">licensed recyclers.</span> 
           </p>
 
           {/* highlights */}
@@ -70,7 +70,7 @@ const AboutPreview = () => {
           }, {
             icon: Leaf,
             title: "Eco-Positive",
-            desc: "Divert UCO from drains and landfills."
+            desc: "Diverts UCO from drains and landfills."
           }, {
             icon: Receipt,
             title: "Proof & Receipts",
@@ -94,9 +94,7 @@ const AboutPreview = () => {
           </div>
 
           {/* small disclaimer */}
-          <p className="text-xs text-muted-foreground">
-            *We collect used cooking oil and hand it over to licensed recyclers. We do not process biodiesel.
-          </p>
+
         </div>
       </div>
     </section>;
