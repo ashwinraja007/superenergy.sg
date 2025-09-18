@@ -3,16 +3,15 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Users, Building } from "lucide-react";
 import React from "react";
 
+const HERO_IMG = "/hero-van.png";
+
 const Hero: React.FC = () => {
   return (
     <section
       id="hero"
       style={{
-        // ✅ Use the uploaded silver background image
-        backgroundImage: "url('/silver-bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        // ✅ Pure background color only (no image or gradient)
+        backgroundColor: "#f0f2f5", // ← replace with any color (e.g. "#ffffff" for white)
       }}
       className="relative min-h-screen overflow-hidden lg:flex lg:items-center pt-14 lg:pt-0 pb-10"
     >
@@ -92,7 +91,9 @@ const Hero: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-muted-foreground">Businesses Served</div>
+                  <div className="text-sm text-muted-foreground">
+                    Businesses Served
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,8 +107,12 @@ const Hero: React.FC = () => {
                   <Building className="h-6 w-6 text-eco-success" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-eco-success">175,000+</div>
-                  <div className="text-sm text-muted-foreground">Litres Collected</div>
+                  <div className="text-2xl font-bold text-eco-success">
+                    175,000+
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Litres Collected
+                  </div>
                 </div>
               </div>
             </div>
