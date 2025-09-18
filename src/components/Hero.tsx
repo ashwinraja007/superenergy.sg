@@ -10,10 +10,8 @@ const Hero: React.FC = () => {
     <section
       id="hero"
       style={{
-        // ✅ Updated background to silver with a soft overlay
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(192,192,192,0.95), rgba(210,210,210,0.98))",
-        backgroundColor: "#C0C0C0", // fallback silver
+        // ✅ Updated background to pure white
+        backgroundColor: "#ffffff",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -61,8 +59,15 @@ const Hero: React.FC = () => {
 
             {/* Trust badges */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 justify-items-center lg:justify-items-start">
-              {["ISCC Certified", "Efficient Pickup Scheduling", "Hygienic & Safe Handling"].map((text) => (
-                <div key={text} className="flex items-center gap-2 text-sm text-muted-foreground">
+              {[
+                "ISCC Certified",
+                "Efficient Pickup Scheduling",
+                "Hygienic & Safe Handling",
+              ].map((text) => (
+                <div
+                  key={text}
+                  className="flex items-center gap-2 text-sm text-muted-foreground"
+                >
                   <CheckCircle className="h-4 w-4 text-green-600" />
                   {text}
                 </div>
@@ -88,7 +93,9 @@ const Hero: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-muted-foreground">Businesses Served</div>
+                  <div className="text-sm text-muted-foreground">
+                    Businesses Served
+                  </div>
                 </div>
               </div>
             </div>
@@ -102,8 +109,12 @@ const Hero: React.FC = () => {
                   <Building className="h-6 w-6 text-eco-success" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-eco-success">175,000+</div>
-                  <div className="text-sm text-muted-foreground">Litres Collected</div>
+                  <div className="text-2xl font-bold text-eco-success">
+                    175,000+
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Litres Collected
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,11 +124,23 @@ const Hero: React.FC = () => {
         {/* Bottom Steps */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
-            { title: "Request Pickup", desc: "Book a collection—get sealed SmartDrums for your used cooking oil." },
-            { title: "We Collect & Weigh", desc: "Dedicated staff, timely collections, and digital weight records for peace of mind." },
-            { title: "Collected for Licensed Recycling", desc: "Our team picks up sealed containers and hands them over to licensed recyclers." },
+            {
+              title: "Request Pickup",
+              desc: "Book a collection—get sealed SmartDrums for your used cooking oil.",
+            },
+            {
+              title: "We Collect & Weigh",
+              desc: "Dedicated staff, timely collections, and digital weight records for peace of mind.",
+            },
+            {
+              title: "Collected for Licensed Recycling",
+              desc: "Our team picks up sealed containers and hands them over to licensed recyclers.",
+            },
           ].map((step, idx) => (
-            <div key={idx} className="rounded-xl border border-emerald-100 backdrop-blur p-5 shadow-sm bg-emerald-100 text-center md:text-left">
+            <div
+              key={idx}
+              className="rounded-xl border border-emerald-100 backdrop-blur p-5 shadow-sm bg-emerald-100 text-center md:text-left"
+            >
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">
                   {idx + 1}
