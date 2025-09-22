@@ -166,42 +166,42 @@ const AboutPage = () => {
 {/* Leadership Section */}
 <section className="py-20 bg-emerald-50/50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-   
-    {/* Stanley Chu Profile */}
-    <div className="grid md:grid-cols-2 gap-10 items-center">
-      {/* Image on Left */}
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Larger image */}
       <div className="flex justify-center">
         <img
-          src="/stanley.jpeg" // replace with actual image path
+          src="/stanley.jpeg"  // your actual image path
           alt="Stanley Chu"
-          className="rounded-2xl shadow-lg w-full max-w-sm object-cover"
+          className="rounded-2xl shadow-xl w-full max-w-lg lg:max-w-xl object-cover"
         />
       </div>
 
-      {/* Content on Right */}
-      <div>
-        <h3 className="text-2xl font-bold mb-2">Stanley Chu – Founder of Super Energy</h3>
-        <p className="text-muted-foreground leading-relaxed mb-4">
+      {/* Text content */}
+      <div className="lg:pl-8">
+        <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+          Stanley Chu – Founder of Super Energy
+        </h3>
+        <p className="text-gray-700 leading-relaxed mb-6">
           Stanley Chu is a pioneer in Singapore’s renewable energy sector, widely recognised
           for his early leadership in the collection and recycling of used cooking oil (UCO).
           At a time when waste-to-energy solutions were still emerging in Southeast Asia,
           Stanley identified the untapped potential of UCO as a sustainable feedstock for
           biodiesel and other renewable fuels.
         </p>
-        <p className="text-muted-foreground leading-relaxed mb-4">
+        <p className="text-gray-700 leading-relaxed mb-6">
           Driven by a vision to reduce waste, lower carbon emissions, and create value from a
           widely discarded resource, he established Super Energy in Singapore. Under his
           direction, the company built one of the first dedicated collection and processing
           networks for used cooking oil in the country, partnering with restaurants, food
           manufacturers, and waste management operators.
         </p>
-        <p className="text-muted-foreground leading-relaxed mb-4">
+        <p className="text-gray-700 leading-relaxed mb-6">
           To reinforce its commitment to environmental responsibility and supply chain
           transparency, Super Energy achieved the International Sustainability and Carbon
           Certification (ISCC) — a globally recognised standard that ensures sustainable
           sourcing, carbon emission reductions, and traceability in bio-based supply chains.
         </p>
-        <p className="text-muted-foreground leading-relaxed">
+        <p className="text-gray-700 leading-relaxed">
           Stanley’s work not only set industry standards for quality and sustainability in
           UCO supply but also helped position Singapore as a reliable source of feedstock
           for the global renewable fuel market. Through innovation, strategic partnerships,
@@ -212,6 +212,7 @@ const AboutPage = () => {
     </div>
   </div>
 </section>
+
 
       {/* Timeline */}
       <section className="py-10 bg-slate-100">
