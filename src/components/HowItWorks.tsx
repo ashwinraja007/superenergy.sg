@@ -154,7 +154,7 @@ const HowItWorks = () => {
             </h3>
             <ul className="space-y-3">
               {[
-                "Sealed containers are transported to authorized recyclers.",
+                "Sealed Drums are transported to authorized recyclers.",
                 "Full traceability with chain-of-custody records.",
                 "Recyclers perform testing & processing per regulations.",
                 "You retain receipts/compliance notes for your records.",
