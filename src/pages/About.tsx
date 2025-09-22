@@ -196,129 +196,57 @@ const AboutPage = () => {
         </div>
       </section>
 
-     <section className="relative py-20 lg:py-28 bg-gradient-to-br from-emerald-50 via-green-50/30 to-teal-50/50 overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-700"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+      {/* Team */}
+{/* Leadership Section */}
+<section className="py-20 bg-emerald-50/50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+   
+    {/* Stanley Chu Profile */}
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+      {/* Image on Left */}
+      <div className="flex justify-center">
+        <img
+          src="/stanley.jpeg" // replace with actual image path
+          alt="Stanley Chu"
+          className="rounded-2xl shadow-lg w-full max-w-sm object-cover"
+        />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center p-2 bg-emerald-100 rounded-full mb-4">
-            <div className="flex items-center justify-center w-8 h-8 bg-emerald-500 rounded-full">
-              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-              </svg>
-            </div>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">Leader</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Pioneering sustainable energy solutions and leading the renewable revolution in Southeast Asia
-          </p>
-        </div>
-
-        {/* Stanley Chu Profile */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 overflow-hidden hover:shadow-3xl transition-all duration-700 group">
-          <div className="grid lg:grid-cols-2 gap-0">
-            {/* Image Section */}
-            <div className="relative p-8 lg:p-12 flex justify-center items-center bg-gradient-to-br from-emerald-50 to-green-50">
-              <div className="relative">
-                {/* Decorative rings */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500 to-green-500 opacity-20 group-hover:opacity-30 transition-opacity duration-500 transform group-hover:scale-105"></div>
-                <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-emerald-400 to-green-400 opacity-10 group-hover:opacity-20 transition-opacity duration-500 transform group-hover:scale-110"></div>
-                
-                <img
-                  src="/stanley.jpeg"
-                  alt="Stanley Chu - Founder of Super Energy"
-                  className="relative rounded-2xl shadow-2xl w-full max-w-sm object-cover aspect-[4/5] transform group-hover:scale-105 transition-transform duration-500"
-                />
-                
-                {/* Badge */}
-                <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-emerald-500 to-green-500 text-white px-6 py-3 rounded-2xl shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                  <p className="text-sm font-semibold">Founder & CEO</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Content Section */}
-            <div className="p-8 lg:p-12 flex flex-col justify-center">
-              <div className="mb-6">
-                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-                  Stanley Chu
-                </h3>
-                <p className="text-xl text-emerald-600 font-semibold mb-4">
-                  Founder of Super Energy
-                </p>
-                
-                {/* Achievement badges */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-medium rounded-full">
-                    🌱 Renewable Energy Pioneer
-                  </span>
-                  <span className="px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
-                    ♻️ UCO Recycling Expert
-                  </span>
-                  <span className="px-3 py-1 bg-teal-100 text-teal-700 text-sm font-medium rounded-full">
-                    🏆 ISCC Certified
-                  </span>
-                </div>
-              </div>
-
-              <div className="space-y-6 text-gray-700 leading-relaxed">
-                <p className="text-lg">
-                  Stanley Chu is a <strong className="text-emerald-700">pioneer in Singapore's renewable energy sector</strong>, widely recognised for his early leadership in the collection and recycling of used cooking oil (UCO). At a time when waste-to-energy solutions were still emerging in Southeast Asia, Stanley identified the untapped potential of UCO as a sustainable feedstock for biodiesel and other renewable fuels.
-                </p>
-                
-                <p>
-                  Driven by a vision to reduce waste, lower carbon emissions, and create value from a widely discarded resource, he established Super Energy in Singapore. Under his direction, the company built one of the first dedicated collection and processing networks for used cooking oil in the country, partnering with restaurants, food manufacturers, and waste management operators.
-                </p>
-                
-                <div className="bg-gradient-to-r from-emerald-50 to-green-50 p-6 rounded-xl border-l-4 border-emerald-500">
-                  <p className="italic">
-                    To reinforce its commitment to environmental responsibility and supply chain transparency, Super Energy achieved the <strong className="text-emerald-700">International Sustainability and Carbon Certification (ISCC)</strong> — a globally recognised standard that ensures sustainable sourcing, carbon emission reductions, and traceability in bio-based supply chains.
-                  </p>
-                </div>
-                
-                <p>
-                  Stanley's work not only set industry standards for quality and sustainability in UCO supply but also helped position Singapore as a reliable source of feedstock for the global renewable fuel market. Through innovation, strategic partnerships, and a commitment to environmental stewardship, Stanley Chu and Super Energy have played a key role in supporting the transition towards cleaner energy solutions in Asia.
-                </p>
-              </div>
-
-              {/* Call-to-action */}
-              <div className="mt-8 flex flex-wrap gap-4">
-                <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  Learn More About Our Mission
-                </button>
-                <button className="px-6 py-3 border-2 border-emerald-500 text-emerald-600 font-semibold rounded-xl hover:bg-emerald-500 hover:text-white transition-all duration-300">
-                  Contact Stanley
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom decorative stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-white/30 hover:bg-white/80 transition-all duration-300">
-            <div className="text-3xl font-bold text-emerald-600 mb-2">15+</div>
-            <div className="text-gray-600">Years of Experience</div>
-          </div>
-          <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-white/30 hover:bg-white/80 transition-all duration-300">
-            <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
-            <div className="text-gray-600">Partner Restaurants</div>
-          </div>
-          <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-white/30 hover:bg-white/80 transition-all duration-300">
-            <div className="text-3xl font-bold text-teal-600 mb-2">ISCC</div>
-            <div className="text-gray-600">Certified Operations</div>
-          </div>
-        </div>
+      {/* Content on Right */}
+      <div>
+        <h3 className="text-2xl font-bold mb-2">Stanley Chu – Founder of Super Energy</h3>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Stanley Chu is a pioneer in Singapore’s renewable energy sector, widely recognised
+          for his early leadership in the collection and recycling of used cooking oil (UCO).
+          At a time when waste-to-energy solutions were still emerging in Southeast Asia,
+          Stanley identified the untapped potential of UCO as a sustainable feedstock for
+          biodiesel and other renewable fuels.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Driven by a vision to reduce waste, lower carbon emissions, and create value from a
+          widely discarded resource, he established Super Energy in Singapore. Under his
+          direction, the company built one of the first dedicated collection and processing
+          networks for used cooking oil in the country, partnering with restaurants, food
+          manufacturers, and waste management operators.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          To reinforce its commitment to environmental responsibility and supply chain
+          transparency, Super Energy achieved the International Sustainability and Carbon
+          Certification (ISCC) — a globally recognised standard that ensures sustainable
+          sourcing, carbon emission reductions, and traceability in bio-based supply chains.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          Stanley’s work not only set industry standards for quality and sustainability in
+          UCO supply but also helped position Singapore as a reliable source of feedstock
+          for the global renewable fuel market. Through innovation, strategic partnerships,
+          and a commitment to environmental stewardship, Stanley Chu and Super Energy have
+          played a key role in supporting the transition towards cleaner energy solutions in Asia.
+        </p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
       {/* Certifications */}
       <section className="py-20 bg-slate-100">
