@@ -2,19 +2,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import ScrollToTop from '../components/ScrollToTop';
 
 import {
   Droplets,
   Smartphone,
-  Truck,
-  ShieldCheck,
   Receipt,
   Cpu,
   CalendarDays,
-  ArrowUp,
 } from "lucide-react";
-import { useEffect, useState } from "react";
 
 /** Steps for the timeline */
 const steps = [
@@ -55,7 +50,7 @@ const steps = [
   },
 ];
 
-/** Tech/compliance list */
+/** Tech/compliance list (kept for reference) */
 const technologies = [
   { name: "Vacuum Filtration", description: "Advanced filtration removes impurities and solid particles." },
   { name: "Degumming & Neutralization", description: "Removes phosphatides and free fatty acids for stable downstream processing." },
@@ -64,20 +59,9 @@ const technologies = [
 ];
 
 const HowItWorks = () => {
-  // Scroll-to-top
-  const [showTop, setShowTop] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setShowTop(window.scrollY > 300);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <>
       <Header />
-      {/* Header is fixed; slightly smaller pad on xs so content is visible immediately */}
       <main className="pt-20 sm:pt-24">
         <section
           id="how-it-works"
@@ -107,7 +91,7 @@ const HowItWorks = () => {
               </p>
             </div>
 
-            {/* Desktop timeline (unchanged) */}
+            {/* Desktop timeline */}
             <div className="hidden lg:block">
               <div className="relative">
                 <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200" />
@@ -136,7 +120,7 @@ const HowItWorks = () => {
               </div>
             </div>
 
-            {/* Mobile vertical timeline (polished) */}
+            {/* Mobile vertical timeline */}
             <div className="lg:hidden space-y-4 sm:space-y-6">
               {steps.map((s, i) => (
                 <Card
@@ -166,54 +150,43 @@ const HowItWorks = () => {
               ))}
             </div>
 
-            {/* After pickup (balanced, mobile-compact) */}
-        <div className="mt-16 flex justify-center">
-          <div className="w-full max-w-3xl flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-8 animate-fade-in bg-lime-100">
-            <h3 className="text-2xl font-bold mb-4">
-              What Happens After Pickup
-            </h3>
-            <ul className="space-y-3">
-              {[
-                "Sealed Drums are transported to authorized recyclers.",
-                "Full traceability with chain-of-custody records.",
-                "Recyclers perform testing & processing per regulations.",
-                "You retain receipts/compliance notes for your records.",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
-                  <span className="text-muted-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto" />
+            {/* After pickup section */}
+            <div className="mt-16 flex justify-center">
+              <div className="w-full max-w-3xl flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-8 animate-fade-in bg-lime-100">
+                <h3 className="text-2xl font-bold mb-4">
+                  What Happens After Pickup
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    "Sealed Drums are transported to authorized recyclers.",
+                    "Full traceability with chain-of-custody records.",
+                    "Recyclers perform testing & processing per regulations.",
+                    "You retain receipts/compliance notes for your records.",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto" />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-          {/* keyframes if not present */}
+          {/* keyframes */}
           <style>{`
             @keyframes fadeIn {
               from { opacity: 0; transform: translateY(6px); }
               to   { opacity: 1; transform: translateY(0); }
             }
           `}</style>
-
-          {/* Scroll-to-top button (smaller on mobile) */}
-          <button
-            type="button"
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-            className={`fixed bottom-5 right-5 z-50 flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-emerald-600 text-white shadow-xl transition-all duration-300 hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-400/40
-              ${showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"}`}
-          >
-            <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5" />
-          </button>
         </section>
       </main>
       <Footer />
-      <ScrollToTop />
     </>
   );
 };
 
 export default HowItWorks;
+
