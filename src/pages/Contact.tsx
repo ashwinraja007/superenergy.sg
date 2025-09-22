@@ -117,10 +117,7 @@ const ContactPage = () => {
           Get in{" "}
           <span className="bg-gradient-eco bg-clip-text text-slate-950">Touch</span>
         </h1>
-        <p className="text-lg max-w-2xl mx-auto leading-relaxed text-slate-950">
-          Ready to start your sustainable journey? Reach out to schedule a free pickup,
-          explore partnerships, or ask about our services.
-        </p>
+        
       </section>
 
       {/* Contact Info */}
