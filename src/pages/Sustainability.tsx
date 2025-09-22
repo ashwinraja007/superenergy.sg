@@ -77,7 +77,7 @@ const SustainabilityPage = () => {
       {/* IMPACT STRIP */}
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {impacts.map((i, idx) => <Card key={idx} className="p-6 border rounded-2xl hover:shadow-lg transition-shadow bg-yellow-100">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 grid place-items-center">
