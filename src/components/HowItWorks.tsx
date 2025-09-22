@@ -1,59 +1,36 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Droplets,
-  Smartphone,
-  Cpu,
-  CalendarDays,
-  Receipt,
-} from "lucide-react";
-
-const steps = [
-  {
-    icon: Droplets,
-    title: "Save Your Used Oil",
-    description:
-      "After frying or cooking, let the oil cool and pour it into our provided sealed drum.",
-    step: "01",
-  },
-  {
-    icon: Cpu,
-    title: "Automatic Monitoring",
-    description:
-      "Real-time sensors track oil levels - no manual checks needed",
-    step: "02",
-  },
-  {
-    icon: Smartphone,
-    title: "Cloud Dashboard",
-    description:
-      "You see live updates and collection history anytime,anywhere",
-    step: "03",
-  },
-  {
-    icon: CalendarDays,
-    title: "Smart Scheduling",
-    description:
-      "Pickups are triggered at the right time - no overflows or delays.",
-    step: "04",
-  },
-  {
-    icon: Receipt,
-    title: "Transparent Handover",
-    description:
-      "Our team collects, and you receive a digital weight slip instantly.",
-    step: "05",
-  },
-];
-
+import { Droplets, Smartphone, Cpu, CalendarDays, Receipt } from "lucide-react";
+const steps = [{
+  icon: Droplets,
+  title: "Save Your Used Oil",
+  description: "After frying or cooking, let the oil cool and pour it into our provided sealed drum.",
+  step: "01"
+}, {
+  icon: Cpu,
+  title: "Automatic Monitoring",
+  description: "Real-time sensors track oil levels - no manual checks needed",
+  step: "02"
+}, {
+  icon: Smartphone,
+  title: "Cloud Dashboard",
+  description: "You see live updates and collection history anytime,anywhere",
+  step: "03"
+}, {
+  icon: CalendarDays,
+  title: "Smart Scheduling",
+  description: "Pickups are triggered at the right time - no overflows or delays.",
+  step: "04"
+}, {
+  icon: Receipt,
+  title: "Transparent Handover",
+  description: "Our team collects, and you receive a digital weight slip instantly.",
+  step: "05"
+}];
 const HowItWorks = () => {
-  return (
-    <section id="how-it-works" className="relative py-10">
+  return <section id="how-it-works" className="relative py-10">
       {/* Background accents */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
-      >
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
         <div className="absolute -bottom-28 -left-20 h-96 w-96 rounded-full bg-green-500/10 blur-3xl" />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-emerald-50/60 to-transparent" />
@@ -62,10 +39,7 @@ const HowItWorks = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14 animate-fade-in">
-          <Badge
-            variant="secondary"
-            className="px-3 py-1 text-sm bg-lime-100"
-          >
+          <Badge variant="secondary" className="px-3 py-1 text-sm bg-lime-100">
             Simple • Transparent • Impactful
           </Badge>
           <h2 className="mt-4 text-4xl lg:text-5xl font-extrabold leading-tight">
@@ -74,10 +48,7 @@ const HowItWorks = () => {
               Works
             </span>
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            A clean, compliant way to handle your used cooking oil—end to
-            end.
-          </p>
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">A clean, compliant way to handle your used cooking oil end to end.</p>
         </div>
 
         {/* Desktop timeline */}
@@ -86,12 +57,9 @@ const HowItWorks = () => {
             {/* Connection line */}
             <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-200 via-emerald-400 to-emerald-200" />
             <div className="grid grid-cols-5 gap-6 items-stretch">
-              {steps.map((s, i) => (
-                <div
-                  key={s.step}
-                  className="relative flex flex-col h-full [animation:fadeIn_.6s_ease_forwards] opacity-0"
-                  style={{ animationDelay: `${i * 120}ms` }}
-                >
+              {steps.map((s, i) => <div key={s.step} className="relative flex flex-col h-full [animation:fadeIn_.6s_ease_forwards] opacity-0" style={{
+              animationDelay: `${i * 120}ms`
+            }}>
                   {/* Step number */}
                   <div className="relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-6 shadow-[0_8px_24px_rgba(16,185,129,0.35)] bg-teal-300">
                     {s.step}
@@ -108,20 +76,16 @@ const HowItWorks = () => {
                     </p>
                     <div className="mt-auto" />
                   </Card>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
 
         {/* Mobile vertical timeline */}
         <div className="lg:hidden space-y-6">
-          {steps.map((s, i) => (
-            <Card
-              key={s.step}
-              className="p-5 bg-white/90 backdrop-blur border border-emerald-100 rounded-2xl [animation:fadeIn_.5s_ease_forwards] opacity-0"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
+          {steps.map((s, i) => <Card key={s.step} className="p-5 bg-white/90 backdrop-blur border border-emerald-100 rounded-2xl [animation:fadeIn_.5s_ease_forwards] opacity-0" style={{
+          animationDelay: `${i * 100}ms`
+        }}>
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-11 h-11 bg-emerald-600 rounded-full flex items-center justify-center text-white font-semibold shadow-[0_6px_20px_rgba(16,185,129,0.35)]">
@@ -142,8 +106,7 @@ const HowItWorks = () => {
                   </p>
                 </div>
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* After pickup section centered */}
@@ -153,17 +116,10 @@ const HowItWorks = () => {
               What Happens After Pickup
             </h3>
             <ul className="space-y-3">
-              {[
-                "Sealed Drums are transported to authorized recyclers.",
-                "Full traceability with chain-of-custody records.",
-                "Recyclers perform testing & processing per regulations.",
-                "You retain receipts/compliance notes for your records.",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
+              {["Sealed Drums are transported to authorized recyclers.", "Full traceability with chain-of-custody records.", "Recyclers perform testing & processing per regulations.", "You retain receipts/compliance notes for your records."].map(item => <li key={item} className="flex items-start gap-3">
                   <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
                   <span className="text-muted-foreground">{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
             <div className="mt-auto" />
           </div>
@@ -177,8 +133,6 @@ const HowItWorks = () => {
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
-    </section>
-  );
+    </section>;
 };
-
 export default HowItWorks;
