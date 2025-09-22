@@ -24,7 +24,7 @@ const SustainabilityPage = () => {
   }, {
     icon: Recycle,
     label: "Oil Recycled",
-    value: "175,000+ L",
+    value: "75,000 L",
     blurb: "Diverted from drains & landfills",
     color: "text-primary"
   }, {
@@ -47,11 +47,16 @@ const SustainabilityPage = () => {
     title: "Community",
     points: ["School programs", "Biz workshops", "Recycling drives"]
   }];
-  const certifications = [{
+  const certifications = [
+  {
     name: "ISO Certified",
-  }, {
+    description: "Recognized international standards ensuring quality, safety, and efficiency."
+  },
+  {
     name: "ISCC Certified",
-  }];
+    description: "International Sustainability and Carbon Certification – guaranteeing sustainable sourcing, carbon reduction, and traceable supply chains."
+  }
+];
   return <div className="min-h-screen bg-background relative">
       {/* Soft background accents */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -96,27 +101,41 @@ const SustainabilityPage = () => {
       
 
       {/* CERTIFICATIONS */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Certified & Transparent</h2>
-            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Independent standards that validate our approach.</p>
-          </div>
+<section className="py-16">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-10">
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+        Certified & Transparent
+      </h2>
+      <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+        Independent standards that validate our approach.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {certifications.map((c, idx) => <Card key={idx} className="p-6 border rounded-2xl hover:shadow-lg transition-shadow bg-cyan-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-50 grid place-items-center">
-                    <Award className="h-5 w-5 text-emerald-700" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">{c.name}</div>
-                  </div>
-                </div>
-              </Card>)}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {certifications.map((c, idx) => (
+        <Card
+          key={idx}
+          className="p-6 border rounded-2xl hover:shadow-lg transition-shadow bg-cyan-100"
+        >
+          <div className="flex items-start gap-4">
+            {/* Icon */}
+            <div className="w-12 h-12 rounded-lg bg-emerald-50 grid place-items-center">
+              <Award className="h-6 w-6 text-emerald-700" />
+            </div>
+
+            {/* Text Content */}
+            <div>
+              <div className="font-semibold text-lg">{c.name}</div>
+              <p className="text-sm text-muted-foreground mt-1">{c.description}</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* CTA */}
       <section className="py-16">
