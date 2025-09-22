@@ -3,10 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ShieldCheck, Leaf, Receipt } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const AboutPreview = () => {
-  return (
-    <section id="about-preview" className="relative py-5">
+  return <section id="about-preview" className="relative py-5">
       {/* subtle background accents */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
@@ -19,13 +17,7 @@ const AboutPreview = () => {
         <div className="relative">
           <div className="relative overflow-hidden rounded-2xl border border-emerald-100 shadow-2xl bg-white">
             {/* Place your file at /public/about-us.jpeg */}
-            <img
-              src="/about-us.jpeg"
-              alt="Team collecting sealed used cooking oil containers"
-              loading="lazy"
-              decoding="async"
-              className="block w-full h-auto object-contain"  /* full image, keep aspect */
-            />
+            <img src="/about-us.jpeg" alt="Team collecting sealed used cooking oil containers" loading="lazy" decoding="async" className="block w-full h-auto object-contain" /* full image, keep aspect */ />
             {/* soft top vignette */}
             <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/10 to-transparent" />
           </div>
@@ -38,9 +30,7 @@ const AboutPreview = () => {
               </div>
               <div>
                 <div className="text-sm font-semibold">100+ Partner Kitchens</div>
-                <div className="text-xs text-muted-foreground">
-                  Free pickup • sealed containers • digital receipt
-                </div>
+                <div className="text-xs text-muted-foreground">Free pickup • sealed Drums • digital receipt</div>
               </div>
             </div>
           </Card>
@@ -68,32 +58,23 @@ const AboutPreview = () => {
 
           {/* highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              {
-                icon: CheckCircle2,
-                title: "Free Pickup",
-                desc: "Fast, reliable collections at your convenience.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Compliant & Safe",
-                desc: "Authorized partners and chain-of-custody records.",
-              },
-              {
-                icon: Leaf,
-                title: "Eco-Positive",
-                desc: "Diverts UCO from drains and landfills.",
-              },
-              {
-                icon: Receipt,
-                title: "Proof & Receipts",
-                desc: "Digital pickup receipts for your records.",
-              },
-            ].map((f) => (
-              <Card
-                key={f.title}
-                className="p-4 bg-white/85 backdrop-blur border border-emerald-100 rounded-xl flex items-start gap-3"
-              >
+            {[{
+            icon: CheckCircle2,
+            title: "Free Pickup",
+            desc: "Fast, reliable collections at your convenience."
+          }, {
+            icon: ShieldCheck,
+            title: "Compliant & Safe",
+            desc: "Authorized partners and chain-of-custody records."
+          }, {
+            icon: Leaf,
+            title: "Eco-Positive",
+            desc: "Diverts UCO from drains and landfills."
+          }, {
+            icon: Receipt,
+            title: "Proof & Receipts",
+            desc: "Digital pickup receipts for your records."
+          }].map(f => <Card key={f.title} className="p-4 bg-white/85 backdrop-blur border border-emerald-100 rounded-xl flex items-start gap-3">
                 <div className="mt-0.5">
                   <f.icon className="h-5 w-5 text-emerald-600" />
                 </div>
@@ -101,23 +82,17 @@ const AboutPreview = () => {
                   <div className="font-semibold">{f.title}</div>
                   <div className="text-sm text-muted-foreground">{f.desc}</div>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* CTA */}
           <div className="pt-2">
-            <Button
-              asChild
-              size="lg"
-              className="px-8 py-6 text-lg rounded-md shadow-xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700"
-            >
+            <Button asChild size="lg" className="px-8 py-6 text-lg rounded-md shadow-xl bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700">
               <Link to="/about">Learn More</Link>
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default AboutPreview;
