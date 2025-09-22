@@ -60,7 +60,7 @@ const AboutPreview = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[{
             icon: CheckCircle2,
-            title: "Efficient pick up scheduling",
+            title: "Efficient Pick-Up scheduling",
             desc: "Fast, reliable collections at your convenience."
           }, {
             icon: ShieldCheck,
