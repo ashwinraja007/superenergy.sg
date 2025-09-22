@@ -52,7 +52,7 @@ const Footer = () => {
             
             <p className="text-white/80 mb-6 leading-relaxed">
               Singapore's leading sustainable UCO collector. Transforming waste cooking oil 
-              into clean renewable fuel for a greener future.
+              into clean renewable fuels for a greener future.
             </p>
             
             <div className="space-y-3">
