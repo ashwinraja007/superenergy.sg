@@ -10,6 +10,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar, Users, Building, S
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import Contact from "@/components/Contact";
 const ContactPage = () => {
   const contactInfo = [{
     icon: Phone,
@@ -124,96 +125,7 @@ const ContactPage = () => {
 
       {/* Contact Info */}
       <section className="py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-          {contactInfo.map((info, i) => <Card key={i} className="p-6 text-center hover:shadow-eco transition-all duration-300 hover:-translate-y-1 bg-eco-surface">
-              <div className="w-16 h-16 bg-eco-light rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <info.icon className={`h-8 w-8 ${info.color}`} />
-              </div>
-              <h3 className="text-lg font-semibold mb-1">{info.title}</h3>
-              <p className="text-primary font-medium mb-1">{info.details}</p>
-              <p className="text-muted-foreground text-sm">{info.subtitle}</p>
-            </Card>)}
-        </div>
-      </section>
-
-      {/* Contact Form & Services */}
-      <section className="py-16 lg:py-20 bg-eco-surface/50">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 px-4">
-          {/* Contact Form */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>
-            <Card className="p-6 bg-background">
-              <form className="space-y-6" onSubmit={onSubmit}>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Full Name *</label>
-                    <Input value={form.name} onChange={onChange("name")} />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Phone Number *</label>
-                    <Input value={form.phone} onChange={onChange("phone")} />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email *</label>
-                  <Input type="email" value={form.email} onChange={onChange("email")} />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Service Type</label>
-                  <Select value={form.service} onValueChange={v => setForm(s => ({
-                  ...s,
-                  service: v
-                }))}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select service type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="household">Household Pickup</SelectItem>
-                      <SelectItem value="commercial">Commercial Collection</SelectItem>
-                      <SelectItem value="partnership">Partnership Inquiry</SelectItem>
-                      <SelectItem value="consultation">Business Consultation</SelectItem>
-                      <SelectItem value="general">General Inquiry</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message *</label>
-                  <Textarea rows={5} value={form.message} onChange={e => setForm(s => ({
-                  ...s,
-                  message: e.target.value
-                }))} />
-                </div>
-
-                <Button size="lg" className="w-full" type="submit" disabled={submitting}>
-                  <Send className="h-4 w-4 mr-2" />
-                  {submitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
-            </Card>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Quick Service Access</h2>
-            <div className="space-y-6">
-              {services.map((service, i) => <Card key={i} className="p-6 hover:shadow-eco transition-all duration-300 bg-background hover:-translate-y-1">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-eco-light rounded-xl flex items-center justify-center">
-                      <service.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                      <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
-                      
-                    </div>
-                  </div>
-                </Card>)}
-            </div>
-          </div>
-        </div>
+       <Contact />
       </section>
 
       {/* FAQs */}
