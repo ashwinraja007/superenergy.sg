@@ -20,7 +20,7 @@ const Contact = () => {
     details: ["support@superenergy.sg"]
   }, {
     icon: Linkedin,
-    label: "LinkedIn",
+    title: "LinkedIn",
     details: ["https://www.linkedin.com/company/moltechglobal/"]
   }];
   
