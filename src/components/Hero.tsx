@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 justify-items-center lg:justify-items-start">
               {[
                 "ISCC Certified",
-                "Efficient Pick- Up Scheduling",
+                "Efficient Pick-Up Scheduling",
                 "Hygienic & Safe Handling",
               ].map((text) => (
                 <div
