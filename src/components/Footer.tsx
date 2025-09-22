@@ -32,22 +32,10 @@ const Footer = () => {
     label: "Partnership Program",
     href: "/services#partnership"
   }];
-  const socialLinks = [{
-    icon: Facebook,
-    label: "Facebook",
-    href: "#"
-  }, {
-    icon: Instagram,
-    label: "Instagram",
-    href: "#"
-  }, {
+  const socialLinks = [ {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "#"
-  }, {
-    icon: Twitter,
-    label: "Twitter",
-    href: "#"
+    href: "https://www.linkedin.com/company/moltechglobal/"
   }];
   return <footer className="text-white bg-slate-950">
       {/* Newsletter Section */}
@@ -63,8 +51,8 @@ const Footer = () => {
             </div>
             
             <p className="text-white/80 mb-6 leading-relaxed">
-              Singapore's leading sustainable fuel solutions provider. Transforming waste cooking oil 
-              into clean biodiesel for a greener future.
+              Singapore's leading sustainable UCO collector. Transforming waste cooking oil 
+              into clean renewable fuel for a greener future.
             </p>
             
             <div className="space-y-3">
@@ -74,7 +62,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-sm">info@superenergy.sg</span>
+                <span className="text-sm">support@superenergy.sg</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-primary" />
@@ -103,16 +91,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Certifications</h4>
             <div className="space-y-3 mb-6">
               <Badge variant="outline" className="border-white/20 text-white bg-transparent">
-                SFA Licensed
+                ISCC Certified
               </Badge>
               <Badge variant="outline" className="border-white/20 text-white bg-transparent">
                 NEA Certified
-              </Badge>
-              <Badge variant="outline" className="border-white/20 text-white bg-transparent">
-                ISO 14001
-              </Badge>
-              <Badge variant="outline" className="border-white/20 text-white bg-transparent">
-                Carbon Trust
               </Badge>
             </div>
             
