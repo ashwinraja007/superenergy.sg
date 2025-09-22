@@ -33,9 +33,9 @@ const Stats = () => {
           hasAnimated.current = true;
 
           const targets = {
-            litres: 175000,
-            businesses: 3500,
-            carbon: 2200,
+            litres: 75000,
+            businesses: 500,
+            carbon: 180-210KT,
             vehicles: 100,
           };
 
@@ -92,16 +92,16 @@ const Stats = () => {
       value: counts.carbon.toLocaleString(),
       suffix: "+",
       label: "Tonnes of Carbon Offset",
-      color: "text-sky-700",
-      ring: "from-sky-400/30 to-sky-600/20",
+      color: "text-green-700",
+      ring: "from-green-400/30 to-green-600/20",
     },
     {
       icon: Truck,
       value: counts.vehicles.toLocaleString(),
       suffix: "+",
-      label: "Vehicles Powered by Super Energy",
-      color: "text-orange-600",
-      ring: "from-amber-400/30 to-orange-600/20",
+      label: "Vehicles Powered by indirectly Super Energy",
+      color: "text-emerald-600",
+      ring: "from-emerald-400/30 to-emerald-600/20",
     },
   ] as const;
 
