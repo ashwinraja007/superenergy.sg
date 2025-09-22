@@ -223,8 +223,7 @@ const AboutPage = () => {
         </div>
 
         {/* Stanley Chu Profile */}
-       <section className="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-green-50/30 to-teal-50/50 overflow-hidden">
-  {/* Soft background blobs (kept subtle) */}
+   <section className="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-green-50/30 to-teal-50/50 overflow-hidden">
   <div className="absolute inset-0 opacity-5 pointer-events-none">
     <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply blur-xl" />
     <div className="absolute bottom-20 right-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply blur-xl" />
@@ -232,7 +231,6 @@ const AboutPage = () => {
   </div>
 
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    {/* Section header */}
     <div className="text-center mb-12 lg:mb-16">
       <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
         Meet Our{" "}
@@ -245,9 +243,7 @@ const AboutPage = () => {
       </p>
     </div>
 
-    {/* Free-flow layout (no box) */}
     <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-      {/* Image */}
       <div className="lg:col-span-5 flex justify-center">
         <img
           src="/stanley.jpeg"
@@ -256,12 +252,10 @@ const AboutPage = () => {
         />
       </div>
 
-      {/* Text (wide and relaxed) */}
       <div className="lg:col-span-7">
         <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">Stanley Chu</h3>
         <p className="mt-2 text-xl text-emerald-700 font-semibold">Founder of Super Energy</p>
 
-        {/* Badges (inline, breathable) */}
         <div className="mt-4 flex flex-wrap gap-2">
           <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-medium rounded-full">
             🌱 Renewable Energy Pioneer
@@ -274,7 +268,6 @@ const AboutPage = () => {
           </span>
         </div>
 
-        {/* Copy (use the whole column; relaxed line-height & spacing) */}
         <div className="mt-8 space-y-6 text-gray-800 leading-8 text-[1.05rem]">
           <p>
             Stanley Chu is a <strong className="text-emerald-700">pioneer in Singapore's renewable energy sector</strong>,
@@ -305,7 +298,6 @@ const AboutPage = () => {
           </p>
         </div>
 
-        {/* CTA (optional, simple buttons without boxes) */}
         <div className="mt-10 flex flex-wrap gap-4">
           <button className="px-6 py-3 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition">
             Learn More About Our Mission
@@ -317,7 +309,6 @@ const AboutPage = () => {
       </div>
     </div>
 
-    {/* Optional stats under the section (kept minimal & open) */}
     <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
       <div className="p-6 rounded-2xl bg-white/50">
         <div className="text-3xl font-bold text-emerald-600 mb-1">15+</div>
@@ -334,6 +325,7 @@ const AboutPage = () => {
     </div>
   </div>
 </section>
+
 
 
       {/* Certifications */}
