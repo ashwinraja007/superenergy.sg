@@ -167,44 +167,28 @@ const HowItWorks = () => {
             </div>
 
             {/* After pickup (balanced, mobile-compact) */}
-            <div className="mt-10 sm:mt-16 grid md:grid-cols-2 gap-4 sm:gap-8 items-stretch">
-              <div className="flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-5 sm:p-8 animate-fade-in bg-lime-100">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">What Happens After Pickup</h3>
-                <ul className="space-y-2.5 sm:space-y-3">
-                  {[
-                    "Sealed containers are transported to authorized recyclers.",
-                    "Full traceability with chain-of-custody records.",
-                    "Recyclers perform testing & processing per regulations.",
-                    "You retain receipts/compliance notes for your records.",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
-                      <span className="text-sm sm:text-base text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-auto" />
-              </div>
-
-              <Card className="flex flex-col h-full p-5 sm:p-8 bg-white/90 backdrop-blur border border-emerald-100 rounded-2xl">
-                <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Technology & Compliance</h4>
-                <ul className="space-y-2.5 sm:space-y-3">
-                  {technologies.map((t) => (
-                    <li key={t.name} className="flex items-start gap-3">
-                      <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
-                      <div>
-                        <div className="text-sm sm:text-base font-medium">{t.name}</div>
-                        <div className="text-xs sm:text-sm text-muted-foreground">{t.description}</div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-auto text-[11px] sm:text-xs text-muted-foreground pt-4">
-                  *We only collect UCO and hand it over to licensed recyclers.
-                </div>
-              </Card>
-            </div>
+        <div className="mt-16 flex justify-center">
+          <div className="w-full max-w-3xl flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-8 animate-fade-in bg-lime-100">
+            <h3 className="text-2xl font-bold mb-4">
+              What Happens After Pickup
+            </h3>
+            <ul className="space-y-3">
+              {[
+                "Sealed Drums are transported to authorized recyclers.",
+                "Full traceability with chain-of-custody records.",
+                "Recyclers perform testing & processing per regulations.",
+                "You retain receipts/compliance notes for your records.",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-emerald-600" />
+                  <span className="text-muted-foreground">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-auto" />
           </div>
+        </div>
+      </div>
 
           {/* keyframes if not present */}
           <style>{`
