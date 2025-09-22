@@ -124,7 +124,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-1 lg:py-20">
+      <section className="">
        <Contact />
       </section>
 
