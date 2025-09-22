@@ -206,7 +206,7 @@ const AboutPage = () => {
       {/* Image on Left */}
       <div className="flex justify-center">
         <img
-          src="/path-to-your-image/stanley-chu.jpg" // replace with actual image path
+          src="/stanley.jpeg" // replace with actual image path
           alt="Stanley Chu"
           className="rounded-2xl shadow-lg w-full max-w-sm object-cover"
         />
