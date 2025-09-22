@@ -11,7 +11,7 @@ import {
   ShieldCheck,
   Receipt,
   Cpu,
-  Calendar-days,
+  CalendarDays,
   ArrowUp,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -40,7 +40,7 @@ const steps = [
     step: "03",
   },
   {
-    icon: Calendar-days,
+    icon: CalendarDays,
     title: "Smart Scheduling",
     description:
       "Our team collects, and you receive a digital weight slip instantly.",
