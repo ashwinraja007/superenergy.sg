@@ -13,25 +13,17 @@ const Contact = () => {
   }, {
     icon: Phone,
     title: "Phone Support",
-    details: ["+91 XXXXX XXXXX"]
+    details: ["+65 XXXXX XXXXX"]
   }, {
     icon: Mail,
     title: "Email",
-    details: ["info@superenergy.in"]
-  }];
-  const socialLinks = [{
-    icon: Facebook,
-    label: "Facebook",
-    href: "#"
-  }, {
-    icon: Instagram,
-    label: "Instagram",
-    href: "#"
+    details: ["support@superenergy.sg"]
   }, {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "#"
+    details: ["https://www.linkedin.com/company/moltechglobal/"]
   }];
+  
   return <section id="contact" className="py-20 bg-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
@@ -70,15 +62,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Media */}
-            <div className="animate-fade-in">
-              <h4 className="text-xl font-bold mb-4">Follow Us</h4>
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => <a key={index} href={social.href} className="w-12 h-12 bg-eco-light rounded-xl flex items-center justify-center hover:bg-primary hover:text-white transition-colors" aria-label={social.label}>
-                    <social.icon className="h-6 w-6" />
-                  </a>)}
-              </div>
-            </div>
+          
 
             {/* Quick Action Card */}
             
@@ -115,7 +99,6 @@ const Contact = () => {
                     <SelectContent>
                       <SelectItem value="pickup">Pickup Request</SelectItem>
                       <SelectItem value="partner">Partnership</SelectItem>
-                      <SelectItem value="business">Business Registration</SelectItem>
                       <SelectItem value="general">General Query</SelectItem>
                     </SelectContent>
                   </Select>
