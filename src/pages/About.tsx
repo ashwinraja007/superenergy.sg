@@ -197,28 +197,62 @@ const AboutPage = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-emerald-50/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-3 tracking-tight">Leadership Team</h2>
-            <p className="text-lg text-muted-foreground">Experienced professionals driving our mission forward</p>
-          </div>
+{/* Leadership Section */}
+<section className="py-20 bg-emerald-50/50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-14">
+      <h2 className="text-4xl font-bold mb-3 tracking-tight">Leadership Team</h2>
+      <p className="text-lg text-muted-foreground">
+        Experienced professionals driving our mission forward
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, index) => <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
-                <div className="relative w-24 h-24 mx-auto mb-4">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-emerald-400 to-primary blur" />
-                  <div className="relative w-24 h-24 rounded-full bg-white grid place-items-center border">
-                    <Users className="h-10 w-10 text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-base font-semibold">{member.name}</h3>
-                <p className="text-primary text-sm font-medium mb-2">{member.position}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
-              </Card>)}
-          </div>
-        </div>
-      </section>
+    {/* Stanley Chu Profile */}
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+      {/* Image on Left */}
+      <div className="flex justify-center">
+        <img
+          src="/path-to-your-image/stanley-chu.jpg" // replace with actual image path
+          alt="Stanley Chu"
+          className="rounded-2xl shadow-lg w-full max-w-sm object-cover"
+        />
+      </div>
+
+      {/* Content on Right */}
+      <div>
+        <h3 className="text-2xl font-bold mb-2">Stanley Chu – Founder of Super Energy</h3>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Stanley Chu is a pioneer in Singapore’s renewable energy sector, widely recognised
+          for his early leadership in the collection and recycling of used cooking oil (UCO).
+          At a time when waste-to-energy solutions were still emerging in Southeast Asia,
+          Stanley identified the untapped potential of UCO as a sustainable feedstock for
+          biodiesel and other renewable fuels.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Driven by a vision to reduce waste, lower carbon emissions, and create value from a
+          widely discarded resource, he established Super Energy in Singapore. Under his
+          direction, the company built one of the first dedicated collection and processing
+          networks for used cooking oil in the country, partnering with restaurants, food
+          manufacturers, and waste management operators.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          To reinforce its commitment to environmental responsibility and supply chain
+          transparency, Super Energy achieved the International Sustainability and Carbon
+          Certification (ISCC) — a globally recognised standard that ensures sustainable
+          sourcing, carbon emission reductions, and traceability in bio-based supply chains.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          Stanley’s work not only set industry standards for quality and sustainability in
+          UCO supply but also helped position Singapore as a reliable source of feedstock
+          for the global renewable fuel market. Through innovation, strategic partnerships,
+          and a commitment to environmental stewardship, Stanley Chu and Super Energy have
+          played a key role in supporting the transition towards cleaner energy solutions in Asia.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Certifications */}
       <section className="py-20 bg-slate-100">
