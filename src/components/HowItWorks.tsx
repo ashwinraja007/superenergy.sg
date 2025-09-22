@@ -34,7 +34,7 @@ const steps = [
     icon: CalendarDays,
     title: "Smart Scheduling",
     description:
-      "Our team collects, and you receive a digital weight slip instantly.",
+      "Pickups are triggered at the right time - no overflows or delays.",
     step: "04",
   },
   {
