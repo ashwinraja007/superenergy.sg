@@ -113,18 +113,18 @@ const ContactPage = () => {
         <Badge variant="secondary" className="mb-4 px-4 py-2 rounded-full">
           📞 Contact Us
         </Badge>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5 text-slate-950">
           Get in{" "}
-          <span className="bg-gradient-eco bg-clip-text text-transparent">Touch</span>
+          <span className="bg-gradient-eco bg-clip-text text-slate-950">Touch</span>
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg max-w-2xl mx-auto leading-relaxed text-slate-950">
           Ready to start your sustainable journey? Reach out to schedule a free pickup,
           explore partnerships, or ask about our services.
         </p>
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 lg:py-20">
+      <section className="py-1 lg:py-20">
        <Contact />
       </section>
 

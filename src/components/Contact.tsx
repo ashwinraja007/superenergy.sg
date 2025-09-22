@@ -23,8 +23,7 @@ const Contact = () => {
     title: "LinkedIn",
     details: ["https://www.linkedin.com/company/moltechglobal/"]
   }];
-  
-  return <section id="contact" className="py-20 bg-slate-100">
+  return <section id="contact" className=" bg-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           
