@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
           {[
             {
               title: "Request Pickup",
-              desc: "Book a collection—get sealed SmartDrums for your used cooking oil.",
+              desc: "Book a collection—get sealed Smart Drums for your used cooking oil.",
             },
             {
               title: "We Collect & Weigh",
