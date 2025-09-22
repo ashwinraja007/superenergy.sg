@@ -28,10 +28,10 @@ const WhyBiodieselSection = () => {
                 🌿 Environmental Impact
               </Badge>
               <h2 className="text-4xl lg:text-5xl font-bold mb-3">
-                Why <span className="bg-gradient-eco bg-clip-text text-transparent">Biodiesel?</span>
+                Why <span className="bg-gradient-eco bg-clip-text text-transparent">recycle used cooking oil?</span>
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                Instead of ending up as waste, used cooking oil can be repurposed into clean, sustainable fuel.
+                Instead of ending up as waste, used cooking oil can be repurposed into clean, renewable fuel.
               </p>
             </div>
 
@@ -40,8 +40,8 @@ const WhyBiodieselSection = () => {
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold mb-2 sm:mb-3">Did You Know?</h3>
                 <p className="text-lg leading-relaxed">
-                  <span className="text-3xl font-bold">1 litre</span> of used cooking oil can produce enough biodiesel
-                  to drive a car for <span className="text-3xl font-bold">20 km</span> — clean &amp; sustainable!
+                  <span className="text-3xl font-bold">1 ton</span> of used cooking oil can produce enough biodiesel
+                  to drive a car for around <span className="text-3xl font-bold">15,000 km</span> — clean &amp; sustainable!
                 </p>
               </div>
             </Card>
