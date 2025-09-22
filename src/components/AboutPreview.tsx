@@ -17,7 +17,7 @@ const AboutPreview = () => {
         <div className="relative">
           <div className="relative overflow-hidden rounded-2xl border border-emerald-100 shadow-2xl">
             {/* Put your image at /public/images/about-us.jpg */}
-            <img src="/about-us.png" alt="Team collecting sealed used cooking oil containers" className="w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[520px] object-cover" loading="lazy" decoding="async" />
+            <img src="/about-us.jpeg" alt="Team collecting sealed used cooking oil containers" className="w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[520px] object-cover" loading="lazy" decoding="async" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/10 to-transparent" />
           </div>
 
