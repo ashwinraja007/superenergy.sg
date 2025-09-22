@@ -162,40 +162,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-10 bg-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-3 tracking-tight">Our Journey</h2>
-            <p className="text-lg text-muted-foreground">Key milestones in our growth and impact</p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-transparent via-emerald-200 to-transparent" />
-            <div className="space-y-12">
-              {milestones.map((m, i) => <div key={i} className={`relative flex flex-col md:flex-row items-center ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
-                  <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pl-10" : "md:pr-10"} w-full`}>
-                    <Card className="p-6 border bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                      <div className="flex items-center gap-3 mb-2">
-                        <Badge variant="secondary" className="text-sm font-bold">{m.year}</Badge>
-                        <div className="h-1 w-20 bg-emerald-200 rounded" />
-                      </div>
-                      <h3 className="text-xl font-semibold mb-1">{m.title}</h3>
-                      <p className="text-muted-foreground text-sm md:text-base">{m.description}</p>
-                    </Card>
-                  </div>
-                  <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
-                    <div className="relative">
-                      <div className="w-6 h-6 rounded-full bg-primary border-4 border-background shadow-md" />
-                      <div className="absolute inset-0 animate-ping rounded-full bg-primary/20" />
-                    </div>
-                  </div>
-                </div>)}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Team */}
 {/* Leadership Section */}
 <section className="py-20 bg-emerald-50/50">
@@ -246,6 +212,42 @@ const AboutPage = () => {
     </div>
   </div>
 </section>
+
+      {/* Timeline */}
+      <section className="py-10 bg-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold mb-3 tracking-tight">Our Journey</h2>
+            <p className="text-lg text-muted-foreground">Key milestones in our growth and impact</p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-1/2 -translate-x-1/2 h-full w-px bg-gradient-to-b from-transparent via-emerald-200 to-transparent" />
+            <div className="space-y-12">
+              {milestones.map((m, i) => <div key={i} className={`relative flex flex-col md:flex-row items-center ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                  <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pl-10" : "md:pr-10"} w-full`}>
+                    <Card className="p-6 border bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex items-center gap-3 mb-2">
+                        <Badge variant="secondary" className="text-sm font-bold">{m.year}</Badge>
+                        <div className="h-1 w-20 bg-emerald-200 rounded" />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-1">{m.title}</h3>
+                      <p className="text-muted-foreground text-sm md:text-base">{m.description}</p>
+                    </Card>
+                  </div>
+                  <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+                    <div className="relative">
+                      <div className="w-6 h-6 rounded-full bg-primary border-4 border-background shadow-md" />
+                      <div className="absolute inset-0 animate-ping rounded-full bg-primary/20" />
+                    </div>
+                  </div>
+                </div>)}
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
 
 
       {/* Certifications */}
