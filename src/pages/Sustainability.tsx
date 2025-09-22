@@ -80,9 +80,7 @@ const SustainabilityPage = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
             Simple, Real <span className="bg-gradient-to-r from-emerald-600 to-teal-400 bg-clip-text text-transparent">Impact</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            We turn used cooking oil into clean fuel—cutting emissions, protecting water, and closing the loop for businesses.
-          </p>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">We collect Used Cooking Oil for the production of renewable fuels —cutting emissions, protecting water, and closing the loop for businesses.</p>
           
         </div>
       </section>
@@ -106,29 +104,7 @@ const SustainabilityPage = () => {
       </section>
 
       {/* INITIATIVES */}
-      <section className="py-16 bg-emerald-50/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">What We Focus On</h2>
-            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Three pillars that drive our environmental performance.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {initiatives.map((it, idx) => <Card key={idx} className="p-6 border rounded-2xl hover:shadow-lg transition-shadow bg-green-200">
-                <div className="w-12 h-12 rounded-xl bg-emerald-50 grid place-items-center mb-3">
-                  <it.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold">{it.title}</h3>
-                <ul className="mt-3 space-y-2">
-                  {it.points.map((p, i) => <li key={i} className="flex items-start gap-2 text-sm">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary inline-block" />
-                      <span>{p}</span>
-                    </li>)}
-                </ul>
-              </Card>)}
-          </div>
-        </div>
-      </section>
+      
 
       {/* CERTIFICATIONS */}
       <section className="py-16">
@@ -164,7 +140,7 @@ const SustainabilityPage = () => {
               <p className="mt-2 text-sm sm:text-base opacity-90">From compliance to real impact—start with a free consultation.</p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
                 <Button size="lg" variant="secondary" asChild>
-                  <Link to="/contact">Get a Quote</Link>
+                  <Link to="/contact">Contact Us</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
                   
