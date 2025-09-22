@@ -10,6 +10,8 @@ import {
   Truck,
   ShieldCheck,
   Receipt,
+  Cpu,
+  Calendar-days,
   ArrowUp,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -20,35 +22,35 @@ const steps = [
     icon: Droplets,
     title: "Save Your Used Oil",
     description:
-      "After frying or cooking, let the oil cool and pour it into our provided sealed container.",
+      "After frying or cooking, let the oil cool and pour it into our provided sealed drum.",
     step: "01",
   },
   {
-    icon: Smartphone,
-    title: "Book a Pickup",
+    icon: Cpu,
+    title: "Automatic Monitoring",
     description:
-      "Use our mobile app, website, or hotline to request a free pickup at your convenience.",
+      "Real-time sensors track oil levels - no manual checks needed",
     step: "02",
   },
   {
-    icon: Truck,
-    title: "We Collect It",
+    icon: Smartphone,
+    title: "Cloud Dashboard",
     description:
-      "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.",
+      "You see live updates and collection history anytime,anywhere",
     step: "03",
   },
   {
-    icon: ShieldCheck,
-    title: "Handover to Licensed Recycler",
+    icon: Calendar-days,
+    title: "Smart Scheduling",
     description:
-      "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.",
+      "Our team collects, and you receive a digital weight slip instantly.",
     step: "04",
   },
   {
     icon: Receipt,
-    title: "Compliance & Impact",
+    title: "Transparent Handover",
     description:
-      "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.",
+      "Our team collects, and you receive a digital weight slip instantly.",
     step: "05",
   },
 ];
