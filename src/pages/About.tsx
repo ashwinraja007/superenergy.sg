@@ -66,7 +66,7 @@ const AboutPage = () => {
     position: "Sustainability Director",
     bio: "Environmental scientist focused on carbon footprint reduction and ESG compliance"
   }];
-  const certifications = ["International Sustainability and Carbon Certified (ISCC)", "National Environment Agency (NEA) Certified""];
+  const certifications = ["International Sustainability and Carbon Certified (ISCC)", "National Environment Agency (NEA) Certified"];
   return <div className="min-h-screen bg-background relative">
       {/* Decorative background elements */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -259,7 +259,7 @@ const AboutPage = () => {
             <p className="text-lg text-muted-foreground">Maintaining the highest standards of quality and environmental responsibility</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
             {certifications.map((cert, index) => <Card key={index} className="p-6 text-center bg-white border hover:shadow-lg transition-all rounded-2xl">
                 <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mx-auto mb-3">
                   <Award className="h-6 w-6 text-emerald-700" />
