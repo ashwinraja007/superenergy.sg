@@ -1,32 +1,43 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Droplets, Smartphone, Truck, ShieldCheck, Receipt } from "lucide-react";
-const steps = [{
-  icon: Droplets,
-  title: "Save Your Used Oil",
-  description: "After frying or cooking, let the oil cool and pour it into our provided sealed container.",
-  step: "01"
-}, {
-  icon: Smartphone,
-  title: "Book a Pickup",
-  description: "Use our mobile app, website, or hotline to request a free pickup at your convenience.",
-  step: "02"
-}, {
-  icon: Truck,
-  title: "We Collect It",
-  description: "Our team arrives at your doorstep. We weigh the oil, issue a receipt, and collect it safely.",
-  step: "03"
-}, {
-  icon: ShieldCheck,
-  title: "Handover to Licensed Recycler",
-  description: "We transfer your UCO to an authorized recycler with full chain-of-custody and safety protocols.",
-  step: "04"
-}, {
-  icon: Receipt,
-  title: "Compliance & Impact",
-  description: "You receive pickup receipts/compliance notes. Track liters diverted and CO₂e avoided.",
-  step: "05"
-}];
+import { Droplets, Smartphone, Truck, ShieldCheck, Receipt, Cpu, CalendarDays, ArrowUp } from "lucide-react";
+const steps = [
+  {
+    icon: Droplets,
+    title: "Save Your Used Oil",
+    description:
+      "After frying or cooking, let the oil cool and pour it into our provided sealed drum.",
+    step: "01",
+  },
+  {
+    icon: Cpu,
+    title: "Automatic Monitoring",
+    description:
+      "Real-time sensors track oil levels - no manual checks needed",
+    step: "02",
+  },
+  {
+    icon: Smartphone,
+    title: "Cloud Dashboard",
+    description:
+      "You see live updates and collection history anytime,anywhere",
+    step: "03",
+  },
+  {
+    icon: CalendarDays,
+    title: "Smart Scheduling",
+    description:
+      "Our team collects, and you receive a digital weight slip instantly.",
+    step: "04",
+  },
+  {
+    icon: Receipt,
+    title: "Transparent Handover",
+    description:
+      "Our team collects, and you receive a digital weight slip instantly.",
+    step: "05",
+  },
+];
 const technologies = [{
   name: "Vacuum Filtration",
   description: "Advanced filtration removes impurities and solid particles."
