@@ -46,7 +46,7 @@ const AboutPage = () => {
     description: "Reached 500+ business partnerships and 75,000+ litres collected."
   }, {
     year: "2024",
-    title: "Certified Leader In sustainable UCO Collector ",
+    title: "Certified Leader In sustainable UCO Collection",
     description: "Recognized as Singapore's leading sustainable fuel feedstock provider"
   }];
   const team = [{
