@@ -66,7 +66,7 @@ const AboutPage = () => {
     position: "Sustainability Director",
     bio: "Environmental scientist focused on carbon footprint reduction and ESG compliance"
   }];
-  const certifications = ["International Sustainability and Carbon Certified (ISCC)", "National Environment Agency (NEA) Certified"];
+  const certifications = ["Certified By International Sustainability and Carbon Certification (ISCC)", "National Environment Agency (NEA) Certified"];
   return <div className="min-h-screen bg-background relative">
       {/* Decorative background elements */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
