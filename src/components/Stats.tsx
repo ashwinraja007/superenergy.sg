@@ -96,7 +96,7 @@ const Stats = () => {
       icon: Truck,
       value: counts.vehicles.toLocaleString(),
       suffix: "+",
-      label: "Vehicles Powered by indirectly Super Energy",
+      label: "Vehicles Powered indirectly by Super Energy",
       color: "text-emerald-600",
       ring: "from-emerald-400/30 to-emerald-600/20",
     },
