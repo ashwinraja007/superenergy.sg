@@ -29,25 +29,25 @@ const AboutPage = () => {
     description: "Continuously improving our technology and processes to deliver the highest quality biodiesel."
   }];
   const milestones = [{
-    year: "2020",
+    year: "2017",
     title: "Company Founded",
-    description: "Super Energy established with a vision to transform Singapore's waste oil landscape"
+    description: "Stanley Chu established SuperEnergy with the vision to transform the waste oil landscape."
   }, {
-    year: "2021",
-    title: "First Commercial Partnerships",
-    description: "Secured partnerships with 50+ restaurants and commercial kitchens"
+    year: "2018",
+    title: "Growing Our Commercial Partnerships",
+    description: "Stanley Chu established SuperEnergy with the vision to transform the waste oil landscape."
+  }, {
+    year: "2019",
+    title: "Processing Facility Launch",
+    description: "Opened state-of-the-art UCO processing/filltering facility."
   }, {
     year: "2022",
-    title: "Processing Facility Launch",
-    description: "Opened state-of-the-art biodiesel processing facility with 100,000L monthly capacity"
-  }, {
-    year: "2023",
-    title: "Expansion & Growth",
-    description: "Reached 3,500+ business partnerships and 175,000+ litres collected annually"
+    title: "Continued Expansion & Growth",
+    description: "Reached 500+ business partnerships and 75,000+ litres collected."
   }, {
     year: "2024",
-    title: "Sustainability Leadership",
-    description: "Recognized as Singapore's leading sustainable fuel solutions provider"
+    title: "Certified Leader In sustainable UCO Collector ",
+    description: "Recognized as Singapore's leading sustainable fuel feedstock provider"
   }];
   const team = [{
     name: "Dr. Sarah Chen",
