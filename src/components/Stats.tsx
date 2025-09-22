@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 type Counts = {
   litres: number;
   businesses: number;
-  carbon: number;
+  carbon: string;     // <-- string to hold "180-210"
   vehicles: number;
 };
 
@@ -14,11 +14,10 @@ const Stats = () => {
   const [counts, setCounts] = useState<Counts>({
     litres: 0,
     businesses: 0,
-    carbon: 0,
+    carbon: "0",      // start as string
     vehicles: 0,
   });
 
-  // Trigger animation only when section enters the viewport
   const sectionRef = useRef<HTMLElement | null>(null);
   const hasAnimated = useRef(false);
 
@@ -35,7 +34,7 @@ const Stats = () => {
           const targets = {
             litres: 75000,
             businesses: 500,
-            carbon: 180-210,
+            // carbon is a fixed string range, no animation needed
             vehicles: 100,
           };
 
@@ -43,21 +42,19 @@ const Stats = () => {
           const duration = 2000;
           const increment = Object.fromEntries(
             Object.entries(targets).map(([k, v]) => [k, (v as number) / steps])
-          ) as Record<keyof Counts, number>;
+          ) as Record<keyof Omit<Counts, "carbon">, number>;
 
           let step = 0;
           const timer = setInterval(() => {
             step++;
             setCounts((prev) => {
-              const updated = { ...prev };
-              (Object.keys(prev) as (keyof Counts)[]).forEach((key) => {
-                const value = Math.min(
-                  Math.floor(increment[key] * step),
-                  targets[key]
-                );
-                updated[key] = value;
-              });
-              return updated;
+              return {
+                ...prev,
+                litres: Math.min(Math.floor(increment.litres * step), targets.litres),
+                businesses: Math.min(Math.floor(increment.businesses * step), targets.businesses),
+                carbon: "180-210", // keep static range
+                vehicles: Math.min(Math.floor(increment.vehicles * step), targets.vehicles),
+              };
             });
             if (step >= steps) clearInterval(timer);
           }, duration / steps);
@@ -89,8 +86,8 @@ const Stats = () => {
     },
     {
       icon: Globe,
-      value: counts.carbon.toLocaleString(),
-      suffix: "KT",
+      value: counts.carbon,  // already the string "180-210"
+      suffix: " KT",
       label: "Tonnes of Carbon Offset",
       color: "text-green-700",
       ring: "from-green-400/30 to-green-600/20",
@@ -106,11 +103,8 @@ const Stats = () => {
   ] as const;
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-20"
-    >
-      {/* Subtle background accents */}
+    <section ref={sectionRef} className="relative py-20">
+      {/* background accents */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-emerald-50/70 to-transparent" />
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
@@ -118,7 +112,7 @@ const Stats = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* header */}
         <div className="text-center mb-14 animate-fade-in">
           <Badge variant="secondary" className="px-3 py-1 text-sm">
             Metrics that matter
@@ -135,7 +129,7 @@ const Stats = () => {
           </p>
         </div>
 
-        {/* Stats Grid */}
+        {/* stats grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, idx) => (
             <div
@@ -144,7 +138,6 @@ const Stats = () => {
               style={{ animationDelay: `${idx * 100}ms` }}
             >
               <Card className="h-full rounded-[1rem] p-6 sm:p-8 text-center bg-white/85 backdrop-blur border border-emerald-100 shadow-sm group-hover:shadow-xl transition-shadow duration-300">
-                {/* Icon with glowing ring */}
                 <div className="relative mx-auto mb-5 w-16 h-16">
                   <div
                     className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${stat.ring} blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-300`}
@@ -153,34 +146,24 @@ const Stats = () => {
                     <stat.icon className={`h-8 w-8 ${stat.color}`} aria-hidden="true" />
                   </div>
                 </div>
-
-                {/* Value */}
                 <div
                   aria-live="polite"
                   className="text-4xl font-extrabold mb-1 flex justify-center items-baseline tracking-tight"
                 >
-                  <span className={`${stat.color}`}>{stat.value}</span>
+                  <span className={stat.color}>{stat.value}</span>
                   <span className="text-2xl ml-1 text-foreground/80">{stat.suffix}</span>
                 </div>
                 <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
-
-                {/* Accent underline on hover */}
                 <div className="mx-auto mt-4 h-0.5 w-10 bg-gradient-to-r from-emerald-400 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Card>
             </div>
           ))}
         </div>
 
-        {/* Footnote */}
         <p className="mt-8 text-center text-xs text-muted-foreground">
           *Figures are cumulative and refreshed periodically.
         </p>
       </div>
-
-      {/* tiny keyframes if not present globally */}
-      <style>{`
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-      `}</style>
     </section>
   );
 };
