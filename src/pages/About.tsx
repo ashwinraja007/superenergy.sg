@@ -66,7 +66,7 @@ const AboutPage = () => {
     position: "Sustainability Director",
     bio: "Environmental scientist focused on carbon footprint reduction and ESG compliance"
   }];
-  const certifications = ["Singapore Food Agency (SFA) Licensed", "National Environment Agency (NEA) Certified", "ISO 14001 Environmental Management", "OHSAS 18001 Occupational Health & Safety", "Singapore Green Finance Framework Compliant", "Carbon Trust Standard Certified"];
+  const certifications = ["International Sustainability and Carbon Certified (ISCC)", "National Environment Agency (NEA) Certified""];
   return <div className="min-h-screen bg-background relative">
       {/* Decorative background elements */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
