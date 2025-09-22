@@ -35,7 +35,7 @@ const Stats = () => {
           const targets = {
             litres: 75000,
             businesses: 500,
-            carbon: 180-210KT,
+            carbon: 180-210,
             vehicles: 100,
           };
 
@@ -90,7 +90,7 @@ const Stats = () => {
     {
       icon: Globe,
       value: counts.carbon.toLocaleString(),
-      suffix: "+",
+      suffix: "KT",
       label: "Tonnes of Carbon Offset",
       color: "text-green-700",
       ring: "from-green-400/30 to-green-600/20",
