@@ -33,12 +33,6 @@ const SustainabilityPage = () => {
     value: "100%",
     blurb: "Zero liquid discharge facility",
     color: "text-cyan-600"
-  }, {
-    icon: Leaf,
-    label: "Closed-Loop Fleet",
-    value: "B20",
-    blurb: "All vehicles on biodiesel",
-    color: "text-green-600"
   }];
   const initiatives = [{
     icon: Zap,
@@ -54,14 +48,9 @@ const SustainabilityPage = () => {
     points: ["School programs", "Biz workshops", "Recycling drives"]
   }];
   const certifications = [{
-    name: "ISO 14001",
-    note: "Environmental Management"
+    name: "ISO Certified",
   }, {
-    name: "Carbon Trust",
-    note: "Measured & reduced emissions"
-  }, {
-    name: "Green Finance",
-    note: "SG framework compliant"
+    name: "ISCC Certified",
   }];
   return <div className="min-h-screen bg-background relative">
       {/* Soft background accents */}
@@ -114,7 +103,7 @@ const SustainabilityPage = () => {
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Independent standards that validate our approach.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {certifications.map((c, idx) => <Card key={idx} className="p-6 border rounded-2xl hover:shadow-lg transition-shadow bg-cyan-100">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-emerald-50 grid place-items-center">
@@ -122,7 +111,6 @@ const SustainabilityPage = () => {
                   </div>
                   <div>
                     <div className="font-semibold">{c.name}</div>
-                    <div className="text-sm text-muted-foreground">{c.note}</div>
                   </div>
                 </div>
               </Card>)}
