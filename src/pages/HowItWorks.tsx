@@ -1,3 +1,4 @@
+import { useEffect } from "react";              // ✅ add this
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -13,52 +14,19 @@ import {
 
 /** Steps for the timeline */
 const steps = [
-  {
-    icon: Droplets,
-    title: "Save Your Used Oil",
-    description:
-      "After frying or cooking, let the oil cool and pour it into our provided sealed drum.",
-    step: "01",
-  },
-  {
-    icon: Cpu,
-    title: "Automatic Monitoring",
-    description:
-      "Real-time sensors track oil levels - no manual checks needed",
-    step: "02",
-  },
-  {
-    icon: Smartphone,
-    title: "Cloud Dashboard",
-    description:
-      "You see live updates and collection history anytime,anywhere",
-    step: "03",
-  },
-  {
-    icon: CalendarDays,
-    title: "Smart Scheduling",
-    description:
-      "Pickups are triggered at the right time - no overflows or delays.",
-    step: "04",
-  },
-  {
-    icon: Receipt,
-    title: "Transparent Handover",
-    description:
-      "Our team collects, and you receive a digital weight slip instantly.",
-    step: "05",
-  },
-];
-
-/** Tech/compliance list (kept for reference) */
-const technologies = [
-  { name: "Vacuum Filtration", description: "Advanced filtration removes impurities and solid particles." },
-  { name: "Degumming & Neutralization", description: "Removes phosphatides and free fatty acids for stable downstream processing." },
-  { name: "Esterification / Transesterification", description: "Performed by licensed recyclers (we only collect UCO)." },
-  { name: "Lab Testing (BIS/Compliance)", description: "Quality checks and documentation retained for your records." },
+  { icon: Droplets, title: "Save Your Used Oil", description: "After frying or cooking, let the oil cool and pour it into our provided sealed drum.", step: "01" },
+  { icon: Cpu, title: "Automatic Monitoring", description: "Real-time sensors track oil levels - no manual checks needed", step: "02" },
+  { icon: Smartphone, title: "Cloud Dashboard", description: "You see live updates and collection history anytime,anywhere", step: "03" },
+  { icon: CalendarDays, title: "Smart Scheduling", description: "Pickups are triggered at the right time - no overflows or delays.", step: "04" },
+  { icon: Receipt, title: "Transparent Handover", description: "Our team collects, and you receive a digital weight slip instantly.", step: "05" },
 ];
 
 const HowItWorks = () => {
+  /* 🔑 Scroll to top when this page is mounted */
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" }); // or "smooth" if you prefer a smooth scroll
+  }, []);
+
   return (
     <>
       <Header />
@@ -153,9 +121,7 @@ const HowItWorks = () => {
             {/* After pickup section */}
             <div className="mt-16 flex justify-center">
               <div className="w-full max-w-3xl flex flex-col h-full rounded-2xl border border-emerald-200/60 backdrop-blur p-8 animate-fade-in bg-lime-100">
-                <h3 className="text-2xl font-bold mb-4">
-                  What Happens After Pickup
-                </h3>
+                <h3 className="text-2xl font-bold mb-4">What Happens After Pickup</h3>
                 <ul className="space-y-3">
                   {[
                     "Sealed Drums are transported to authorized recyclers.",
@@ -189,4 +155,3 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
-
