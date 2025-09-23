@@ -37,7 +37,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       title: "LinkedIn",
-      details: ["https://www.linkedin.com/company/moltechglobal/"],
+      details: [""],
     },
   ];
 
