@@ -184,7 +184,7 @@ const ContactPage = () => {
         <div className="relative w-full h-[350px] rounded-2xl overflow-hidden shadow-md transition-transform duration-300 hover:scale-[1.02]">
           <iframe
             title="Super Energy Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.726960523674!2d103.889!3d1.341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da176fb41f8d65%3A0x4c1f1ed7a12e6d!2s1001%20Tai%20Seng%20Ave%2C%20Singapore%20534420!5e0!3m2!1sen!2ssg!4v1690000000000!5m2!1sen!2ssg"
+            src="https://www.google.com/maps/d/embed?mid=1QYWOGZQvE8w1dDvza5mQ-ex2sXLGqYM&ehbc=2E312F&noprof=1"
             width="100%"
             height="100%"
             style={{ border: 0 }}
