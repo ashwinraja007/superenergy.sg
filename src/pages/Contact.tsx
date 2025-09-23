@@ -181,18 +181,21 @@ const ContactPage = () => {
         </div>
 
         {/* Clean Google Map */}
-        <div className="relative w-full h-[350px] rounded-2xl overflow-hidden shadow-md transition-transform duration-300 hover:scale-[1.02]">
-          <iframe
-            title="Super Energy Location"
-            src="https://www.google.com/maps/d/embed?mid=1QYWOGZQvE8w1dDvza5mQ-ex2sXLGqYM&ehbc=2E312F&noprof=1"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+        <div className="relative w-full h-[350px] rounded-2xl overflow-hidden shadow-md">
+  {/* Green overlay */}
+  <div className="absolute top-0 left-0 w-full bg-emerald-600 text-white text-center py-2 z-10">
+    Super Energy Head Office
+  </div>
+
+  {/* Map iframe (kept beneath overlay) */}
+  <iframe
+    title="Super Energy Location"
+    src="https://www.google.com/maps/d/embed?mid=1QYWOGZQvE8w1dDvza5mQ-ex2sXLGqYM&ehbc=2E312F&noprof=1"
+    className="absolute inset-0 w-full h-full border-0"
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
       </div>
     </Card>
   </div>
