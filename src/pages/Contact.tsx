@@ -146,9 +146,10 @@ const ContactPage = () => {
      <section className="py-16 lg:py-20 bg-eco-surface" id="map">
   <div className="max-w-7xl mx-auto px-4">
     <h2 className="text-3xl font-bold text-center mb-10">Visit Our Office</h2>
-    <Card className="p-6 bg-background">
+
+    <Card className="p-6 bg-background shadow-lg rounded-2xl">
       <div className="grid md:grid-cols-2 gap-8">
-        {/* Details + CTA */}
+        {/* Contact Details */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Super Energy Head Office</h3>
           <div className="space-y-3 mb-6">
@@ -170,7 +171,7 @@ const ContactPage = () => {
           </div>
           <Button asChild>
             <a
-              href="https://www.google.com/maps/dir/?api=1&destination=1001%20Tai%20Seng%20Avenue%2C%20%2301-2526%2C%20Singapore%20534420"
+              href="https://www.google.com/maps/dir/?api=1&destination=1001+Tai+Seng+Avenue+Singapore+534420"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -179,19 +180,18 @@ const ContactPage = () => {
           </Button>
         </div>
 
-        {/* Embedded Map */}
-        <div className="rounded-2xl overflow-hidden bg-eco-surface">
-          {/* Responsive 16:9 wrapper; change pt-[56.25%] if you prefer a different ratio */}
-          <div className="relative w-full pt-[56.25%]">
-            <iframe
-              title="Super Energy - Location Map"
-              src="https://www.google.com/maps/d/embed?mid=1QYWOGZQvE8w1dDvza5mQ-ex2sXLGqYM&ehbc=2E312F&noprof=1"
-              className="absolute inset-0 h-full w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              aria-label="Interactive map showing Super Energy head office location"
-            />
-          </div>
+        {/* Clean Google Map */}
+        <div className="relative w-full h-[350px] rounded-2xl overflow-hidden shadow-md transition-transform duration-300 hover:scale-[1.02]">
+          <iframe
+            title="Super Energy Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.726960523674!2d103.889!3d1.341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da176fb41f8d65%3A0x4c1f1ed7a12e6d!2s1001%20Tai%20Seng%20Ave%2C%20Singapore%20534420!5e0!3m2!1sen!2ssg!4v1690000000000!5m2!1sen!2ssg"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </Card>
