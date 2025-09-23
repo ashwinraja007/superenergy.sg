@@ -30,7 +30,7 @@ const AboutPreview = () => {
               </div>
               <div>
                 <div className="text-sm font-semibold">100+ Partner Kitchens</div>
-                <div className="text-xs text-muted-foreground">Free pickup • sealed drums • digital receipt</div>
+                <div className="text-xs text-muted-foreground">Efficient Pick-Up • sealed drums • digital receipt</div>
               </div>
             </div>
           </Card>
