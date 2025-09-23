@@ -143,7 +143,7 @@ const ContactPage = () => {
       </section>
 
       {/* Location */}
-     <section className="py-16 lg:py-20 bg-eco-surface" id="map">
+    <section className="py-16 lg:py-20 bg-eco-surface" id="map">
   <div className="max-w-7xl mx-auto px-4">
     <h2 className="text-3xl font-bold text-center mb-10">Visit Our Office</h2>
 
@@ -197,7 +197,6 @@ const ContactPage = () => {
     </Card>
   </div>
 </section>
-
 
       <Footer />
       <ScrollToTop />
