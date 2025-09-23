@@ -143,46 +143,61 @@ const ContactPage = () => {
       </section>
 
       {/* Location */}
-      <section className="py-16 lg:py-20 bg-eco-surface" id="map">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">Visit Our Office</h2>
-          <Card className="p-6 bg-background">
-            <div className="grid md:grid-cols-2 gap-8">
+     <section className="py-16 lg:py-20 bg-eco-surface" id="map">
+  <div className="max-w-7xl mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-10">Visit Our Office</h2>
+    <Card className="p-6 bg-background">
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Details + CTA */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Super Energy Head Office</h3>
+          <div className="space-y-3 mb-6">
+            <div className="flex gap-3">
+              <MapPin className="h-5 w-5 text-primary" />
               <div>
-                <h3 className="text-xl font-semibold mb-4">Super Energy Head Office</h3>
-                <div className="space-y-3 mb-6">
-                  <div className="flex gap-3">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <div>
-                      <p>1001 Tai Seng Avenue, #01-2526</p>
-                      <p className="text-muted-foreground">Singapore 534420</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <span>+65 9298 8849, +65 9385 1609</span>
-                  </div>
-                  <div className="flex gap-3">
-                    <Mail className="h-5 w-5 text-primary" />
-                    <span>info@superenergy.sg</span>
-                  </div>
-                </div>
-                <Button asChild>
-                  <a href="https://www.google.com/maps/d/embed?mid=1QYWOGZQvE8w1dDvza5mQ-ex2sXLGqYM&ehbc=2E312F&noprof=1" target="_blank" rel="noopener noreferrer">
-                    Get Directions
-                  </a>
-                </Button>
-              </div>
-              <div className="rounded-2xl bg-eco-surface flex items-center justify-center p-8 text-center">
-                <MapPin className="h-12 w-12 text-primary mb-4" />
-                <p className="text-muted-foreground">
-                  Interactive map integration will appear here to show our exact location.
-                </p>
+                <p>1001 Tai Seng Avenue, #01-2526</p>
+                <p className="text-muted-foreground">Singapore 534420</p>
               </div>
             </div>
-          </Card>
+            <div className="flex gap-3">
+              <Phone className="h-5 w-5 text-primary" />
+              <span>+65 9298 8849, +65 9385 1609</span>
+            </div>
+            <div className="flex gap-3">
+              <Mail className="h-5 w-5 text-primary" />
+              <span>info@superenergy.sg</span>
+            </div>
+          </div>
+          <Button asChild>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=1001%20Tai%20Seng%20Avenue%2C%20%2301-2526%2C%20Singapore%20534420"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Directions
+            </a>
+          </Button>
         </div>
-      </section>
+
+        {/* Embedded Map */}
+        <div className="rounded-2xl overflow-hidden bg-eco-surface">
+          {/* Responsive 16:9 wrapper; change pt-[56.25%] if you prefer a different ratio */}
+          <div className="relative w-full pt-[56.25%]">
+            <iframe
+              title="Super Energy - Location Map"
+              src="https://www.google.com/maps/d/embed?mid=1QYWOGZQvE8w1dDvza5mQ-ex2sXLGqYM&ehbc=2E312F&noprof=1"
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              aria-label="Interactive map showing Super Energy head office location"
+            />
+          </div>
+        </div>
+      </div>
+    </Card>
+  </div>
+</section>
+
 
       <Footer />
       <ScrollToTop />
