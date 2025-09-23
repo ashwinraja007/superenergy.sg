@@ -183,7 +183,7 @@ const ContactPage = () => {
         {/* Clean Google Map */}
         <div className="relative w-full h-[350px] rounded-2xl overflow-hidden shadow-md">
   {/* Green overlay */}
-  <div className="absolute top-0 left-0 w-full bg-emerald-600 text-white text-center py-2 z-10">
+  <div className="absolute top-0 left-0 w-full bg-emerald-600 text-white text-center py-3 z-10">
     Super Energy Head Office
   </div>
 
