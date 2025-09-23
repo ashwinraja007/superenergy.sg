@@ -160,7 +160,7 @@ const ContactPage = () => {
                   </div>
                   <div className="flex gap-3">
                     <Phone className="h-5 w-5 text-primary" />
-                    <span>+65 6XXX XXXX</span>
+                    <span>+65 9298 8849, +65 9385 1609</span>
                   </div>
                   <div className="flex gap-3">
                     <Mail className="h-5 w-5 text-primary" />
@@ -168,7 +168,7 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <Button asChild>
-                  <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.google.com/maps/d/embed?mid=1QYWOGZQvE8w1dDvza5mQ-ex2sXLGqYM&ehbc=2E312F&noprof=1" target="_blank" rel="noopener noreferrer">
                     Get Directions
                   </a>
                 </Button>
