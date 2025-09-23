@@ -15,7 +15,7 @@ const ContactPage = () => {
   const contactInfo = [{
     icon: Phone,
     title: "Phone Support",
-    details: "+65 6XXX XXXX",
+    details: "+65 9298 8849,+65 9385 1609",
     subtitle: "Available 24/7 for emergencies",
     color: "text-primary"
   }, {
