@@ -35,7 +35,7 @@ const AboutPage = () => {
   }, {
     year: "2018",
     title: "Growing Our Commercial Partnerships",
-    description: "Strengthening ties with our trusted partners"
+    description: "Strengthening ties with our trusted partners."
   }, {
     year: "2019",
     title: "Processing Facility Launch",
