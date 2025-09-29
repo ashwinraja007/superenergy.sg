@@ -49,8 +49,8 @@ const SustainabilityPage = () => {
   }];
   const certifications = [
   {
-    name: "ISO Certified",
-    description: "Recognized international standards ensuring quality, safety, and efficiency."
+    name: "NEA Certified",
+    description: "National Environment Agency (NEA) Certified"
   },
   {
     name: "ISCC Certified",
