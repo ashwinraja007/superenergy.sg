@@ -120,7 +120,7 @@ const Contact = () => {
                       Phone Number
                     </label>
                     <Input
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="+65 XXXXX XXXXX"
                       className="border-2 focus:border-primary"
                     />
                   </div>
