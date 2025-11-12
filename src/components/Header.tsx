@@ -28,7 +28,14 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-4">
             <img alt="Super Energy" className="h-12 w-auto cursor-pointer object-contain transition-all duration-300" src="/lovable-uploads/a3ad0f90-3f30-4006-8027-6d25a277ad0e.png" />
             <div className="h-8 w-px bg-gray-500 hidden md:block" />
+            <a
+  href="https://moltechglobal.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Visit 1 Global Enterprises Website"
+>
             <img alt="1 Global Enterprises Logo" src="/logo1234.png" className="hidden md:block h-12 w-auto object-contain transition-all duration-300" />
+            </a>
           </Link>
 
           {/* Right side (Desktop ≥ lg): group NAV + CTA to avoid huge space */}
