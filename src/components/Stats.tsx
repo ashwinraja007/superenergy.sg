@@ -32,7 +32,7 @@ const Stats = () => {
           hasAnimated.current = true;
 
           const targets = {
-            litres: 75000,
+            litres: 3.65 M,
             businesses: 500,
             // carbon is a fixed string range, no animation needed
             vehicles: 100,
@@ -52,7 +52,7 @@ const Stats = () => {
                 ...prev,
                 litres: Math.min(Math.floor(increment.litres * step), targets.litres),
                 businesses: Math.min(Math.floor(increment.businesses * step), targets.businesses),
-                carbon: "180-210", // keep static range
+                carbon: "9000", // keep static range
                 vehicles: Math.min(Math.floor(increment.vehicles * step), targets.vehicles),
               };
             });
@@ -92,14 +92,7 @@ const Stats = () => {
       color: "text-green-700",
       ring: "from-green-400/30 to-green-600/20",
     },
-    {
-      icon: Truck,
-      value: counts.vehicles.toLocaleString(),
-      suffix: "+",
-      label: "Vehicles Powered indirectly by Super Energy",
-      color: "text-emerald-600",
-      ring: "from-emerald-400/30 to-emerald-600/20",
-    },
+  
   ] as const;
 
   return (
@@ -130,7 +123,7 @@ const Stats = () => {
         </div>
 
         {/* stats grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {stats.map((stat, idx) => (
             <div
               key={stat.label}
