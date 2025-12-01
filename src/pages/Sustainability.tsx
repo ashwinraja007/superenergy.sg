@@ -18,13 +18,13 @@ const SustainabilityPage = () => {
   const impacts = [{
     icon: Globe,
     label: "CO₂ Offset",
-    value: "2,200+ t",
+    value: "9,000+ t",
     blurb: "78% fewer GHG vs. fossil diesel",
     color: "text-emerald-600"
   }, {
     icon: Recycle,
     label: "Oil Recycled",
-    value: "75,000 L",
+    value: "36,50,000+ L",
     blurb: "Diverted from drains & landfills",
     color: "text-primary"
   }, {
