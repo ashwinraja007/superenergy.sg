@@ -1,21 +1,19 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Recycle, Building, Globe, Truck } from "lucide-react";
+import { Recycle, Building, Globe } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 type Counts = {
   litres: number;
   businesses: number;
-  carbon: string;     // <-- string to hold "180-210"
-  vehicles: number;
+  carbon: string; // static text
 };
 
 const Stats = () => {
   const [counts, setCounts] = useState<Counts>({
     litres: 0,
     businesses: 0,
-    carbon: "0",      // start as string
-    vehicles: 0,
+    carbon: "0",
   });
 
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -31,31 +29,36 @@ const Stats = () => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
 
+          // animation targets (vehicles removed)
           const targets = {
-            litres: 3.65 M,
+            litres: 3_650_000,
             businesses: 500,
-            // carbon is a fixed string range, no animation needed
-            vehicles: 100,
           };
 
           const steps = 60;
           const duration = 2000;
-          const increment = Object.fromEntries(
-            Object.entries(targets).map(([k, v]) => [k, (v as number) / steps])
-          ) as Record<keyof Omit<Counts, "carbon">, number>;
+
+          const increment = {
+            litres: targets.litres / steps,
+            businesses: targets.businesses / steps,
+          };
 
           let step = 0;
           const timer = setInterval(() => {
             step++;
-            setCounts((prev) => {
-              return {
-                ...prev,
-                litres: Math.min(Math.floor(increment.litres * step), targets.litres),
-                businesses: Math.min(Math.floor(increment.businesses * step), targets.businesses),
-                carbon: "9000", // keep static range
-                vehicles: Math.min(Math.floor(increment.vehicles * step), targets.vehicles),
-              };
-            });
+
+            setCounts((prev) => ({
+              litres: Math.min(
+                Math.floor(increment.litres * step),
+                targets.litres
+              ),
+              businesses: Math.min(
+                Math.floor(increment.businesses * step),
+                targets.businesses
+              ),
+              carbon: "180-210", // static text
+            }));
+
             if (step >= steps) clearInterval(timer);
           }, duration / steps);
         }
@@ -86,13 +89,12 @@ const Stats = () => {
     },
     {
       icon: Globe,
-      value: counts.carbon,  // already the string "180-210"
+      value: counts.carbon,
       suffix: " KT",
       label: "Tonnes of Carbon Offset",
       color: "text-green-700",
       ring: "from-green-400/30 to-green-600/20",
     },
-  
   ] as const;
 
   return (
@@ -136,7 +138,10 @@ const Stats = () => {
                     className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${stat.ring} blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-300`}
                   />
                   <div className="relative w-full h-full rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center">
-                    <stat.icon className={`h-8 w-8 ${stat.color}`} aria-hidden="true" />
+                    <stat.icon
+                      className={`h-8 w-8 ${stat.color}`}
+                      aria-hidden="true"
+                    />
                   </div>
                 </div>
                 <div
@@ -144,9 +149,13 @@ const Stats = () => {
                   className="text-4xl font-extrabold mb-1 flex justify-center items-baseline tracking-tight"
                 >
                   <span className={stat.color}>{stat.value}</span>
-                  <span className="text-2xl ml-1 text-foreground/80">{stat.suffix}</span>
+                  <span className="text-2xl ml-1 text-foreground/80">
+                    {stat.suffix}
+                  </span>
                 </div>
-                <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
+                <p className="text-sm font-medium text-muted-foreground">
+                  {stat.label}
+                </p>
                 <div className="mx-auto mt-4 h-0.5 w-10 bg-gradient-to-r from-emerald-400 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Card>
             </div>
