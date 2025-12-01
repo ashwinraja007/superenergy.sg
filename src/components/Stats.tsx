@@ -4,21 +4,18 @@ import { Recycle, Building, Globe } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 type Counts = {
-  litres: number;
   businesses: number;
-  carbon: string; // static text
 };
 
 const Stats = () => {
   const [counts, setCounts] = useState<Counts>({
-    litres: 0,
     businesses: 0,
-    carbon: "0",
   });
 
   const sectionRef = useRef<HTMLElement | null>(null);
   const hasAnimated = useRef(false);
 
+  // Only animate businesses
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -29,34 +26,17 @@ const Stats = () => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
 
-          // animation targets (vehicles removed)
-          const targets = {
-            litres: 3_650_000,
-            businesses: 500,
-          };
-
+          const target = 500;
           const steps = 60;
           const duration = 2000;
-
-          const increment = {
-            litres: targets.litres / steps,
-            businesses: targets.businesses / steps,
-          };
+          const increment = target / steps;
 
           let step = 0;
           const timer = setInterval(() => {
             step++;
 
             setCounts((prev) => ({
-              litres: Math.min(
-                Math.floor(increment.litres * step),
-                targets.litres
-              ),
-              businesses: Math.min(
-                Math.floor(increment.businesses * step),
-                targets.businesses
-              ),
-              carbon: "180-210", // static text
+              businesses: Math.min(Math.floor(increment * step), target),
             }));
 
             if (step >= steps) clearInterval(timer);
@@ -73,8 +53,8 @@ const Stats = () => {
   const stats = [
     {
       icon: Recycle,
-      value: counts.litres.toLocaleString(),
-      suffix: "+",
+      value: "3.65 M+",
+      suffix: "",
       label: "Litres Collected",
       color: "text-emerald-600",
       ring: "from-emerald-400/30 to-emerald-600/20",
@@ -89,8 +69,8 @@ const Stats = () => {
     },
     {
       icon: Globe,
-      value: counts.carbon,
-      suffix: " KT",
+      value: "9000+",
+      suffix: "",
       label: "Tonnes of Carbon Offset",
       color: "text-green-700",
       ring: "from-green-400/30 to-green-600/20",
@@ -144,18 +124,16 @@ const Stats = () => {
                     />
                   </div>
                 </div>
-                <div
-                  aria-live="polite"
-                  className="text-4xl font-extrabold mb-1 flex justify-center items-baseline tracking-tight"
-                >
+
+                <div className="text-4xl font-extrabold mb-1 flex justify-center items-baseline tracking-tight">
                   <span className={stat.color}>{stat.value}</span>
-                  <span className="text-2xl ml-1 text-foreground/80">
-                    {stat.suffix}
-                  </span>
+                  <span className="text-2xl ml-1 text-foreground/80">{stat.suffix}</span>
                 </div>
+
                 <p className="text-sm font-medium text-muted-foreground">
                   {stat.label}
                 </p>
+
                 <div className="mx-auto mt-4 h-0.5 w-10 bg-gradient-to-r from-emerald-400 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Card>
             </div>
