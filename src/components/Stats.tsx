@@ -53,7 +53,7 @@ const Stats = () => {
   const stats = [
     {
       icon: Recycle,
-      value: "3.65 M+",
+      value: "3.65 Million+",
       suffix: "",
       label: "Litres Collected",
       color: "text-emerald-600",
@@ -71,7 +71,7 @@ const Stats = () => {
       icon: Globe,
       value: "9000+",
       suffix: "",
-      label: "Tonnes of Carbon Offset",
+      label: "Tonnes of CO₂e offset",
       color: "text-green-700",
       ring: "from-green-400/30 to-green-600/20",
     },
