@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-eco-success">
-                    3.65 M+
+                    3.65 Million+
                   </div>
                   <div className="text-sm text-muted-foreground">
                     Litres Collected
